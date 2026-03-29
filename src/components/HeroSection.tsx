@@ -28,8 +28,8 @@ const HeroSection = () => {
 
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight text-primary-foreground drop-shadow-lg"
               style={{ color: 'hsl(45, 100%, 95%)' }}>
-            शत्रु नाश और विजय प्राप्ति हेतु{" "}
-            <span className="text-gradient-golden">शक्तिशाली हवन सेवा</span>
+            माँ बगलामुखी हवन सेवा |{" "}
+            <span className="text-gradient-golden">ऑनलाइन बुकिंग एवं अनुभवी पंडित</span>
           </h1>
 
           <p className="text-lg md:text-xl leading-relaxed" style={{ color: 'hsl(40, 30%, 85%)' }}>
