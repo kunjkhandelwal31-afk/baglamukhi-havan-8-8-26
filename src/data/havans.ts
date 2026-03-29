@@ -1,3 +1,12 @@
+import havanShatruNash from "@/assets/havan-shatru-nash.jpg";
+import havanLalMirch from "@/assets/havan-lal-mirch.jpg";
+import havanVijay from "@/assets/havan-vijay.jpg";
+import havanDhan from "@/assets/havan-dhan.jpg";
+import havanKalaJadu from "@/assets/havan-kala-jadu.jpg";
+import havanShanti from "@/assets/havan-shanti.jpg";
+import havanSarvKarya from "@/assets/havan-sarv-karya.jpg";
+import havanVashikaran from "@/assets/havan-vashikaran.jpg";
+
 export interface Havan {
   id: string;
   name: string;
@@ -7,6 +16,7 @@ export interface Havan {
   price: string;
   priceNum: number;
   icon: string;
+  image: string;
 }
 
 export const havans: Havan[] = [
@@ -19,6 +29,7 @@ export const havans: Havan[] = [
     price: "₹11,000",
     priceNum: 11000,
     icon: "⚔️",
+    image: havanShatruNash,
   },
   {
     id: "lal-mirch",
@@ -29,6 +40,7 @@ export const havans: Havan[] = [
     price: "₹15,000",
     priceNum: 15000,
     icon: "🌶️",
+    image: havanLalMirch,
   },
   {
     id: "vijay-prapti",
@@ -39,6 +51,7 @@ export const havans: Havan[] = [
     price: "₹11,000",
     priceNum: 11000,
     icon: "🏆",
+    image: havanVijay,
   },
   {
     id: "dhan-prapti",
@@ -49,6 +62,7 @@ export const havans: Havan[] = [
     price: "₹9,000",
     priceNum: 9000,
     icon: "💰",
+    image: havanDhan,
   },
   {
     id: "kala-jadu",
@@ -59,6 +73,7 @@ export const havans: Havan[] = [
     price: "₹21,000",
     priceNum: 21000,
     icon: "🛡️",
+    image: havanKalaJadu,
   },
   {
     id: "shanti",
@@ -69,6 +84,7 @@ export const havans: Havan[] = [
     price: "₹5,100",
     priceNum: 5100,
     icon: "🕊️",
+    image: havanShanti,
   },
   {
     id: "sarv-karya-siddhi",
@@ -79,6 +95,7 @@ export const havans: Havan[] = [
     price: "₹11,000",
     priceNum: 11000,
     icon: "✨",
+    image: havanSarvKarya,
   },
   {
     id: "vashikaran",
@@ -89,5 +106,6 @@ export const havans: Havan[] = [
     price: "₹15,000",
     priceNum: 15000,
     icon: "💝",
+    image: havanVashikaran,
   },
 ];
