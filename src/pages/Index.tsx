@@ -5,13 +5,7 @@ import TestimonialsSection from "@/components/TestimonialsSection";
 import BookingForm from "@/components/BookingForm";
 import { havans } from "@/data/havans";
 import { Link } from "react-router-dom";
-import { ArrowRight, Shield, Clock, Award } from "lucide-react";
-
-const features = [
-  { icon: Shield, title: "विधिवत अनुष्ठान", desc: "शास्त्रों के अनुसार पूर्ण विधि-विधान से हवन" },
-  { icon: Clock, title: "शुभ मुहूर्त", desc: "ज्योतिष गणना के अनुसार शुभ समय पर हवन" },
-  { icon: Award, title: "अनुभवी पंडित", desc: "10+ वर्षों का बगलामुखी साधना अनुभव" },
-];
+import { ArrowRight } from "lucide-react";
 
 const Index = () => {
   return (
@@ -45,20 +39,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Features */}
-      <section className="py-16 bg-card">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-            {features.map((f) => (
-              <div key={f.title} className="text-center p-6 rounded-xl border border-border bg-background hover:shadow-golden transition-all">
-                <f.icon className="h-10 w-10 mx-auto mb-3 text-accent" />
-                <h3 className="font-bold text-foreground mb-1">{f.title}</h3>
-                <p className="text-sm text-muted-foreground">{f.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Pandit Section */}
       <PanditSection />

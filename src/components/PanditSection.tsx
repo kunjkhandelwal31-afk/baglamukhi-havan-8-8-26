@@ -39,7 +39,7 @@ const PanditSection = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-3">
-            🧑‍🦳 पंडित जी के <span className="text-gradient-golden">बारे में जानें</span>
+            पंडित जी के <span className="text-gradient-golden">बारे में जानें</span>
           </h2>
         </div>
 
