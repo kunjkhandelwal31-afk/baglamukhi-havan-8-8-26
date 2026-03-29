@@ -28,7 +28,7 @@ const HeroSection = () => {
 
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight text-primary-foreground drop-shadow-lg"
               style={{ color: 'hsl(45, 100%, 95%)' }}>
-            माँ बगलामुखी हवन सेवा |{" "}
+            माँ बगलामुखी हवन सेवा{" "}
             <span className="text-gradient-golden">ऑनलाइन बुकिंग एवं अनुभवी पंडित</span>
           </h1>
 
