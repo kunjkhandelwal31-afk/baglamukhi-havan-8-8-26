@@ -5,6 +5,8 @@ import { Menu, X, Phone, Flame } from "lucide-react";
 const navItems = [
   { path: "/", label: "होम" },
   { path: "/havan-types", label: "हवन के प्रकार" },
+  { path: "/live-darshan", label: "🔴 लाइव दर्शन" },
+  { path: "/vip-darshan", label: "👑 VIP प्रवेश" },
   { path: "/about", label: "माँ बगलामुखी" },
   { path: "/pricing", label: "मूल्य सूची" },
   { path: "/booking", label: "बुकिंग" },
