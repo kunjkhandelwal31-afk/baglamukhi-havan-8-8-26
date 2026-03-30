@@ -4,7 +4,7 @@ import type { Havan } from "@/data/havans";
 
 const HavanCard = ({ havan }: { havan: Havan }) => {
   return (
-    <div className="bg-card rounded-xl border border-border overflow-hidden hover:shadow-golden transition-all duration-300 group flex flex-col">
+    <Link to={`/havan/${havan.id}`} className="bg-card rounded-xl border border-border overflow-hidden hover:shadow-golden transition-all duration-300 group flex flex-col">
       <div className="relative h-48 overflow-hidden">
         <img
           src={havan.image}
@@ -14,10 +14,6 @@ const HavanCard = ({ havan }: { havan: Havan }) => {
           height={512}
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-card/60 to-transparent opacity-60" />
-        <span className="absolute bottom-3 left-3 text-xl font-bold text-gradient-golden drop-shadow-lg">
-          {havan.price}
-        </span>
       </div>
 
       <div className="p-5 flex flex-col flex-1">
@@ -48,17 +44,14 @@ const HavanCard = ({ havan }: { havan: Havan }) => {
           </div>
 
           <div className="flex items-center justify-end pt-2 border-t border-border">
-            <Link
-              to={`/booking?havan=${havan.id}`}
-              className="gradient-golden text-primary-foreground px-4 py-2 rounded-lg text-sm font-semibold inline-flex items-center gap-1.5 hover:shadow-golden transition-all"
-            >
-              अभी बुक करें
+            <span className="gradient-golden text-primary-foreground px-4 py-2 rounded-lg text-sm font-semibold inline-flex items-center gap-1.5 hover:shadow-golden transition-all">
+              विस्तार से देखें
               <ArrowRight className="h-3.5 w-3.5" />
-            </Link>
+            </span>
           </div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 

@@ -1,6 +1,7 @@
 import HeroSection from "@/components/HeroSection";
 import HavanCard from "@/components/HavanCard";
 import PanditSection from "@/components/PanditSection";
+import CallSection from "@/components/CallSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import BookingForm from "@/components/BookingForm";
 import { havans } from "@/data/havans";
@@ -42,6 +43,9 @@ const Index = () => {
 
       {/* Pandit Section */}
       <PanditSection />
+
+      {/* Call Section */}
+      <CallSection />
 
       <TestimonialsSection />
 

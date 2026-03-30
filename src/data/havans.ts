@@ -11,7 +11,10 @@ export interface Havan {
   id: string;
   name: string;
   description: string;
+  longDescription?: string;
   benefits: string[];
+  extraBenefits?: string[];
+  vidhi?: string[];
   duration: string;
   price: string;
   priceNum: number;
