@@ -18,7 +18,7 @@ const WhatsAppButton = () => {
         className="bg-[#25D366] hover:bg-[#20bd5a] p-2 rounded-full shadow-lg hover:shadow-xl transition-all"
         aria-label="WhatsApp पर संपर्क करें"
       >
-        <WhatsAppIcon className="h-10 w-10" />
+        <WhatsAppIcon className="h-12 w-12" />
       </a>
     </div>
   );

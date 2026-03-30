@@ -48,15 +48,15 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-3">
-              🛍️ दिव्य <span className="text-gradient-golden">आध्यात्मिक उत्पाद</span>
+              दिव्य <span className="text-gradient-golden">आध्यात्मिक उत्पाद</span>
             </h2>
             <p className="text-muted-foreground max-w-xl mx-auto">
               पंडित जी द्वारा अभिमंत्रित सिद्ध सामग्री — सीधे घर पर मंगवाएं
             </p>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid sm:grid-cols-2 gap-6">
             {products
-              .filter((p) => ["tabiz", "kavach", "yantra"].includes(p.id))
+              .filter((p) => ["tabiz", "kavach"].includes(p.id))
               .map((product) => (
                 <div
                   key={product.id}
