@@ -12,11 +12,14 @@ const MandirLocationSection = () => {
             <MapPin className="h-5 w-5 text-accent" />
             माँ बगलामुखी मंदिर, नलखेड़ा, जिला आगर मालवा, मध्य प्रदेश, भारत
           </p>
+          <a href="tel:+918103960297" className="inline-block mt-3 text-accent font-semibold hover:underline">
+            📞 +91 81039 60297
+          </a>
         </div>
 
         <div className="max-w-4xl mx-auto rounded-xl overflow-hidden border border-border shadow-golden">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3660.0!2d76.4!3d23.8!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3963b5e5a5a5a5a5%3A0x0!2sMaa%20Baglamukhi%20Temple%2C%20Nalkheda!5e0!3m2!1sen!2sin!4v1700000000000"
+            src="https://www.google.com/maps?q=Maa+Baglamukhi+Temple+Nalkheda+Agar+Malwa+Madhya+Pradesh&output=embed"
             width="100%"
             height="350"
             style={{ border: 0 }}

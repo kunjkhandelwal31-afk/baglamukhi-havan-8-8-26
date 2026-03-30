@@ -27,8 +27,8 @@ const Footer = () => {
           <div>
             <h4 className="font-bold text-background mb-4">संपर्क</h4>
             <div className="space-y-3 text-sm">
-              <a href="tel:+919876543210" className="flex items-center gap-2 hover:text-primary transition-colors">
-                <Phone className="h-4 w-4" /> +91 98765 43210
+              <a href="tel:+918103960297" className="flex items-center gap-2 hover:text-primary transition-colors">
+                <Phone className="h-4 w-4" /> +91 81039 60297
               </a>
               <a href="mailto:info@baglamukhihavan.com" className="flex items-center gap-2 hover:text-primary transition-colors">
                 <Mail className="h-4 w-4" /> info@baglamukhihavan.com

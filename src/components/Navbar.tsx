@@ -42,11 +42,11 @@ const Navbar = () => {
               </Link>
             ))}
             <a
-              href="tel:+919876543210"
+              href="tel:+918103960297"
               className="ml-3 flex items-center gap-1.5 gradient-red text-secondary-foreground px-4 py-2 rounded-lg text-sm font-semibold"
             >
               <Phone className="h-4 w-4" />
-              कॉल करें
+              +91 81039 60297
             </a>
           </div>
 
@@ -77,11 +77,11 @@ const Navbar = () => {
               </Link>
             ))}
             <a
-              href="tel:+919876543210"
+              href="tel:+918103960297"
               className="flex items-center gap-2 mx-4 mt-2 gradient-red text-secondary-foreground px-4 py-2.5 rounded-lg text-sm font-semibold justify-center"
             >
               <Phone className="h-4 w-4" />
-              कॉल करें
+              +91 81039 60297
             </a>
           </div>
         )}
