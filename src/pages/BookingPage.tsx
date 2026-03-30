@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import BookingForm from "@/components/BookingForm";
 import { useSearchParams } from "react-router-dom";
+import ContactStrip from "@/components/ContactStrip";
 
 const BookingPage = () => {
   const [params] = useSearchParams();
@@ -27,6 +28,7 @@ const BookingPage = () => {
         <div className="mt-6 text-center text-sm text-muted-foreground">
           ⏰ सीमित स्लॉट उपलब्ध • बुकिंग के समय 50% अग्रिम भुगतान
         </div>
+        <ContactStrip className="mt-6" />
       </div>
     </main>
   );

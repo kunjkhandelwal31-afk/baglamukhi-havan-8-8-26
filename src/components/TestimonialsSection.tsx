@@ -1,4 +1,5 @@
 import { Star } from "lucide-react";
+import ContactStrip from "@/components/ContactStrip";
 
 const testimonials = [
   {
@@ -55,6 +56,8 @@ const TestimonialsSection = () => {
             </div>
           ))}
         </div>
+
+        <ContactStrip className="mt-10" />
       </div>
     </section>
   );

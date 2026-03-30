@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Eye, Flame, Volume2 } from "lucide-react";
+import ContactStrip from "@/components/ContactStrip";
 import darshan1 from "@/assets/darshan-1.jpg";
 import darshan2 from "@/assets/darshan-2.jpg";
 import darshan3 from "@/assets/darshan-3.jpg";
@@ -28,6 +29,7 @@ const LiveDarshanPage = () => {
             माँ बगलामुखी <span className="text-gradient-golden">लाइव दर्शन</span>
           </h1>
           <p className="text-white/80 text-lg">घर बैठे करें माँ के दिव्य दर्शन</p>
+          <ContactStrip compact className="mt-4 text-white" />
         </div>
       </section>
 

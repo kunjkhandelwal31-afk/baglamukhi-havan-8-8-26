@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { Award, CheckCircle, Shield, Star, ArrowRight } from "lucide-react";
 import panditImg from "@/assets/pandit-ji.jpg";
+import ContactStrip from "@/components/ContactStrip";
 
 const features = [
   "10+ वर्षों का अनुभव",
@@ -87,6 +88,8 @@ const PanditSection = () => {
               👉 अभी हवन बुक करें
               <ArrowRight className="h-4 w-4" />
             </Link>
+
+            <ContactStrip compact className="mt-4 justify-start" />
           </div>
 
           {/* Image */}

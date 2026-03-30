@@ -19,12 +19,21 @@ const Navbar = () => {
     <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur-md border-b border-border">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
-          <Link to="/" className="flex items-center gap-2">
+         <Link to="/" className="flex items-center gap-2">
             <Flame className="h-7 w-7 text-accent animate-flame" />
             <span className="text-lg font-bold text-foreground">
               माँ बगलामुखी हवन सेवा
             </span>
           </Link>
+
+          {/* Header phone number - always visible */}
+          <a
+            href="tel:+918103960297"
+            className="hidden md:flex lg:hidden items-center gap-1.5 text-accent font-semibold text-sm"
+          >
+            <Phone className="h-4 w-4" />
+            +91 81039 60297
+          </a>
 
           {/* Desktop Nav */}
           <div className="hidden lg:flex items-center gap-1">

@@ -4,6 +4,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import ContactStrip from "@/components/ContactStrip";
 
 const faqs = [
   { q: "माँ बगलामुखी कौन हैं?", a: "माँ बगलामुखी दस महाविद्याओं में से एक हैं। ये शत्रुओं की वाणी और कार्यों को स्तंभित (रोकने) की शक्ति रखती हैं। पीला रंग इनका प्रिय रंग है।" },
@@ -82,6 +83,8 @@ const AboutPage = () => {
               ))}
             </Accordion>
           </div>
+
+          <ContactStrip className="mt-10" />
         </div>
       </div>
     </main>
