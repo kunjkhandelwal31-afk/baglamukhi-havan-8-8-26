@@ -4,8 +4,8 @@ import type { Havan } from "@/data/havans";
 
 const HavanCard = ({ havan }: { havan: Havan }) => {
   return (
-    <Link to={`/havan/${havan.id}`} className="bg-card rounded-xl border border-border overflow-hidden hover:shadow-golden transition-all duration-300 group flex flex-col">
-      <div className="relative h-48 overflow-hidden">
+    <div className="bg-card rounded-xl border border-border overflow-hidden hover:shadow-golden transition-all duration-300 group flex flex-col">
+      <Link to={`/havan/${havan.id}`} className="relative h-48 overflow-hidden block">
         <img
           src={havan.image}
           alt={havan.name}
@@ -14,19 +14,21 @@ const HavanCard = ({ havan }: { havan: Havan }) => {
           height={512}
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
         />
-      </div>
+      </Link>
 
       <div className="p-5 flex flex-col flex-1">
-        <h3 className="text-lg font-bold text-foreground mb-2 group-hover:text-accent transition-colors">
-          {havan.name}
-        </h3>
+        <Link to={`/havan/${havan.id}`}>
+          <h3 className="text-lg font-bold text-foreground mb-2 group-hover:text-accent transition-colors">
+            {havan.name}
+          </h3>
+        </Link>
         <p className="text-sm text-muted-foreground mb-4 leading-relaxed flex-1">
           {havan.description}
         </p>
 
         <div className="space-y-3">
           <div className="flex flex-wrap gap-2">
-            {havan.benefits.map((b) => (
+            {havan.benefits.slice(0, 3).map((b) => (
               <span
                 key={b}
                 className="text-xs bg-primary/15 text-accent-foreground px-2.5 py-1 rounded-full font-medium"
@@ -39,19 +41,25 @@ const HavanCard = ({ havan }: { havan: Havan }) => {
           <div className="flex items-center gap-2 text-sm text-muted-foreground">
             <Clock className="h-4 w-4" />
             <span>{havan.duration}</span>
-            <span className="mx-1">•</span>
-            <span>पूरी सामग्री सहित</span>
           </div>
 
-          <div className="flex items-center justify-end pt-2 border-t border-border">
-            <span className="gradient-golden text-primary-foreground px-4 py-2 rounded-lg text-sm font-semibold inline-flex items-center gap-1.5 hover:shadow-golden transition-all">
-              विस्तार से देखें
-              <ArrowRight className="h-3.5 w-3.5" />
-            </span>
+          <div className="flex items-center justify-between pt-3 border-t border-border gap-2">
+            <Link
+              to={`/havan/${havan.id}`}
+              className="text-sm text-accent font-medium hover:underline inline-flex items-center gap-1"
+            >
+              विस्तार से देखें <ArrowRight className="h-3.5 w-3.5" />
+            </Link>
+            <Link
+              to={`/booking?havan=${havan.id}`}
+              className="gradient-golden text-primary-foreground px-4 py-2 rounded-lg text-sm font-bold inline-flex items-center gap-1.5 shadow-golden hover:shadow-lg transition-all animate-pulse hover:animate-none"
+            >
+              👉 अभी बुक करें
+            </Link>
           </div>
         </div>
       </div>
-    </Link>
+    </div>
   );
 };
 

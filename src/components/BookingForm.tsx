@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { havans } from "@/data/havans";
 import { toast } from "@/hooks/use-toast";
-import { Send } from "lucide-react";
+import { Send, Shield, Star, Users } from "lucide-react";
 
 const BookingForm = ({ preselectedHavan }: { preselectedHavan?: string }) => {
   const [form, setForm] = useState({
@@ -10,7 +10,10 @@ const BookingForm = ({ preselectedHavan }: { preselectedHavan?: string }) => {
     location: "",
     havanType: preselectedHavan || "",
     date: "",
+    gotra: "",
+    nakshatra: "",
   });
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -18,12 +21,49 @@ const BookingForm = ({ preselectedHavan }: { preselectedHavan?: string }) => {
       toast({ title: "कृपया सभी आवश्यक फ़ील्ड भरें", variant: "destructive" });
       return;
     }
-    const bookingId = "BGL" + Date.now().toString(36).toUpperCase();
-    toast({
-      title: "बुकिंग सफल! 🙏",
-      description: `बुकिंग ID: ${bookingId} — हम जल्द ही आपसे संपर्क करेंगे।`,
-    });
-    setForm({ name: "", phone: "", location: "", havanType: "", date: "" });
+
+    setLoading(true);
+
+    // Razorpay integration placeholder
+    const selectedHavan = havans.find((h) => h.id === form.havanType);
+    const amount = selectedHavan ? selectedHavan.priceNum * 50 : 500000; // 50% advance in paise
+
+    // @ts-ignore - Razorpay loaded via script
+    if (typeof window.Razorpay !== "undefined") {
+      const options = {
+        key: "rzp_test_XXXXXXXXXX", // Replace with real key
+        amount,
+        currency: "INR",
+        name: "माँ बगलामुखी हवन सेवा",
+        description: selectedHavan?.name || "हवन बुकिंग",
+        handler: function (response: any) {
+          const bookingId = "BGL" + Date.now().toString(36).toUpperCase();
+          toast({
+            title: "आपकी बुकिंग सफल हुई है! 🙏",
+            description: `बुकिंग ID: ${bookingId} | Payment ID: ${response.razorpay_payment_id}`,
+          });
+          setForm({ name: "", phone: "", location: "", havanType: "", date: "", gotra: "", nakshatra: "" });
+          setLoading(false);
+        },
+        prefill: { name: form.name, contact: form.phone },
+        theme: { color: "#D4A017" },
+        modal: {
+          ondismiss: () => setLoading(false),
+        },
+      };
+      // @ts-ignore
+      const rzp = new window.Razorpay(options);
+      rzp.open();
+    } else {
+      // Fallback if Razorpay not loaded
+      const bookingId = "BGL" + Date.now().toString(36).toUpperCase();
+      toast({
+        title: "बुकिंग सफल! 🙏",
+        description: `बुकिंग ID: ${bookingId} — हम जल्द ही आपसे संपर्क करेंगे।`,
+      });
+      setForm({ name: "", phone: "", location: "", havanType: "", date: "", gotra: "", nakshatra: "" });
+      setLoading(false);
+    }
   };
 
   const inputClass =
@@ -75,13 +115,37 @@ const BookingForm = ({ preselectedHavan }: { preselectedHavan?: string }) => {
         onChange={(e) => setForm({ ...form, date: e.target.value })}
         className={inputClass}
       />
+      <input
+        type="text"
+        placeholder="गोत्र (वैकल्पिक)"
+        value={form.gotra}
+        onChange={(e) => setForm({ ...form, gotra: e.target.value })}
+        className={inputClass}
+        maxLength={50}
+      />
+      <input
+        type="text"
+        placeholder="नक्षत्र (वैकल्पिक)"
+        value={form.nakshatra}
+        onChange={(e) => setForm({ ...form, nakshatra: e.target.value })}
+        className={inputClass}
+        maxLength={50}
+      />
       <button
         type="submit"
-        className="w-full gradient-golden text-primary-foreground py-3.5 rounded-lg font-bold text-lg shadow-golden hover:shadow-lg transition-all flex items-center justify-center gap-2"
+        disabled={loading}
+        className="w-full gradient-golden text-primary-foreground py-3.5 rounded-lg font-bold text-lg shadow-golden hover:shadow-lg transition-all flex items-center justify-center gap-2 disabled:opacity-60"
       >
         <Send className="h-5 w-5" />
-        बुकिंग करें
+        {loading ? "प्रोसेसिंग..." : "बुकिंग कन्फर्म करें"}
       </button>
+
+      {/* Trust Badges */}
+      <div className="flex items-center justify-center gap-4 pt-2 text-xs text-muted-foreground">
+        <span className="flex items-center gap-1"><Shield className="h-3.5 w-3.5 text-accent" /> सुरक्षित भुगतान</span>
+        <span className="flex items-center gap-1"><Star className="h-3.5 w-3.5 text-accent" /> 1000+ सफल हवन</span>
+        <span className="flex items-center gap-1"><Users className="h-3.5 w-3.5 text-accent" /> संतुष्ट ग्राहक</span>
+      </div>
     </form>
   );
 };

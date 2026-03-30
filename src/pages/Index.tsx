@@ -3,6 +3,7 @@ import HavanCard from "@/components/HavanCard";
 import PanditSection from "@/components/PanditSection";
 import CallSection from "@/components/CallSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
+import MandirLocationSection from "@/components/MandirLocationSection";
 import BookingForm from "@/components/BookingForm";
 import { havans } from "@/data/havans";
 import { Link } from "react-router-dom";
@@ -13,7 +14,7 @@ const Index = () => {
     <main>
       <HeroSection />
 
-      {/* Top Havans - right after hero */}
+      {/* Top Havans */}
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
@@ -40,14 +41,10 @@ const Index = () => {
         </div>
       </section>
 
-
-      {/* Pandit Section */}
       <PanditSection />
-
-      {/* Call Section */}
       <CallSection />
-
       <TestimonialsSection />
+      <MandirLocationSection />
 
       {/* Booking CTA */}
       <section className="py-20">
