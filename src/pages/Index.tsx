@@ -43,7 +43,6 @@ const Index = () => {
 
       <PanditSection />
       <CallSection />
-      <TestimonialsSection />
       <MandirLocationSection />
 
       {/* Booking CTA */}
@@ -66,6 +65,8 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      <TestimonialsSection />
     </main>
   );
 };
