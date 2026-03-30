@@ -52,7 +52,7 @@ const HavanCard = ({ havan }: { havan: Havan }) => {
             </Link>
             <Link
               to={`/booking?havan=${havan.id}`}
-              className="gradient-golden text-primary-foreground px-4 py-2 rounded-lg text-sm font-bold inline-flex items-center gap-1.5 shadow-golden hover:shadow-lg transition-all animate-pulse hover:animate-none"
+              className="gradient-golden text-primary-foreground px-4 py-2 rounded-lg text-sm font-bold inline-flex items-center gap-1.5 shadow-golden hover:shadow-lg transition-all"
             >
               👉 अभी बुक करें
             </Link>
