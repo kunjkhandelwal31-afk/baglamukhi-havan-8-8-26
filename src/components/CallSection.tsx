@@ -1,4 +1,5 @@
-import { Phone, MessageCircle } from "lucide-react";
+import { Phone } from "lucide-react";
+import WhatsAppIcon from "@/components/icons/WhatsAppIcon";
 
 const CallSection = () => {
   return (
@@ -23,9 +24,9 @@ const CallSection = () => {
             href="https://wa.me/918103960297?text=मुझे हवन बुक करना है"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-3 bg-green-600 text-white px-8 py-4 rounded-xl font-bold text-lg shadow-lg hover:scale-105 transition-transform"
+            className="flex items-center gap-3 bg-accent text-primary-foreground px-8 py-4 rounded-xl font-bold text-lg shadow-lg hover:scale-105 transition-transform"
           >
-            <MessageCircle className="h-6 w-6" />
+            <WhatsAppIcon className="h-6 w-6" />
             WhatsApp करें
           </a>
         </div>
