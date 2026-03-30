@@ -11,7 +11,7 @@ const WhatsAppButton = () => {
         <Phone className="h-6 w-6" />
       </a>
       <a
-        href="https://wa.me/9181039602970?text=मुझे हवन बुक करना है"
+        href="https://wa.me/918103960297?text=मुझे हवन बुक करना है"
         target="_blank"
         rel="noopener noreferrer"
         className="bg-[#25D366] hover:bg-[#128C7E] text-[#fff] p-4 rounded-full shadow-lg hover:shadow-xl transition-all"

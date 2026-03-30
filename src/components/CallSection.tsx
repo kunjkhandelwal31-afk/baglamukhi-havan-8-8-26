@@ -20,7 +20,7 @@ const CallSection = () => {
             📞 +91 81039 60297
           </a>
           <a
-            href="https://wa.me/9181039602970?text=मुझे हवन बुक करना है"
+            href="https://wa.me/918103960297?text=मुझे हवन बुक करना है"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-3 bg-green-600 text-white px-8 py-4 rounded-xl font-bold text-lg shadow-lg hover:scale-105 transition-transform"
