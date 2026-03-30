@@ -94,6 +94,7 @@ const LiveDarshanPage = () => {
             >
               👉 हवन बुक करें
             </Link>
+            <ContactStrip className="mt-6" />
           </div>
         </div>
       </section>
