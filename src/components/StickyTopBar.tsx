@@ -3,7 +3,7 @@ import WhatsAppIcon from "@/components/icons/WhatsAppIcon";
 
 const StickyTopBar = () => {
   return (
-    <div className="sticky top-0 z-[60] bg-foreground text-background py-1.5">
+    <div className="sticky top-0 z-[60] bg-foreground text-background py-1.5 border-b-0">
       <div className="container mx-auto px-4 flex items-center justify-center gap-4 text-sm">
         <a
           href="tel:+918103960297"
@@ -19,7 +19,7 @@ const StickyTopBar = () => {
           rel="noopener noreferrer"
           className="inline-flex items-center gap-1.5 font-semibold hover:text-primary transition-colors"
         >
-          <WhatsAppIcon className="h-5 w-5" />
+          <WhatsAppIcon className="h-6 w-6" />
           WhatsApp करें
         </a>
       </div>
