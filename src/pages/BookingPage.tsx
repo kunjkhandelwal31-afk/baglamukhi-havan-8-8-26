@@ -1,9 +1,14 @@
+import { useEffect } from "react";
 import BookingForm from "@/components/BookingForm";
 import { useSearchParams } from "react-router-dom";
 
 const BookingPage = () => {
   const [params] = useSearchParams();
   const preselected = params.get("havan") || undefined;
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <main className="py-16">
