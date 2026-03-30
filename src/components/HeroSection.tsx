@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import { Flame, ArrowRight } from "lucide-react";
+import { Flame, ArrowRight, Phone } from "lucide-react";
+import WhatsAppIcon from "@/components/icons/WhatsAppIcon";
 import heroImg from "@/assets/havan-hero.jpg";
 
 const HeroSection = () => {
@@ -69,6 +70,28 @@ const HeroSection = () => {
               <div className="text-2xl font-bold text-primary">100%</div>
               <div className="text-xs">संतुष्टि गारंटी</div>
             </div>
+          </div>
+
+          {/* Contact in hero */}
+          <div className="flex flex-col sm:flex-row items-start gap-3 pt-2">
+            <a
+              href="tel:+918103960297"
+              className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 px-5 py-2.5 rounded-lg font-semibold text-sm hover:bg-white/20 transition-colors"
+              style={{ color: 'hsl(45, 100%, 90%)' }}
+            >
+              <Phone className="h-4 w-4" />
+              📞 +91 81039 60297
+            </a>
+            <a
+              href="https://wa.me/918103960297?text=मुझे हवन बुक करना है"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 px-5 py-2.5 rounded-lg font-semibold text-sm hover:bg-white/20 transition-colors"
+              style={{ color: 'hsl(45, 100%, 90%)' }}
+            >
+              <WhatsAppIcon className="h-4 w-4" />
+              WhatsApp करें
+            </a>
           </div>
         </div>
       </div>

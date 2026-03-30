@@ -3,6 +3,7 @@ import { useParams, Link } from "react-router-dom";
 import { havans } from "@/data/havans";
 import { Clock, CheckCircle, ArrowRight, Shield, Star, Users, ChevronLeft } from "lucide-react";
 import NotFound from "./NotFound";
+import ContactStrip from "@/components/ContactStrip";
 
 const HavanDetailPage = () => {
   const { id } = useParams<{ id: string }>();
@@ -148,6 +149,8 @@ const HavanDetailPage = () => {
               <p className="text-xs text-center text-muted-foreground mt-3">
                 ⏰ सीमित स्लॉट • 50% अग्रिम भुगतान
               </p>
+
+              <ContactStrip compact className="mt-4" />
             </div>
 
             {/* Trust */}

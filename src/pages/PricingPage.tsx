@@ -1,5 +1,6 @@
 import { Check } from "lucide-react";
 import { Link } from "react-router-dom";
+import ContactStrip from "@/components/ContactStrip";
 
 const packages = [
   {
@@ -73,6 +74,8 @@ const PricingPage = () => {
             </div>
           ))}
         </div>
+
+        <ContactStrip className="mt-12" />
       </div>
     </main>
   );

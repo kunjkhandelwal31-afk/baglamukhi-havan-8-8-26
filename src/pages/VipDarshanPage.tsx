@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Crown, Flame, Users, Clock, HandHeart, ShieldCheck, Star } from "lucide-react";
+import ContactStrip from "@/components/ContactStrip";
 import heroImg from "@/assets/vip-hero.jpg";
 
 const benefits = [
@@ -30,6 +31,7 @@ const VipDarshanPage = () => {
             VIP <span className="text-gradient-golden">गर्भ गृह प्रवेश</span>
           </h1>
           <p className="text-white/80 text-lg">माँ के निकट से करें विशेष दर्शन</p>
+          <ContactStrip compact className="mt-4 text-white" />
         </div>
       </section>
 
@@ -120,6 +122,7 @@ const VipDarshanPage = () => {
           <p className="text-center mt-6 text-sm font-medium gradient-red text-secondary-foreground inline-block w-full py-2 rounded-lg">
             ⏰ सीमित स्लॉट उपलब्ध — जल्दी बुक करें!
           </p>
+          <ContactStrip className="mt-6" />
         </div>
       </section>
     </main>
