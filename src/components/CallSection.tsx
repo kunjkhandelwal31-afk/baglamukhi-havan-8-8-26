@@ -13,14 +13,14 @@ const CallSection = () => {
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
           <a
-            href="tel:+919876543210"
+            href="tel:+918103960297"
             className="flex items-center gap-3 bg-foreground text-background px-8 py-4 rounded-xl font-bold text-lg shadow-lg hover:scale-105 transition-transform"
           >
             <Phone className="h-6 w-6" />
-            📞 +91 98765 43210
+            📞 +91 81039 60297
           </a>
           <a
-            href="https://wa.me/919876543210?text=नमस्ते%20पंडित%20जी%2C%20मुझे%20हवन%20बुकिंग%20के%20बारे%20में%20जानकारी%20चाहिए।"
+            href="https://wa.me/9181039602970?text=मुझे हवन बुक करना है"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-3 bg-green-600 text-white px-8 py-4 rounded-xl font-bold text-lg shadow-lg hover:scale-105 transition-transform"
