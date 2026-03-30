@@ -8,7 +8,6 @@ const navItems = [
   { path: "/shop", label: "🛍️ दिव्य सामग्री" },
   { path: "/live-darshan", label: "🔴 लाइव दर्शन" },
   { path: "/vip-darshan", label: "👑 VIP प्रवेश" },
-  { path: "/booking", label: "बुकिंग" },
   { path: "/contact", label: "संपर्क" },
 ];
 
