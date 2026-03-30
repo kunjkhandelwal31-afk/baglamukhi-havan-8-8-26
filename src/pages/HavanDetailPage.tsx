@@ -126,7 +126,7 @@ const HavanDetailPage = () => {
 
           {/* Right sidebar - Pricing & CTA */}
           <div className="space-y-6">
-            <div className="bg-card border-2 border-primary/30 rounded-xl p-6 shadow-golden sticky top-24">
+            <div className="bg-card border-2 border-primary/30 rounded-xl p-6 shadow-golden md:sticky md:top-24">
               <div className="text-center mb-4">
                 <div className="text-sm text-muted-foreground mb-1">हवन शुल्क</div>
                 <div className="text-3xl font-extrabold text-gradient-golden">{havan.price}</div>
