@@ -12,6 +12,7 @@ import BookingPage from "./pages/BookingPage";
 import ContactPage from "./pages/ContactPage";
 import LiveDarshanPage from "./pages/LiveDarshanPage";
 import VipDarshanPage from "./pages/VipDarshanPage";
+import HavanDetailPage from "./pages/HavanDetailPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -28,6 +29,7 @@ const App = () => (
           <Route path="/havan-types" element={<HavanTypes />} />
           <Route path="/live-darshan" element={<LiveDarshanPage />} />
           <Route path="/vip-darshan" element={<VipDarshanPage />} />
+          <Route path="/havan/:id" element={<HavanDetailPage />} />
           <Route path="/booking" element={<BookingPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="*" element={<NotFound />} />
