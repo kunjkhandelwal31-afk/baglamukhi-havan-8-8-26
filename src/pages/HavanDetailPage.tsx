@@ -1,3 +1,4 @@
+import React from "react";
 import { useParams, Link } from "react-router-dom";
 import { havans } from "@/data/havans";
 import { Clock, CheckCircle, ArrowRight, Shield, Star, Users, ChevronLeft } from "lucide-react";
@@ -6,6 +7,10 @@ import NotFound from "./NotFound";
 const HavanDetailPage = () => {
   const { id } = useParams<{ id: string }>();
   const havan = havans.find((h) => h.id === id);
+
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [id]);
 
   if (!havan) return <NotFound />;
 
@@ -18,7 +23,7 @@ const HavanDetailPage = () => {
           alt={havan.name}
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/40 to-transparent" />
+        <div className="absolute inset-0 bg-foreground/60 backdrop-blur-sm" />
         <div className="absolute bottom-0 left-0 right-0 p-6 md:p-10">
           <div className="container mx-auto">
             <Link
