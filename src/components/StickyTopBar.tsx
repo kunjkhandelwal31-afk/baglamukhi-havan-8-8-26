@@ -19,7 +19,7 @@ const StickyTopBar = () => {
           rel="noopener noreferrer"
           className="inline-flex items-center gap-1.5 font-semibold hover:text-primary transition-colors"
         >
-          <WhatsAppIcon className="h-3.5 w-3.5" />
+          <WhatsAppIcon className="h-5 w-5" />
           WhatsApp करें
         </a>
       </div>
