@@ -107,10 +107,11 @@ const BookingForm = ({ preselectedHavan }: { preselectedHavan?: string }) => {
       <button
         type="submit"
         disabled={loading}
-        className="w-full gradient-golden text-primary-foreground py-3.5 rounded-lg font-bold text-lg shadow-golden hover:shadow-lg transition-all flex items-center justify-center gap-2 disabled:opacity-60"
+        type="submit"
+        className="w-full gradient-golden text-primary-foreground py-3.5 rounded-lg font-bold text-lg shadow-golden hover:shadow-lg transition-all flex items-center justify-center gap-2"
       >
-        <Send className="h-5 w-5" />
-        {loading ? "प्रोसेसिंग..." : "बुकिंग कन्फर्म करें"}
+        <WhatsAppIcon className="h-6 w-6" />
+        बुकिंग कन्फर्म करें
       </button>
 
       {/* Trust Badges */}
