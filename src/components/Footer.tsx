@@ -39,8 +39,13 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="border-t border-background/20 pt-6 text-center text-xs">
-          © 2026 माँ बगलामुखी हवन सेवा। सर्वाधिकार सुरक्षित। 🙏
+        <div className="border-t border-background/20 pt-6 text-center text-xs space-y-2">
+          <p>© 2026 माँ बगलामुखी हवन सेवा। सर्वाधिकार सुरक्षित। 🙏</p>
+          <p className="text-background/50">
+            वेबसाइट निर्माता: <span className="text-background/70 font-semibold">Kunj Khandelwal</span> •{" "}
+            <a href="tel:+918103960297" className="hover:text-primary transition-colors">📞 8103960297</a>
+            {" "}• वेबसाइट बनवाने के लिए संपर्क करें
+          </p>
         </div>
       </div>
     </footer>
