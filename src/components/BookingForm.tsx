@@ -22,48 +22,20 @@ const BookingForm = ({ preselectedHavan }: { preselectedHavan?: string }) => {
       return;
     }
 
-    setLoading(true);
-
-    // Razorpay integration placeholder
     const selectedHavan = havans.find((h) => h.id === form.havanType);
-    const amount = selectedHavan ? selectedHavan.priceNum * 50 : 500000; // 50% advance in paise
+    const havanName = selectedHavan?.name || form.havanType;
+    const price = selectedHavan?.price || "N/A";
 
-    // @ts-ignore - Razorpay loaded via script
-    if (typeof window.Razorpay !== "undefined") {
-      const options = {
-        key: "rzp_test_XXXXXXXXXX", // Replace with real key
-        amount,
-        currency: "INR",
-        name: "माँ बगलामुखी हवन सेवा",
-        description: selectedHavan?.name || "हवन बुकिंग",
-        handler: function (response: any) {
-          const bookingId = "BGL" + Date.now().toString(36).toUpperCase();
-          toast({
-            title: "आपकी बुकिंग सफल हुई है! 🙏",
-            description: `बुकिंग ID: ${bookingId} | Payment ID: ${response.razorpay_payment_id}`,
-          });
-          setForm({ name: "", phone: "", location: "", havanType: "", date: "", gotra: "", nakshatra: "" });
-          setLoading(false);
-        },
-        prefill: { name: form.name, contact: form.phone },
-        theme: { color: "#D4A017" },
-        modal: {
-          ondismiss: () => setLoading(false),
-        },
-      };
-      // @ts-ignore
-      const rzp = new window.Razorpay(options);
-      rzp.open();
-    } else {
-      // Fallback if Razorpay not loaded
-      const bookingId = "BGL" + Date.now().toString(36).toUpperCase();
-      toast({
-        title: "बुकिंग सफल! 🙏",
-        description: `बुकिंग ID: ${bookingId} — हम जल्द ही आपसे संपर्क करेंगे।`,
-      });
-      setForm({ name: "", phone: "", location: "", havanType: "", date: "", gotra: "", nakshatra: "" });
-      setLoading(false);
-    }
+    const message = `🙏 *नई हवन बुकिंग*\n\n👤 नाम: ${form.name}\n📞 मोबाइल: ${form.phone}\n📍 स्थान: ${form.location || "N/A"}\n🔥 हवन: ${havanName}\n💰 शुल्क: ${price}\n📅 तिथि: ${form.date}\n🪷 गोत्र: ${form.gotra || "N/A"}\n⭐ नक्षत्र: ${form.nakshatra || "N/A"}`;
+
+    const waURL = `https://wa.me/918103960297?text=${encodeURIComponent(message)}`;
+    window.open(waURL, "_blank");
+
+    toast({
+      title: "WhatsApp पर बुकिंग भेजी जा रही है! 🙏",
+      description: "कृपया WhatsApp पर मैसेज भेजें।",
+    });
+    setForm({ name: "", phone: "", location: "", havanType: "", date: "", gotra: "", nakshatra: "" });
   };
 
   const inputClass =
