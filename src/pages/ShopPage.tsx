@@ -231,7 +231,7 @@ const ShopPage = () => {
       {cartCount > 0 && (
         <button
           onClick={() => setShowCart(true)}
-          className="fixed bottom-24 right-6 z-50 gradient-golden text-primary-foreground p-4 rounded-full shadow-golden"
+          className="fixed bottom-44 right-6 z-50 gradient-golden text-primary-foreground p-4 rounded-full shadow-golden"
         >
           <ShoppingCart className="h-6 w-6" />
           <span className="absolute -top-1 -right-1 bg-secondary text-secondary-foreground text-xs w-5 h-5 rounded-full flex items-center justify-center font-bold">
