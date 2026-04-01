@@ -82,12 +82,15 @@ const BookingForm = ({ preselectedHavan }: { preselectedHavan?: string }) => {
         <option value="vip-darshan">VIP गर्भ गृह दर्शन — ₹2,100 – ₹5,100</option>
         <option value="vip-combo">VIP + हवन कॉम्बो — ₹7,100 – ₹21,000</option>
       </select>
-      <input
-        type="date"
-        value={form.date}
-        onChange={(e) => setForm({ ...form, date: e.target.value })}
-        className={inputClass}
-      />
+      <div>
+        <label className="block text-sm font-medium text-foreground mb-1">हवन की अवधि *</label>
+        <input
+          type="date"
+          value={form.date}
+          onChange={(e) => setForm({ ...form, date: e.target.value })}
+          className={inputClass}
+        />
+      </div>
       <input
         type="text"
         placeholder="गोत्र (वैकल्पिक)"
