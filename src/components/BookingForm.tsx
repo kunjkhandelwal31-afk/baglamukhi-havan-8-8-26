@@ -106,8 +106,6 @@ const BookingForm = ({ preselectedHavan }: { preselectedHavan?: string }) => {
       />
       <button
         type="submit"
-        disabled={loading}
-        type="submit"
         className="w-full gradient-golden text-primary-foreground py-3.5 rounded-lg font-bold text-lg shadow-golden hover:shadow-lg transition-all flex items-center justify-center gap-2"
       >
         <WhatsAppIcon className="h-6 w-6" />
