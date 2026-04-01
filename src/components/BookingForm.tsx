@@ -14,7 +14,7 @@ const BookingForm = ({ preselectedHavan }: { preselectedHavan?: string }) => {
     gotra: "",
     nakshatra: "",
   });
-  const [loading, setLoading] = useState(false);
+  
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
