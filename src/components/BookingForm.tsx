@@ -83,7 +83,7 @@ const BookingForm = ({ preselectedHavan }: { preselectedHavan?: string }) => {
         <option value="vip-combo">VIP + हवन कॉम्बो — ₹7,100 – ₹21,000</option>
       </select>
       <div>
-        <label className="block text-sm font-medium text-foreground mb-1">हवन की अवधि *</label>
+        <label className="block text-sm font-medium text-foreground mb-1">हवन की तिथि *</label>
         <input
           type="date"
           value={form.date}
