@@ -2,6 +2,7 @@ import { useState } from "react";
 import { havans } from "@/data/havans";
 import { toast } from "@/hooks/use-toast";
 import { Send, Shield, Star, Users } from "lucide-react";
+import WhatsAppIcon from "@/components/icons/WhatsAppIcon";
 
 const BookingForm = ({ preselectedHavan }: { preselectedHavan?: string }) => {
   const [form, setForm] = useState({
