@@ -8,6 +8,7 @@ import StickyTopBar from "@/components/StickyTopBar";
 import ScrollToTop from "@/components/ScrollToTop";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import BottomNav from "@/components/BottomNav";
 import Index from "./pages/Index";
 import HavanTypes from "./pages/HavanTypes";
 import BookingPage from "./pages/BookingPage";
@@ -42,6 +43,7 @@ const App = () => (
         </Routes>
         <Footer />
         <WhatsAppButton />
+        <BottomNav />
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
