@@ -28,13 +28,16 @@ const Navbar = () => {
           </Link>
 
           {/* Header phone number - always visible */}
-          <a
-            href="tel:+918103960297"
-            className="hidden md:flex lg:hidden items-center gap-1.5 text-accent font-semibold text-sm"
-          >
-            <Phone className="h-4 w-4" />
-            +91 81039 60297
-          </a>
+          <div className="hidden md:flex lg:hidden items-center gap-3">
+            <LanguageToggle />
+            <a
+              href="tel:+918103960297"
+              className="flex items-center gap-1.5 text-accent font-semibold text-sm"
+            >
+              <Phone className="h-4 w-4" />
+              +91 81039 60297
+            </a>
+          </div>
 
           {/* Desktop Nav */}
           <div className="hidden lg:flex items-center gap-1">
@@ -51,6 +54,7 @@ const Navbar = () => {
                 {item.label}
               </Link>
             ))}
+            <LanguageToggle />
             <a
               href="tel:+918103960297"
               className="ml-3 flex items-center gap-1.5 gradient-red text-secondary-foreground px-4 py-2 rounded-lg text-sm font-semibold"
@@ -61,12 +65,17 @@ const Navbar = () => {
           </div>
 
           {/* Mobile toggle */}
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden p-2 rounded-lg hover:bg-muted"
-          >
-            {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-          </button>
+          <div className="lg:hidden flex items-center gap-2">
+            <div className="md:hidden">
+              <LanguageToggle />
+            </div>
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="p-2 rounded-lg hover:bg-muted"
+            >
+              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Nav */}
