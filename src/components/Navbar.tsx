@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Phone, Flame } from "lucide-react";
+import LanguageToggle from "./LanguageToggle";
 
 const navItems = [
   { path: "/", label: "होम" },
