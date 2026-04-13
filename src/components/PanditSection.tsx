@@ -32,15 +32,11 @@ const PanditSection = () => {
   }, []);
 
   return (
-    <section
-      ref={ref}
-      className="py-20"
-      style={{ background: "linear-gradient(135deg, hsl(45 100% 95%), hsl(40 80% 92%))" }}
-    >
+    <section ref={ref} className="py-20 yantra-bg" style={{ background: '#1f1f1f' }}>
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-3">
-            पंडित जी के <span className="text-gradient-golden">बारे में जानें</span>
+          <h2 className="text-3xl md:text-4xl font-bold mb-3" style={{ color: '#FFD700' }}>
+            पंडित जी के बारे में जानें
           </h2>
         </div>
 
@@ -51,18 +47,18 @@ const PanditSection = () => {
         >
           {/* Text */}
           <div className="order-2 md:order-1">
-            <p className="text-muted-foreground leading-relaxed mb-6">
+            <p className="text-white/75 leading-relaxed mb-6">
               हमारे पंडित जी वैदिक अनुष्ठानों और विशेष रूप से माँ बगलामुखी साधना में 10+ वर्षों का गहरा अनुभव रखते हैं। उन्होंने अनेक सफल हवन और अनुष्ठान सम्पन्न कराए हैं, जिससे हजारों भक्तों को शांति, सुरक्षा और सफलता प्राप्त हुई है।
             </p>
-            <p className="text-muted-foreground leading-relaxed mb-6">
+            <p className="text-white/75 leading-relaxed mb-6">
               पंडित जी शास्त्रों के अनुसार पूरी विधि-विधान से हवन सम्पन्न कराते हैं, जिससे हर अनुष्ठान का पूर्ण फल प्राप्त होता है। उनकी साधना, मंत्र शक्ति और अनुभव उन्हें विशेष बनाते हैं।
             </p>
 
-            <h3 className="text-lg font-bold text-foreground mb-3">विशेषताएं</h3>
+            <h3 className="text-lg font-bold mb-3" style={{ color: '#FFD700' }}>विशेषताएं</h3>
             <ul className="space-y-2 mb-8">
               {features.map((f) => (
-                <li key={f} className="flex items-center gap-2 text-foreground">
-                  <CheckCircle className="h-5 w-5 text-accent flex-shrink-0" />
+                <li key={f} className="flex items-center gap-2 text-white">
+                  <CheckCircle className="h-5 w-5 flex-shrink-0" style={{ color: '#FFD700' }} />
                   <span>{f}</span>
                 </li>
               ))}
@@ -73,17 +69,19 @@ const PanditSection = () => {
               {trustBadges.map((b) => (
                 <div
                   key={b.label}
-                  className="flex items-center gap-2 bg-card border border-border rounded-full px-4 py-2 shadow-sm"
+                  className="flex items-center gap-2 rounded-full px-4 py-2 shadow-sm"
+                  style={{ background: 'rgba(139,0,0,0.4)', border: '1px solid rgba(255,215,0,0.2)' }}
                 >
-                  <b.icon className="h-5 w-5 text-accent" />
-                  <span className="text-sm font-medium text-foreground">{b.label}</span>
+                  <b.icon className="h-5 w-5" style={{ color: '#FFD700' }} />
+                  <span className="text-sm font-medium text-white">{b.label}</span>
                 </div>
               ))}
             </div>
 
             <Link
               to="/booking"
-              className="gradient-golden text-primary-foreground px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2 hover:shadow-golden transition-all text-base"
+              className="px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2 transition-all text-base hover:scale-105"
+              style={{ background: '#FFD700', color: '#1a1a1a' }}
             >
               👉 अभी हवन बुक करें
               <ArrowRight className="h-4 w-4" />
@@ -94,7 +92,7 @@ const PanditSection = () => {
 
           {/* Image */}
           <div className="order-1 md:order-2">
-            <div className="rounded-2xl overflow-hidden shadow-golden border-2 border-primary/20">
+            <div className="rounded-2xl overflow-hidden shadow-golden" style={{ border: '2px solid rgba(255,215,0,0.3)' }}>
               <img
                 src={panditImg}
                 alt="पंडित जी हवन करते हुए"
