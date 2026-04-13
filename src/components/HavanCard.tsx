@@ -4,7 +4,10 @@ import type { Havan } from "@/data/havans";
 
 const HavanCard = ({ havan }: { havan: Havan }) => {
   return (
-    <div className="bg-card rounded-xl border border-border overflow-hidden hover:shadow-golden transition-all duration-300 group flex flex-col">
+    <div
+      className="rounded-xl overflow-hidden hover:shadow-golden transition-all duration-300 group flex flex-col"
+      style={{ background: '#222', border: '1px solid rgba(255,215,0,0.12)' }}
+    >
       <Link to={`/havan/${havan.id}`} className="relative h-48 overflow-hidden block">
         <img
           src={havan.image}
@@ -18,11 +21,11 @@ const HavanCard = ({ havan }: { havan: Havan }) => {
 
       <div className="p-5 flex flex-col flex-1">
         <Link to={`/havan/${havan.id}`}>
-          <h3 className="text-lg font-bold text-foreground mb-2 group-hover:text-accent transition-colors">
+          <h3 className="text-lg font-bold mb-2 transition-colors" style={{ color: '#FFD700' }}>
             {havan.name}
           </h3>
         </Link>
-        <p className="text-sm text-muted-foreground mb-4 leading-relaxed flex-1">
+        <p className="text-sm text-white/70 mb-4 leading-relaxed flex-1">
           {havan.description}
         </p>
 
@@ -31,28 +34,31 @@ const HavanCard = ({ havan }: { havan: Havan }) => {
             {havan.benefits.slice(0, 3).map((b) => (
               <span
                 key={b}
-                className="text-xs bg-primary/15 text-accent-foreground px-2.5 py-1 rounded-full font-medium"
+                className="text-xs px-2.5 py-1 rounded-full font-medium"
+                style={{ background: 'rgba(139,0,0,0.4)', color: '#FFD700' }}
               >
                 {b}
               </span>
             ))}
           </div>
 
-          <div className="flex items-center gap-2 text-sm text-muted-foreground">
+          <div className="flex items-center gap-2 text-sm text-white/50">
             <Clock className="h-4 w-4" />
             <span>{havan.duration}</span>
           </div>
 
-          <div className="flex items-center justify-between pt-3 border-t border-border gap-2">
+          <div className="flex items-center justify-between pt-3 gap-2" style={{ borderTop: '1px solid rgba(255,215,0,0.1)' }}>
             <Link
               to={`/havan/${havan.id}`}
-              className="text-sm text-accent font-medium hover:underline inline-flex items-center gap-1"
+              className="text-sm font-medium hover:underline inline-flex items-center gap-1"
+              style={{ color: '#FFD700' }}
             >
               विस्तार से देखें <ArrowRight className="h-3.5 w-3.5" />
             </Link>
             <Link
               to={`/booking?havan=${havan.id}`}
-              className="gradient-golden text-primary-foreground px-4 py-2 rounded-lg text-sm font-bold inline-flex items-center gap-1.5 shadow-golden hover:shadow-lg transition-all"
+              className="px-4 py-2 rounded-lg text-sm font-bold inline-flex items-center gap-1.5 shadow-golden hover:shadow-lg hover:scale-105 transition-all"
+              style={{ background: '#FFD700', color: '#1a1a1a' }}
             >
               👉 अभी बुक करें
             </Link>

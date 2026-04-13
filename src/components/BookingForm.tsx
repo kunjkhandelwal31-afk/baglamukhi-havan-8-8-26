@@ -40,7 +40,7 @@ const BookingForm = ({ preselectedHavan }: { preselectedHavan?: string }) => {
   };
 
   const inputClass =
-    "w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring text-sm";
+    "w-full px-4 py-3 rounded-lg text-white placeholder:text-white/40 focus:outline-none focus:ring-2 text-sm";
 
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
@@ -50,6 +50,7 @@ const BookingForm = ({ preselectedHavan }: { preselectedHavan?: string }) => {
         value={form.name}
         onChange={(e) => setForm({ ...form, name: e.target.value })}
         className={inputClass}
+        style={{ background: '#2a2a2a', border: '1px solid rgba(255,215,0,0.15)', boxShadow: 'none' }}
         maxLength={100}
       />
       <input
@@ -58,6 +59,7 @@ const BookingForm = ({ preselectedHavan }: { preselectedHavan?: string }) => {
         value={form.phone}
         onChange={(e) => setForm({ ...form, phone: e.target.value })}
         className={inputClass}
+        style={{ background: '#2a2a2a', border: '1px solid rgba(255,215,0,0.15)' }}
         maxLength={15}
       />
       <input
@@ -66,12 +68,14 @@ const BookingForm = ({ preselectedHavan }: { preselectedHavan?: string }) => {
         value={form.location}
         onChange={(e) => setForm({ ...form, location: e.target.value })}
         className={inputClass}
+        style={{ background: '#2a2a2a', border: '1px solid rgba(255,215,0,0.15)' }}
         maxLength={100}
       />
       <select
         value={form.havanType}
         onChange={(e) => setForm({ ...form, havanType: e.target.value })}
         className={inputClass}
+        style={{ background: '#2a2a2a', border: '1px solid rgba(255,215,0,0.15)' }}
       >
         <option value="">हवन / सेवा का प्रकार चुनें *</option>
         {havans.map((h) => (
@@ -83,12 +87,13 @@ const BookingForm = ({ preselectedHavan }: { preselectedHavan?: string }) => {
         <option value="vip-combo">VIP + हवन कॉम्बो — ₹7,100 – ₹21,000</option>
       </select>
       <div>
-        <label className="block text-sm font-medium text-foreground mb-1">हवन की तिथि *</label>
+        <label className="block text-sm font-medium mb-1" style={{ color: '#FFD700' }}>हवन की तिथि *</label>
         <input
           type="date"
           value={form.date}
           onChange={(e) => setForm({ ...form, date: e.target.value })}
           className={inputClass}
+          style={{ background: '#2a2a2a', border: '1px solid rgba(255,215,0,0.15)' }}
         />
       </div>
       <input
@@ -97,6 +102,7 @@ const BookingForm = ({ preselectedHavan }: { preselectedHavan?: string }) => {
         value={form.gotra}
         onChange={(e) => setForm({ ...form, gotra: e.target.value })}
         className={inputClass}
+        style={{ background: '#2a2a2a', border: '1px solid rgba(255,215,0,0.15)' }}
         maxLength={50}
       />
       <input
@@ -105,21 +111,23 @@ const BookingForm = ({ preselectedHavan }: { preselectedHavan?: string }) => {
         value={form.nakshatra}
         onChange={(e) => setForm({ ...form, nakshatra: e.target.value })}
         className={inputClass}
+        style={{ background: '#2a2a2a', border: '1px solid rgba(255,215,0,0.15)' }}
         maxLength={50}
       />
       <button
         type="submit"
-        className="w-full gradient-golden text-primary-foreground py-3.5 rounded-lg font-bold text-lg shadow-golden hover:shadow-lg transition-all flex items-center justify-center gap-2"
+        className="w-full py-3.5 rounded-lg font-bold text-lg shadow-golden hover:shadow-lg hover:scale-[1.02] transition-all flex items-center justify-center gap-2"
+        style={{ background: '#FFD700', color: '#1a1a1a' }}
       >
         <WhatsAppIcon className="h-6 w-6" />
         बुकिंग कन्फर्म करें
       </button>
 
       {/* Trust Badges */}
-      <div className="flex items-center justify-center gap-4 pt-2 text-xs text-muted-foreground">
-        <span className="flex items-center gap-1"><Shield className="h-3.5 w-3.5 text-accent" /> सुरक्षित भुगतान</span>
-        <span className="flex items-center gap-1"><Star className="h-3.5 w-3.5 text-accent" /> 1000+ सफल हवन</span>
-        <span className="flex items-center gap-1"><Users className="h-3.5 w-3.5 text-accent" /> संतुष्ट ग्राहक</span>
+      <div className="flex items-center justify-center gap-4 pt-2 text-xs text-white/50">
+        <span className="flex items-center gap-1"><Shield className="h-3.5 w-3.5" style={{ color: '#FFD700' }} /> सुरक्षित</span>
+        <span className="flex items-center gap-1"><Star className="h-3.5 w-3.5" style={{ color: '#FFD700' }} /> 1000+ हवन</span>
+        <span className="flex items-center gap-1"><Users className="h-3.5 w-3.5" style={{ color: '#FFD700' }} /> संतुष्ट ग्राहक</span>
       </div>
     </form>
   );
