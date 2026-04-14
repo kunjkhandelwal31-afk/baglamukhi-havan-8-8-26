@@ -37,7 +37,7 @@ const ContactStrip = ({ className = "", compact = false }: ContactStripProps) =>
       <a
         href="tel:+918103960297"
         className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg font-semibold text-sm hover:opacity-80 transition-colors"
-        style={{ background: 'rgba(139,0,0,0.3)', border: '1px solid rgba(255,215,0,0.2)', color: '#FFD700' }}
+        style={{ background: '#FF8C00', border: '1px solid rgba(255,215,0,0.3)', color: '#FFD700' }}
       >
         <Phone className="h-4 w-4" />
         📞 +91 81039 60297
@@ -47,7 +47,7 @@ const ContactStrip = ({ className = "", compact = false }: ContactStripProps) =>
         target="_blank"
         rel="noopener noreferrer"
         className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg font-semibold text-sm hover:opacity-80 transition-colors"
-        style={{ background: 'rgba(139,0,0,0.3)', border: '1px solid rgba(255,215,0,0.2)', color: '#FFD700' }}
+        style={{ background: '#FF8C00', border: '1px solid rgba(255,215,0,0.3)', color: '#FFD700' }}
       >
         <WhatsAppIcon className="h-6 w-6" />
         WhatsApp करें

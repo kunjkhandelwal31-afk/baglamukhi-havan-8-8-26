@@ -24,13 +24,13 @@ const testimonials = [
 
 const TestimonialsSection = () => {
   return (
-    <section className="py-20" style={{ background: '#1a1a1a' }}>
+    <section className="py-20 yantra-bg" style={{ background: '#7A0000' }}>
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-3" style={{ color: '#FFD700' }}>
             भक्तों के अनुभव
           </h2>
-          <p className="text-white/60 max-w-xl mx-auto">
+          <p className="text-white/70 max-w-xl mx-auto">
             हमारे भक्तों ने माँ बगलामुखी की कृपा से अपने जीवन में चमत्कारी बदलाव अनुभव किया है
           </p>
         </div>
@@ -40,19 +40,19 @@ const TestimonialsSection = () => {
             <div
               key={t.name}
               className="rounded-xl p-6 hover:shadow-golden transition-all"
-              style={{ background: '#222', border: '1px solid rgba(255,215,0,0.12)' }}
+              style={{ background: '#FF8C00', border: '1px solid rgba(255,215,0,0.3)' }}
             >
               <div className="flex gap-0.5 mb-4">
                 {Array.from({ length: t.rating }).map((_, i) => (
                   <Star key={i} className="h-4 w-4 fill-yellow-500 text-yellow-500" />
                 ))}
               </div>
-              <p className="text-sm text-white/80 mb-4 leading-relaxed italic">
+              <p className="text-sm text-white mb-4 leading-relaxed italic">
                 "{t.text}"
               </p>
               <div>
-                <div className="font-semibold text-white">{t.name}</div>
-                <div className="text-xs text-white/50">{t.location}</div>
+                <div className="font-semibold" style={{ color: '#FFD700' }}>{t.name}</div>
+                <div className="text-xs text-white/80">{t.location}</div>
               </div>
             </div>
           ))}

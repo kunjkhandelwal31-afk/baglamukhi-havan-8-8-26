@@ -3,7 +3,7 @@ import { Flame, Phone, Mail, MapPin } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="py-12 pb-24" style={{ background: '#111', color: 'rgba(255,255,255,0.7)' }}>
+    <footer className="py-12 pb-24" style={{ background: '#5A0000', color: 'rgba(255,255,255,0.8)' }}>
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           <div>
@@ -11,7 +11,7 @@ const Footer = () => {
               <Flame className="h-6 w-6" style={{ color: '#FFD700' }} />
               <span className="text-lg font-bold" style={{ color: '#FFD700' }}>माँ बगलामुखी हवन सेवा</span>
             </div>
-            <p className="text-sm leading-relaxed text-white/60">
+            <p className="text-sm leading-relaxed text-white/70">
               अनुभवी पंडित जी द्वारा विधिवत माँ बगलामुखी हवन सेवा। शत्रु नाश, विजय प्राप्ति और जीवन में सफलता के लिए संपर्क करें।
             </p>
           </div>
@@ -39,10 +39,10 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="border-t border-white/10 pt-6 text-center text-xs space-y-2">
+        <div className="border-t border-white/15 pt-6 text-center text-xs space-y-2">
           <p>© 2026 माँ बगलामुखी हवन सेवा। सर्वाधिकार सुरक्षित। 🙏</p>
-          <p className="text-white/40">
-            वेबसाइट निर्माता: <span className="text-white/60 font-semibold">Kunj Khandelwal</span> •{" "}
+          <p className="text-white/50">
+            वेबसाइट निर्माता: <span className="text-white/70 font-semibold">Kunj Khandelwal</span> •{" "}
             <a href="tel:+918103960297" className="hover:text-yellow-400 transition-colors">📞 8103960297</a>
             {" "}• वेबसाइट बनवाने के लिए संपर्क करें
           </p>

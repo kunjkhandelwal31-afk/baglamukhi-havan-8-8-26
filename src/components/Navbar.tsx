@@ -17,8 +17,8 @@ const Navbar = () => {
   const location = useLocation();
 
   return (
-    <nav className="sticky top-[36px] z-50 backdrop-blur-md border-b border-border -mt-px"
-         style={{ background: 'rgba(26,26,26,0.95)' }}>
+    <nav className="sticky top-[36px] z-50 backdrop-blur-md border-b -mt-px"
+         style={{ background: 'rgba(90,0,0,0.95)', borderColor: 'rgba(255,215,0,0.15)' }}>
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
          <Link to="/" className="flex items-center gap-2">
@@ -49,10 +49,10 @@ const Navbar = () => {
                 to={item.path}
                 className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
                   location.pathname === item.path
-                    ? "text-primary-foreground"
+                    ? ""
                     : "text-white/80 hover:text-white hover:bg-white/10"
                 }`}
-                style={location.pathname === item.path ? { background: '#8B0000', color: '#FFD700' } : {}}
+                style={location.pathname === item.path ? { background: '#FF8C00', color: '#FFD700' } : {}}
               >
                 {item.label}
               </Link>
@@ -61,7 +61,7 @@ const Navbar = () => {
             <a
               href="tel:+918103960297"
               className="ml-3 flex items-center gap-1.5 px-4 py-2 rounded-lg text-sm font-semibold"
-              style={{ background: '#8B0000', color: '#FFD700' }}
+              style={{ background: '#FF8C00', color: '#FFD700' }}
             >
               <Phone className="h-4 w-4" />
               +91 81039 60297
@@ -84,7 +84,7 @@ const Navbar = () => {
 
         {/* Mobile Nav */}
         {isOpen && (
-          <div className="lg:hidden pb-4 border-t border-border pt-3 space-y-1">
+          <div className="lg:hidden pb-4 pt-3 space-y-1" style={{ borderTop: '1px solid rgba(255,215,0,0.15)' }}>
             {navItems.map((item) => (
               <Link
                 key={item.path}
@@ -92,10 +92,10 @@ const Navbar = () => {
                 onClick={() => setIsOpen(false)}
                 className={`block px-4 py-2.5 rounded-lg text-sm font-medium ${
                   location.pathname === item.path
-                    ? "text-primary-foreground"
+                    ? ""
                     : "text-white/80 hover:bg-white/10"
                 }`}
-                style={location.pathname === item.path ? { background: '#8B0000', color: '#FFD700' } : {}}
+                style={location.pathname === item.path ? { background: '#FF8C00', color: '#FFD700' } : {}}
               >
                 {item.label}
               </Link>
@@ -103,7 +103,7 @@ const Navbar = () => {
             <a
               href="tel:+918103960297"
               className="flex items-center gap-2 mx-4 mt-2 px-4 py-2.5 rounded-lg text-sm font-semibold justify-center"
-              style={{ background: '#8B0000', color: '#FFD700' }}
+              style={{ background: '#FF8C00', color: '#FFD700' }}
             >
               <Phone className="h-4 w-4" />
               +91 81039 60297
