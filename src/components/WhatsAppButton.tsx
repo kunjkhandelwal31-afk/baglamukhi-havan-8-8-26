@@ -1,4 +1,4 @@
-import { Phone } from "lucide-react";
+import { Phone, Instagram } from "lucide-react";
 import WhatsAppIcon from "@/components/icons/WhatsAppIcon";
 
 const WhatsAppButton = () => {
@@ -20,6 +20,16 @@ const WhatsAppButton = () => {
         aria-label="WhatsApp पर संपर्क करें"
       >
         <WhatsAppIcon className="h-14 w-14" />
+      </a>
+      <a
+        href="https://www.instagram.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex items-center justify-center w-14 h-14 rounded-full shadow-lg hover:shadow-xl hover:scale-110 transition-all text-white"
+        aria-label="Instagram पर फॉलो करें"
+        style={{ background: 'linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888)' }}
+      >
+        <Instagram className="h-7 w-7" />
       </a>
     </div>
   );

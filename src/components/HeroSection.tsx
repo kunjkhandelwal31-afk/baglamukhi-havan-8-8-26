@@ -1,21 +1,22 @@
 import { Link } from "react-router-dom";
 import { Flame, ArrowRight, Phone } from "lucide-react";
 import WhatsAppIcon from "@/components/icons/WhatsAppIcon";
-import heroImg from "@/assets/havan-hero.jpg";
+import heroVideo from "@/assets/hero-video.mp4";
 
 const HeroSection = () => {
   return (
     <section id="hero-section" className="relative min-h-[85vh] flex items-center overflow-hidden">
-      {/* Background */}
+      {/* Video Background */}
       <div className="absolute inset-0">
-        <img
-          src={heroImg}
-          alt="माँ बगलामुखी हवन"
-          width={1920}
-          height={1080}
+        <video
+          src={heroVideo}
+          autoPlay
+          loop
+          muted
+          playsInline
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/40" />
+        <div className="absolute inset-0 bg-black/35" />
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
@@ -27,12 +28,18 @@ const HeroSection = () => {
             </span>
           </div>
 
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight drop-shadow-lg" style={{ color: '#FFD700' }}>
+          <h1
+            className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight drop-shadow-lg"
+            style={{ color: '#FFD700', textShadow: '2px 2px 8px rgba(0,0,0,0.8)' }}
+          >
             माँ बगलामुखी मंदिर{" "}
             <span className="text-white">पंडित बुकिंग सेवा</span>
           </h1>
 
-          <p className="text-lg md:text-xl leading-relaxed text-white/85">
+          <p
+            className="text-lg md:text-xl leading-relaxed text-white/85"
+            style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.8)' }}
+          >
             अनुभवी पंडित जी द्वारा बगलामुखी पूजा, हवन एवं अनुष्ठान बुक करें।
             माँ बगलामुखी की कृपा से शत्रुओं का नाश, कोर्ट-कचहरी में विजय और जीवन में सफलता प्राप्त करें।
           </p>
@@ -40,10 +47,10 @@ const HeroSection = () => {
           <div className="flex flex-col sm:flex-row gap-4 pt-2">
             <Link
               to="/booking"
-              className="px-8 py-4 rounded-lg text-lg font-bold shadow-golden hover:shadow-lg transition-all inline-flex items-center justify-center gap-2 hover:scale-105"
+              className="btn-shimmer px-8 py-4 rounded-lg text-lg font-bold shadow-golden hover:shadow-lg transition-all inline-flex items-center justify-center gap-2 hover:scale-105"
               style={{ background: '#FFD700', color: '#1a1a1a' }}
             >
-              अभी पंडित बुक करें
+              अभी हवन बुक करें
               <ArrowRight className="h-5 w-5" />
             </Link>
             <Link
@@ -51,7 +58,7 @@ const HeroSection = () => {
               className="border-2 px-8 py-4 rounded-lg text-lg font-bold hover:bg-white/10 transition-all inline-flex items-center justify-center"
               style={{ borderColor: '#FFD700', color: '#FFD700' }}
             >
-              हवन देखें
+              हवन के प्रकार
             </Link>
           </div>
 
