@@ -11,10 +11,12 @@ const HeroSection = () => {
       <div className="w-full" style={{ background: '#4A0000' }}>
         <video
           src={heroVideo}
+          poster={heroPoster}
           autoPlay
           loop
           muted
           playsInline
+          preload="metadata"
           className="w-full h-auto block mx-auto"
         />
       </div>
