@@ -115,6 +115,15 @@ const Index = () => {
               </div>
             ))}
           </div>
+          <div className="text-center mt-8">
+            <Link
+              to="/anushthan"
+              className="inline-flex items-center gap-2 font-semibold hover:underline"
+              style={{ color: '#FFD700' }}
+            >
+              सभी अनुष्ठान देखें <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
         </div>
       </section>
 

@@ -91,7 +91,7 @@ const HeroSection = () => {
               className="inline-flex items-center gap-2 bg-white/10 border border-white/20 px-5 py-2.5 rounded-lg font-semibold text-sm hover:bg-white/20 transition-colors text-white"
             >
               <WhatsAppIcon className="h-4 w-4" />
-              WhatsApp करें
+              WhatsApp
             </a>
           </div>
         </div>
