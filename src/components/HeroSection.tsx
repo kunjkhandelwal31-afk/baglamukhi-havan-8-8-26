@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Flame, ArrowRight, Phone } from "lucide-react";
 import WhatsAppIcon from "@/components/icons/WhatsAppIcon";
 import heroVideo from "@/assets/hero-video.mp4";
+import heroPoster from "@/assets/hero-poster.jpg";
 
 const HeroSection = () => {
   return (
