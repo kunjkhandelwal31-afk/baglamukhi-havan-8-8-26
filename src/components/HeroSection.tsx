@@ -5,9 +5,9 @@ import heroVideo from "@/assets/hero-video.mp4";
 
 const HeroSection = () => {
   return (
-    <section id="hero-section" className="relative min-h-[85vh] flex items-center overflow-hidden">
-      {/* Video Background */}
-      <div className="absolute inset-0">
+    <section id="hero-section">
+      {/* Video Banner */}
+      <div className="w-full h-[220px] sm:h-[280px] md:h-[350px] lg:h-[400px] overflow-hidden">
         <video
           src={heroVideo}
           autoPlay
@@ -16,12 +16,12 @@ const HeroSection = () => {
           playsInline
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-black/35" />
       </div>
 
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-2xl space-y-6 animate-float-up">
-          <div className="flex items-center gap-2" style={{ color: '#FFD700' }}>
+      {/* Content Below Video */}
+      <div className="py-10 md:py-14" style={{ background: '#6B0000' }}>
+        <div className="container mx-auto px-4 max-w-2xl text-center space-y-5">
+          <div className="flex items-center justify-center gap-2" style={{ color: '#FFD700' }}>
             <Flame className="h-6 w-6 animate-flame" />
             <span className="text-sm font-semibold tracking-wider uppercase">
               ॐ ह्लीं बगलामुखी सर्वदुष्टानां वाचं मुखं पदं स्तम्भय
@@ -29,25 +29,22 @@ const HeroSection = () => {
           </div>
 
           <h1
-            className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight drop-shadow-lg"
-            style={{ color: '#FFD700', textShadow: '2px 2px 8px rgba(0,0,0,0.8)' }}
+            className="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight text-golden-shadow"
+            style={{ color: '#FFD700' }}
           >
             माँ बगलामुखी मंदिर{" "}
             <span className="text-white">पंडित बुकिंग सेवा</span>
           </h1>
 
-          <p
-            className="text-lg md:text-xl leading-relaxed text-white/85"
-            style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.8)' }}
-          >
+          <p className="text-base md:text-lg leading-relaxed text-white/85">
             अनुभवी पंडित जी द्वारा बगलामुखी पूजा, हवन एवं अनुष्ठान बुक करें।
             माँ बगलामुखी की कृपा से शत्रुओं का नाश, कोर्ट-कचहरी में विजय और जीवन में सफलता प्राप्त करें।
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 pt-2">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center pt-2">
             <Link
               to="/booking"
-              className="btn-shimmer px-8 py-4 rounded-lg text-lg font-bold shadow-golden hover:shadow-lg transition-all inline-flex items-center justify-center gap-2 hover:scale-105"
+              className="btn-shimmer px-8 py-4 rounded-lg text-lg font-bold shadow-lg hover:shadow-xl transition-all inline-flex items-center justify-center gap-2 hover:scale-105"
               style={{ background: '#FFD700', color: '#1a1a1a' }}
             >
               अभी हवन बुक करें
@@ -62,7 +59,7 @@ const HeroSection = () => {
             </Link>
           </div>
 
-          <div className="flex items-center gap-6 pt-4 text-white/80">
+          <div className="flex items-center justify-center gap-6 pt-4 text-white/80">
             <div className="text-center">
               <div className="text-2xl font-bold" style={{ color: '#FFD700' }}>5000+</div>
               <div className="text-xs">सफल हवन</div>
@@ -79,11 +76,10 @@ const HeroSection = () => {
             </div>
           </div>
 
-          {/* Contact in hero */}
-          <div className="flex flex-col sm:flex-row items-start gap-3 pt-2">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
             <a
               href="tel:+918103960297"
-              className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 px-5 py-2.5 rounded-lg font-semibold text-sm hover:bg-white/20 transition-colors text-white"
+              className="inline-flex items-center gap-2 bg-white/10 border border-white/20 px-5 py-2.5 rounded-lg font-semibold text-sm hover:bg-white/20 transition-colors text-white"
             >
               <Phone className="h-4 w-4" />
               📞 +91 81039 60297
@@ -92,7 +88,7 @@ const HeroSection = () => {
               href="https://wa.me/918103960297?text=मुझे हवन बुक करना है"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 px-5 py-2.5 rounded-lg font-semibold text-sm hover:bg-white/20 transition-colors text-white"
+              className="inline-flex items-center gap-2 bg-white/10 border border-white/20 px-5 py-2.5 rounded-lg font-semibold text-sm hover:bg-white/20 transition-colors text-white"
             >
               <WhatsAppIcon className="h-4 w-4" />
               WhatsApp करें
