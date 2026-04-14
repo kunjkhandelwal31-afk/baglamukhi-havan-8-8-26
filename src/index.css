@@ -6,14 +6,14 @@
 
 @layer base {
   :root {
-    /* Dark spiritual theme: #1a1a1a bg, #FFD700 gold, #8B0000 deep red, #FFF white text */
-    --background: 0 0% 10%;
+    /* Saffron spiritual theme: bhagwa bg, #FFD700 gold, #8B0000 deep red, #FFF white text */
+    --background: 27 100% 52%;
     --foreground: 0 0% 100%;
 
-    --card: 0 0% 13%;
+    --card: 0 100% 27%;
     --card-foreground: 0 0% 100%;
 
-    --popover: 0 0% 13%;
+    --popover: 0 100% 27%;
     --popover-foreground: 0 0% 100%;
 
     --primary: 51 100% 50%;
@@ -22,8 +22,8 @@
     --secondary: 0 100% 27%;
     --secondary-foreground: 51 100% 50%;
 
-    --muted: 0 0% 18%;
-    --muted-foreground: 0 0% 65%;
+    --muted: 27 80% 42%;
+    --muted-foreground: 0 0% 90%;
 
     --accent: 51 100% 50%;
     --accent-foreground: 0 0% 8%;
@@ -31,7 +31,7 @@
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 22%;
+    --border: 0 100% 27%;
     --input: 0 0% 22%;
     --ring: 51 100% 50%;
 
@@ -39,16 +39,17 @@
 
     --golden-gradient: linear-gradient(135deg, hsl(51 100% 50%), hsl(43 96% 56%), hsl(36 90% 50%));
     --red-gradient: linear-gradient(135deg, hsl(0 100% 27%), hsl(350 85% 22%));
+    --saffron-gradient: linear-gradient(180deg, #FF8C00, #FF6A00);
     --warm-glow: 0 8px 32px -8px hsla(51, 100%, 50%, 0.35);
     --fire-glow: 0 0 60px 10px hsla(30, 100%, 50%, 0.15);
 
-    --sidebar-background: 0 0% 12%;
+    --sidebar-background: 0 100% 20%;
     --sidebar-foreground: 0 0% 90%;
     --sidebar-primary: 51 100% 50%;
     --sidebar-primary-foreground: 0 0% 8%;
-    --sidebar-accent: 0 0% 18%;
+    --sidebar-accent: 0 100% 25%;
     --sidebar-accent-foreground: 0 0% 90%;
-    --sidebar-border: 0 0% 20%;
+    --sidebar-border: 0 100% 30%;
     --sidebar-ring: 51 100% 50%;
   }
 
@@ -57,8 +58,11 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply text-foreground;
     font-family: 'Noto Sans Devanagari', sans-serif;
+    background: var(--saffron-gradient);
+    background-attachment: fixed;
+    min-height: 100vh;
   }
 }
 
