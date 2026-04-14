@@ -85,14 +85,14 @@ const Index = () => {
               <div
                 key={a.title}
                 className="rounded-xl p-6 hover:shadow-golden transition-all group"
-                style={{ background: '#FF8C00', border: '1px solid rgba(255,215,0,0.4)', boxShadow: '0 4px 20px rgba(0,0,0,0.25)' }}
+                style={{ background: '#F57C00', border: '1px solid rgba(255,215,0,0.4)', boxShadow: '0 4px 20px rgba(0,0,0,0.25)' }}
               >
                 <div className="text-4xl mb-4">{a.icon}</div>
-                <h3 className="text-xl font-bold mb-2" style={{ color: '#FFD700' }}>{a.title}</h3>
+                <h3 className="text-xl font-bold mb-2 text-golden-shadow" style={{ color: '#FFD700' }}>{a.title}</h3>
                 <p className="text-white text-sm mb-4 leading-relaxed">{a.description}</p>
                 <div className="flex items-center justify-between text-sm mb-4">
                   <span className="text-white/90">⏱️ {a.duration}</span>
-                  <span className="font-bold" style={{ color: '#FFD700' }}>{a.price}</span>
+                  <span className="font-bold text-golden-shadow" style={{ color: '#FFD700' }}>{a.price}</span>
                 </div>
                 <Link
                   to="/booking"
@@ -143,14 +143,14 @@ const Index = () => {
                     )}
                   </div>
                   <div className="p-5">
-                    <h3 className="font-bold text-lg mb-1" style={{ color: '#FFD700' }}>{product.name}</h3>
+                    <h3 className="font-bold text-lg mb-1 text-golden-shadow" style={{ color: '#FFD700' }}>{product.name}</h3>
                     <p className="text-white text-sm mb-3">{product.description}</p>
                     <div className="flex items-center gap-1 mb-3">
                       {[...Array(5)].map((_, i) => (
                         <Star key={i} className="h-3.5 w-3.5 fill-yellow-500 text-yellow-500" />
                       ))}
                     </div>
-                    <p className="font-bold text-xl mb-4" style={{ color: '#FFD700' }}>{product.priceRange}</p>
+                    <p className="font-bold text-xl mb-4 text-golden-shadow" style={{ color: '#FFD700' }}>{product.priceRange}</p>
                     <Link
                       to="/shop"
                       className="btn-shimmer inline-flex items-center gap-2 w-full justify-center px-4 py-2.5 rounded-lg font-semibold text-sm hover:scale-105 transition-all"
