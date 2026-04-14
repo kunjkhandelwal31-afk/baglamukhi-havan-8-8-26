@@ -21,7 +21,7 @@ const HavanCard = ({ havan }: { havan: Havan }) => {
 
       <div className="p-5 flex flex-col flex-1">
         <Link to={`/havan/${havan.id}`}>
-          <h3 className="text-lg font-bold mb-2 transition-colors text-golden-shadow" style={{ color: '#FFD700' }}>
+          <h3 className="text-lg font-bold mb-2 transition-colors text-golden-outline" style={{ color: '#FFD700' }}>
             {havan.name}
           </h3>
         </Link>
@@ -50,7 +50,7 @@ const HavanCard = ({ havan }: { havan: Havan }) => {
           <div className="flex items-center justify-between pt-3 gap-2" style={{ borderTop: '1px solid rgba(255,215,0,0.25)' }}>
             <Link
               to={`/havan/${havan.id}`}
-              className="text-sm font-medium hover:underline inline-flex items-center gap-1"
+              className="text-sm font-medium hover:underline inline-flex items-center gap-1 text-soft-shadow"
               style={{ color: '#FFD700' }}
             >
               विस्तार से देखें <ArrowRight className="h-3.5 w-3.5" />

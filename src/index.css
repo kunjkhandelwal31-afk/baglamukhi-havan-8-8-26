@@ -85,6 +85,15 @@
   .text-golden-shadow {
     text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
   }
+  /* Thin black outline for golden text inside orange boxes */
+  .text-golden-outline {
+    -webkit-text-stroke: 0.5px rgba(0, 0, 0, 0.6);
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+  }
+  /* Soft shadow for link text */
+  .text-soft-shadow {
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+  }
 }
 
 /* Shimmer animation for CTA buttons */
