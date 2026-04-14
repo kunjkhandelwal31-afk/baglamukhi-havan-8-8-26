@@ -46,7 +46,7 @@ const BookingForm = ({ preselectedHavan }: { preselectedHavan?: string }) => {
     "w-full px-4 py-3 rounded-lg text-gray-900 bg-white border border-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 text-base font-medium appearance-none cursor-pointer";
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4 p-6 rounded-xl" style={{ background: '#FF8C00', border: '1px solid rgba(255,215,0,0.3)' }}>
+    <form onSubmit={handleSubmit} className="space-y-4 p-6 rounded-xl bg-white shadow-lg border-2 border-yellow-500">
       <input
         type="text"
         placeholder="आपका नाम *"
@@ -112,17 +112,17 @@ const BookingForm = ({ preselectedHavan }: { preselectedHavan?: string }) => {
       />
       <button
         type="submit"
-        className="btn-shimmer w-full py-3.5 rounded-lg font-bold text-lg shadow-golden hover:shadow-lg hover:scale-[1.02] transition-all flex items-center justify-center gap-2"
+        className="btn-shine-visible w-full py-3.5 rounded-lg font-bold text-lg shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all flex items-center justify-center gap-2"
       >
         <WhatsAppIcon className="h-6 w-6" />
         बुकिंग कन्फर्म करें
       </button>
 
       {/* Trust Badges */}
-      <div className="flex items-center justify-center gap-4 pt-2 text-xs text-white/70">
-        <span className="flex items-center gap-1"><Shield className="h-3.5 w-3.5" style={{ color: '#FFD700' }} /> सुरक्षित</span>
-        <span className="flex items-center gap-1"><Star className="h-3.5 w-3.5" style={{ color: '#FFD700' }} /> 1000+ हवन</span>
-        <span className="flex items-center gap-1"><Users className="h-3.5 w-3.5" style={{ color: '#FFD700' }} /> संतुष्ट ग्राहक</span>
+      <div className="flex items-center justify-center gap-4 pt-2 text-xs text-gray-600 font-medium">
+        <span className="flex items-center gap-1"><Shield className="h-3.5 w-3.5 text-yellow-600" /> सुरक्षित</span>
+        <span className="flex items-center gap-1"><Star className="h-3.5 w-3.5 text-yellow-600" /> 1000+ हवन</span>
+        <span className="flex items-center gap-1"><Users className="h-3.5 w-3.5 text-yellow-600" /> संतुष्ट ग्राहक</span>
       </div>
     </form>
   );
