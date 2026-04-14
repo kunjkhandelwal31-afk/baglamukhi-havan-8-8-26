@@ -40,7 +40,7 @@ const BookingForm = ({ preselectedHavan }: { preselectedHavan?: string }) => {
   };
 
   const inputClass =
-    "w-full px-4 py-3 rounded-lg text-white placeholder:text-white/50 focus:outline-none focus:ring-2 focus:ring-yellow-500 text-sm";
+    "w-full px-4 py-3 rounded-lg text-white placeholder:text-yellow-200/80 focus:outline-none focus:ring-2 focus:ring-yellow-500 text-sm";
 
   return (
     <form onSubmit={handleSubmit} className="space-y-4 p-6 rounded-xl" style={{ background: '#FF8C00', border: '1px solid rgba(255,215,0,0.3)' }}>

@@ -1,4 +1,4 @@
-import { Phone } from "lucide-react";
+import { Phone, Instagram } from "lucide-react";
 import WhatsAppIcon from "@/components/icons/WhatsAppIcon";
 
 const CallSection = () => {
@@ -19,7 +19,7 @@ const CallSection = () => {
             style={{ background: '#FF8C00', color: '#FFD700' }}
           >
             <Phone className="h-6 w-6" />
-            📞 +91 81039 60297
+            +91 81039 60297
           </a>
           <a
             href="https://wa.me/918103960297?text=मुझे हवन बुक करना है"
@@ -28,7 +28,17 @@ const CallSection = () => {
             className="flex items-center gap-3 bg-[#25D366] text-white px-8 py-4 rounded-xl font-bold text-lg shadow-lg hover:scale-105 transition-transform"
           >
             <WhatsAppIcon className="h-6 w-6" />
-            WhatsApp करें
+            WhatsApp
+          </a>
+          <a
+            href="https://www.instagram.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-3 px-8 py-4 rounded-xl font-bold text-lg shadow-lg hover:scale-105 transition-transform text-white"
+            style={{ background: 'linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888)' }}
+          >
+            <Instagram className="h-6 w-6" />
+            Instagram
           </a>
         </div>
 
