@@ -44,8 +44,7 @@ const HeroSection = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-2">
             <Link
               to="/booking"
-              className="btn-shimmer px-8 py-4 rounded-lg text-lg font-bold shadow-lg hover:shadow-xl transition-all inline-flex items-center justify-center gap-2 hover:scale-105"
-              style={{ background: '#FFD700', color: '#1a1a1a' }}
+              className="btn-shine-visible px-8 py-4 rounded-lg text-lg font-bold shadow-lg hover:shadow-xl transition-all inline-flex items-center justify-center gap-2 hover:scale-105"
             >
               अभी हवन बुक करें
               <ArrowRight className="h-5 w-5" />
