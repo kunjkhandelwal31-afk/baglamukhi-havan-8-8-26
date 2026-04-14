@@ -41,7 +41,7 @@ const Index = () => {
       <HeroSection />
 
       {/* Top Havans */}
-      <section id="hawan-section" className="py-20 yantra-bg" style={{ background: '#8B0000' }}>
+      <section id="hawan-section" className="py-20 yantra-bg" style={{ background: 'linear-gradient(135deg, #8B0000, #6B0000)' }}>
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-3" style={{ color: '#FFD700' }}>
@@ -85,7 +85,7 @@ const Index = () => {
               <div
                 key={a.title}
                 className="rounded-xl p-6 border border-border hover:shadow-golden transition-all group"
-                style={{ background: 'rgba(139,0,0,0.3)', borderColor: 'rgba(255,215,0,0.15)' }}
+                style={{ background: '#8B0000', borderColor: 'rgba(255,215,0,0.2)', boxShadow: '0 4px 20px rgba(0,0,0,0.3)' }}
               >
                 <div className="text-4xl mb-4">{a.icon}</div>
                 <h3 className="text-xl font-bold mb-2" style={{ color: '#FFD700' }}>{a.title}</h3>
@@ -108,7 +108,7 @@ const Index = () => {
       </section>
 
       {/* Featured Products from Shop */}
-      <section className="py-20" style={{ background: 'rgba(139,0,0,0.15)' }}>
+      <section className="py-20" style={{ background: 'linear-gradient(135deg, #6B0000, #8B0000)' }}>
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-3" style={{ color: '#FFD700' }}>
@@ -124,8 +124,8 @@ const Index = () => {
               .map((product) => (
                 <div
                   key={product.id}
-                  className="rounded-xl border overflow-hidden shadow-sm hover:shadow-golden transition-all group"
-                  style={{ background: '#222', borderColor: 'rgba(255,215,0,0.15)' }}
+                  className="rounded-xl border overflow-hidden transition-all group"
+                  style={{ background: '#8B0000', borderColor: 'rgba(255,215,0,0.2)', boxShadow: '0 4px 20px rgba(0,0,0,0.3)' }}
                 >
                   <div className="relative overflow-hidden">
                     <img
