@@ -86,13 +86,12 @@ const BookingForm = ({ preselectedHavan }: { preselectedHavan?: string }) => {
         <option value="vip-combo">VIP + हवन कॉम्बो — ₹7,100 – ₹21,000</option>
       </select>
       <div>
-        <label className="block text-sm font-medium mb-1" style={{ color: '#FFD700' }}>हवन की तिथि *</label>
+        <label className="block text-sm font-bold mb-2" style={{ color: '#8B0000' }}>हवन की तिथि *</label>
         <input
           type="date"
           value={form.date}
           onChange={(e) => setForm({ ...form, date: e.target.value })}
           className={inputClass}
-          style={{ background: 'rgba(139,0,0,0.6)', border: '1px solid rgba(255,215,0,0.2)' }}
         />
       </div>
       <input
@@ -101,7 +100,6 @@ const BookingForm = ({ preselectedHavan }: { preselectedHavan?: string }) => {
         value={form.gotra}
         onChange={(e) => setForm({ ...form, gotra: e.target.value })}
         className={inputClass}
-        style={{ background: 'rgba(139,0,0,0.6)', border: '1px solid rgba(255,215,0,0.2)' }}
         maxLength={50}
       />
       <input
@@ -110,7 +108,6 @@ const BookingForm = ({ preselectedHavan }: { preselectedHavan?: string }) => {
         value={form.nakshatra}
         onChange={(e) => setForm({ ...form, nakshatra: e.target.value })}
         className={inputClass}
-        style={{ background: 'rgba(139,0,0,0.6)', border: '1px solid rgba(255,215,0,0.2)' }}
         maxLength={50}
       />
       <button
