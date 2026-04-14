@@ -16,7 +16,7 @@ const CallSection = () => {
           <a
             href="tel:+918103960297"
             className="flex items-center gap-3 px-8 py-4 rounded-xl font-bold text-lg shadow-lg hover:scale-105 transition-transform"
-            style={{ background: '#1a1a1a', color: '#FFD700' }}
+            style={{ background: '#FF8C00', color: '#FFD700' }}
           >
             <Phone className="h-6 w-6" />
             📞 +91 81039 60297

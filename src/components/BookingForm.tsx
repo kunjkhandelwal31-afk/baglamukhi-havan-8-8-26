@@ -40,17 +40,17 @@ const BookingForm = ({ preselectedHavan }: { preselectedHavan?: string }) => {
   };
 
   const inputClass =
-    "w-full px-4 py-3 rounded-lg text-white placeholder:text-white/40 focus:outline-none focus:ring-2 text-sm";
+    "w-full px-4 py-3 rounded-lg text-white placeholder:text-white/50 focus:outline-none focus:ring-2 focus:ring-yellow-500 text-sm";
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4">
+    <form onSubmit={handleSubmit} className="space-y-4 p-6 rounded-xl" style={{ background: '#FF8C00', border: '1px solid rgba(255,215,0,0.3)' }}>
       <input
         type="text"
         placeholder="आपका नाम *"
         value={form.name}
         onChange={(e) => setForm({ ...form, name: e.target.value })}
         className={inputClass}
-        style={{ background: '#2a2a2a', border: '1px solid rgba(255,215,0,0.15)', boxShadow: 'none' }}
+        style={{ background: 'rgba(139,0,0,0.6)', border: '1px solid rgba(255,215,0,0.2)' }}
         maxLength={100}
       />
       <input
@@ -59,7 +59,7 @@ const BookingForm = ({ preselectedHavan }: { preselectedHavan?: string }) => {
         value={form.phone}
         onChange={(e) => setForm({ ...form, phone: e.target.value })}
         className={inputClass}
-        style={{ background: '#2a2a2a', border: '1px solid rgba(255,215,0,0.15)' }}
+        style={{ background: 'rgba(139,0,0,0.6)', border: '1px solid rgba(255,215,0,0.2)' }}
         maxLength={15}
       />
       <input
@@ -68,14 +68,14 @@ const BookingForm = ({ preselectedHavan }: { preselectedHavan?: string }) => {
         value={form.location}
         onChange={(e) => setForm({ ...form, location: e.target.value })}
         className={inputClass}
-        style={{ background: '#2a2a2a', border: '1px solid rgba(255,215,0,0.15)' }}
+        style={{ background: 'rgba(139,0,0,0.6)', border: '1px solid rgba(255,215,0,0.2)' }}
         maxLength={100}
       />
       <select
         value={form.havanType}
         onChange={(e) => setForm({ ...form, havanType: e.target.value })}
         className={inputClass}
-        style={{ background: '#2a2a2a', border: '1px solid rgba(255,215,0,0.15)' }}
+        style={{ background: 'rgba(139,0,0,0.6)', border: '1px solid rgba(255,215,0,0.2)' }}
       >
         <option value="">हवन / सेवा का प्रकार चुनें *</option>
         {havans.map((h) => (
@@ -93,7 +93,7 @@ const BookingForm = ({ preselectedHavan }: { preselectedHavan?: string }) => {
           value={form.date}
           onChange={(e) => setForm({ ...form, date: e.target.value })}
           className={inputClass}
-          style={{ background: '#2a2a2a', border: '1px solid rgba(255,215,0,0.15)' }}
+          style={{ background: 'rgba(139,0,0,0.6)', border: '1px solid rgba(255,215,0,0.2)' }}
         />
       </div>
       <input
@@ -102,7 +102,7 @@ const BookingForm = ({ preselectedHavan }: { preselectedHavan?: string }) => {
         value={form.gotra}
         onChange={(e) => setForm({ ...form, gotra: e.target.value })}
         className={inputClass}
-        style={{ background: '#2a2a2a', border: '1px solid rgba(255,215,0,0.15)' }}
+        style={{ background: 'rgba(139,0,0,0.6)', border: '1px solid rgba(255,215,0,0.2)' }}
         maxLength={50}
       />
       <input
@@ -111,20 +111,19 @@ const BookingForm = ({ preselectedHavan }: { preselectedHavan?: string }) => {
         value={form.nakshatra}
         onChange={(e) => setForm({ ...form, nakshatra: e.target.value })}
         className={inputClass}
-        style={{ background: '#2a2a2a', border: '1px solid rgba(255,215,0,0.15)' }}
+        style={{ background: 'rgba(139,0,0,0.6)', border: '1px solid rgba(255,215,0,0.2)' }}
         maxLength={50}
       />
       <button
         type="submit"
-        className="w-full py-3.5 rounded-lg font-bold text-lg shadow-golden hover:shadow-lg hover:scale-[1.02] transition-all flex items-center justify-center gap-2"
-        style={{ background: '#FFD700', color: '#1a1a1a' }}
+        className="btn-shimmer w-full py-3.5 rounded-lg font-bold text-lg shadow-golden hover:shadow-lg hover:scale-[1.02] transition-all flex items-center justify-center gap-2"
       >
         <WhatsAppIcon className="h-6 w-6" />
         बुकिंग कन्फर्म करें
       </button>
 
       {/* Trust Badges */}
-      <div className="flex items-center justify-center gap-4 pt-2 text-xs text-white/50">
+      <div className="flex items-center justify-center gap-4 pt-2 text-xs text-white/70">
         <span className="flex items-center gap-1"><Shield className="h-3.5 w-3.5" style={{ color: '#FFD700' }} /> सुरक्षित</span>
         <span className="flex items-center gap-1"><Star className="h-3.5 w-3.5" style={{ color: '#FFD700' }} /> 1000+ हवन</span>
         <span className="flex items-center gap-1"><Users className="h-3.5 w-3.5" style={{ color: '#FFD700' }} /> संतुष्ट ग्राहक</span>

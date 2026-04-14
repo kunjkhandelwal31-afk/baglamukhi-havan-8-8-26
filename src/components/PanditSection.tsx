@@ -32,7 +32,7 @@ const PanditSection = () => {
   }, []);
 
   return (
-    <section ref={ref} className="py-20 yantra-bg" style={{ background: '#1f1f1f' }}>
+    <section ref={ref} className="py-20 yantra-bg" style={{ background: '#7A0000' }}>
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-3" style={{ color: '#FFD700' }}>
@@ -47,10 +47,10 @@ const PanditSection = () => {
         >
           {/* Text */}
           <div className="order-2 md:order-1">
-            <p className="text-white/75 leading-relaxed mb-6">
+            <p className="text-white/85 leading-relaxed mb-6">
               हमारे पंडित जी वैदिक अनुष्ठानों और विशेष रूप से माँ बगलामुखी साधना में 10+ वर्षों का गहरा अनुभव रखते हैं। उन्होंने अनेक सफल हवन और अनुष्ठान सम्पन्न कराए हैं, जिससे हजारों भक्तों को शांति, सुरक्षा और सफलता प्राप्त हुई है।
             </p>
-            <p className="text-white/75 leading-relaxed mb-6">
+            <p className="text-white/85 leading-relaxed mb-6">
               पंडित जी शास्त्रों के अनुसार पूरी विधि-विधान से हवन सम्पन्न कराते हैं, जिससे हर अनुष्ठान का पूर्ण फल प्राप्त होता है। उनकी साधना, मंत्र शक्ति और अनुभव उन्हें विशेष बनाते हैं।
             </p>
 
@@ -70,7 +70,7 @@ const PanditSection = () => {
                 <div
                   key={b.label}
                   className="flex items-center gap-2 rounded-full px-4 py-2 shadow-sm"
-                  style={{ background: 'rgba(139,0,0,0.4)', border: '1px solid rgba(255,215,0,0.2)' }}
+                  style={{ background: '#FF8C00', border: '1px solid rgba(255,215,0,0.3)' }}
                 >
                   <b.icon className="h-5 w-5" style={{ color: '#FFD700' }} />
                   <span className="text-sm font-medium text-white">{b.label}</span>
@@ -80,8 +80,7 @@ const PanditSection = () => {
 
             <Link
               to="/booking"
-              className="px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2 transition-all text-base hover:scale-105"
-              style={{ background: '#FFD700', color: '#1a1a1a' }}
+              className="btn-shimmer px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2 transition-all text-base hover:scale-105"
             >
               👉 अभी हवन बुक करें
               <ArrowRight className="h-4 w-4" />

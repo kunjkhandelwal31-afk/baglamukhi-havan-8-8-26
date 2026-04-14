@@ -6,7 +6,7 @@ const HavanCard = ({ havan }: { havan: Havan }) => {
   return (
     <div
       className="rounded-xl overflow-hidden hover:shadow-golden transition-all duration-300 group flex flex-col"
-      style={{ background: '#8B0000', border: '1px solid rgba(255,215,0,0.2)', boxShadow: '0 4px 20px rgba(0,0,0,0.3)' }}
+      style={{ background: '#FF8C00', border: '1px solid rgba(255,215,0,0.4)', boxShadow: '0 4px 20px rgba(0,0,0,0.25)' }}
     >
       <Link to={`/havan/${havan.id}`} className="relative h-48 overflow-hidden block">
         <img
@@ -25,7 +25,7 @@ const HavanCard = ({ havan }: { havan: Havan }) => {
             {havan.name}
           </h3>
         </Link>
-        <p className="text-sm text-white/70 mb-4 leading-relaxed flex-1">
+        <p className="text-sm text-white mb-4 leading-relaxed flex-1">
           {havan.description}
         </p>
 
@@ -35,19 +35,19 @@ const HavanCard = ({ havan }: { havan: Havan }) => {
               <span
                 key={b}
                 className="text-xs px-2.5 py-1 rounded-full font-medium"
-                style={{ background: 'rgba(139,0,0,0.4)', color: '#FFD700' }}
+                style={{ background: 'rgba(139,0,0,0.5)', color: '#FFD700' }}
               >
                 {b}
               </span>
             ))}
           </div>
 
-          <div className="flex items-center gap-2 text-sm text-white/50">
+          <div className="flex items-center gap-2 text-sm text-white/80">
             <Clock className="h-4 w-4" />
             <span>{havan.duration}</span>
           </div>
 
-          <div className="flex items-center justify-between pt-3 gap-2" style={{ borderTop: '1px solid rgba(255,215,0,0.1)' }}>
+          <div className="flex items-center justify-between pt-3 gap-2" style={{ borderTop: '1px solid rgba(255,215,0,0.25)' }}>
             <Link
               to={`/havan/${havan.id}`}
               className="text-sm font-medium hover:underline inline-flex items-center gap-1"
@@ -57,8 +57,7 @@ const HavanCard = ({ havan }: { havan: Havan }) => {
             </Link>
             <Link
               to={`/booking?havan=${havan.id}`}
-              className="px-4 py-2 rounded-lg text-sm font-bold inline-flex items-center gap-1.5 shadow-golden hover:shadow-lg hover:scale-105 transition-all"
-              style={{ background: '#FFD700', color: '#1a1a1a' }}
+              className="btn-shimmer px-4 py-2 rounded-lg text-sm font-bold inline-flex items-center gap-1.5 shadow-golden hover:shadow-lg hover:scale-105 transition-all"
             >
               👉 अभी बुक करें
             </Link>
