@@ -6,7 +6,7 @@ const HavanCard = ({ havan }: { havan: Havan }) => {
   return (
     <div
       className="rounded-xl overflow-hidden hover:shadow-golden transition-all duration-300 group flex flex-col"
-      style={{ background: '#222', border: '1px solid rgba(255,215,0,0.12)' }}
+      style={{ background: '#8B0000', border: '1px solid rgba(255,215,0,0.2)', boxShadow: '0 4px 20px rgba(0,0,0,0.3)' }}
     >
       <Link to={`/havan/${havan.id}`} className="relative h-48 overflow-hidden block">
         <img
