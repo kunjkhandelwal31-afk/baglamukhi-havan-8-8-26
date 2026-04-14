@@ -53,7 +53,6 @@ const BookingForm = ({ preselectedHavan }: { preselectedHavan?: string }) => {
         value={form.name}
         onChange={(e) => setForm({ ...form, name: e.target.value })}
         className={inputClass}
-        style={{ background: 'rgba(139,0,0,0.6)', border: '1px solid rgba(255,215,0,0.2)' }}
         maxLength={100}
       />
       <input
@@ -62,7 +61,6 @@ const BookingForm = ({ preselectedHavan }: { preselectedHavan?: string }) => {
         value={form.phone}
         onChange={(e) => setForm({ ...form, phone: e.target.value })}
         className={inputClass}
-        style={{ background: 'rgba(139,0,0,0.6)', border: '1px solid rgba(255,215,0,0.2)' }}
         maxLength={15}
       />
       <input
@@ -71,14 +69,12 @@ const BookingForm = ({ preselectedHavan }: { preselectedHavan?: string }) => {
         value={form.location}
         onChange={(e) => setForm({ ...form, location: e.target.value })}
         className={inputClass}
-        style={{ background: 'rgba(139,0,0,0.6)', border: '1px solid rgba(255,215,0,0.2)' }}
         maxLength={100}
       />
       <select
         value={form.havanType}
         onChange={(e) => setForm({ ...form, havanType: e.target.value })}
-        className={inputClass}
-        style={{ background: 'rgba(139,0,0,0.6)', border: '1px solid rgba(255,215,0,0.2)' }}
+        className={selectClass}
       >
         <option value="">हवन / सेवा का प्रकार चुनें *</option>
         {havans.map((h) => (
