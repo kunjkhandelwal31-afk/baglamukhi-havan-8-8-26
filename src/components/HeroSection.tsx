@@ -7,14 +7,14 @@ const HeroSection = () => {
   return (
     <section id="hero-section">
       {/* Video Banner */}
-      <div className="w-full h-[220px] sm:h-[280px] md:h-[350px] lg:h-[400px] overflow-hidden">
+      <div className="w-full" style={{ background: '#4A0000' }}>
         <video
           src={heroVideo}
           autoPlay
           loop
           muted
           playsInline
-          className="w-full h-full object-cover"
+          className="w-full h-auto block mx-auto"
         />
       </div>
 
