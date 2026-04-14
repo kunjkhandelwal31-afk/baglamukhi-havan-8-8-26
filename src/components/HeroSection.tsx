@@ -32,8 +32,8 @@ const HeroSection = () => {
             className="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight text-golden-shadow"
             style={{ color: '#FFD700' }}
           >
-            माँ बगलामुखी मंदिर{" "}
-            <span className="text-white">पंडित बुकिंग सेवा</span>
+            माँ बगलामुखी{" "}
+            <span className="text-white">हवन सेवा</span>
           </h1>
 
           <p className="text-base md:text-lg leading-relaxed text-white/85">
@@ -82,7 +82,7 @@ const HeroSection = () => {
               className="inline-flex items-center gap-2 bg-white/10 border border-white/20 px-5 py-2.5 rounded-lg font-semibold text-sm hover:bg-white/20 transition-colors text-white"
             >
               <Phone className="h-4 w-4" />
-              📞 +91 81039 60297
+              +91 81039 60297
             </a>
             <a
               href="https://wa.me/918103960297?text=मुझे हवन बुक करना है"
