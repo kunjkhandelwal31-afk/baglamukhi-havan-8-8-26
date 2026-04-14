@@ -6,9 +6,8 @@ import LanguageToggle from "./LanguageToggle";
 const navItems = [
   { path: "/", label: "होम" },
   { path: "/havan-types", label: "हवन के प्रकार" },
-  { path: "/shop", label: "🛍️ दिव्य सामग्री" },
+  { path: "/anushthan", label: "📿 अनुष्ठान के प्रकार" },
   { path: "/live-darshan", label: "🔴 लाइव दर्शन" },
-  { path: "/vip-darshan", label: "👑 VIP प्रवेश" },
   { path: "/contact", label: "संपर्क" },
 ];
 

@@ -6,10 +6,8 @@ import TestimonialsSection from "@/components/TestimonialsSection";
 import MandirLocationSection from "@/components/MandirLocationSection";
 import BookingForm from "@/components/BookingForm";
 import { havans } from "@/data/havans";
-import { products } from "@/data/products";
 import { Link } from "react-router-dom";
-import { ArrowRight, Star, ShoppingCart, BookOpen, Shield, Sparkles } from "lucide-react";
-import WhatsAppIcon from "@/components/icons/WhatsAppIcon";
+import { ArrowRight, BookOpen } from "lucide-react";
 
 const anushthanTypes = [
   {
@@ -35,6 +33,12 @@ const anushthanTypes = [
   },
 ];
 
+// Show only these 4 havans on home page in this order
+const homeHavanIds = ["lal-mirch", "shanti", "vijay-prapti", "dhan-prapti"];
+const homeHavans = homeHavanIds
+  .map((id) => havans.find((h) => h.id === id))
+  .filter(Boolean) as typeof havans;
+
 const Index = () => {
   return (
     <main className="pb-16">
@@ -52,8 +56,16 @@ const Index = () => {
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {havans.slice(0, 4).map((h) => (
-              <HavanCard key={h.id} havan={h} />
+            {homeHavans.map((h, i) => (
+              <div key={h.id} className="relative">
+                {i === 0 && (
+                  <span className="absolute -top-3 left-4 z-10 px-3 py-1 rounded-full text-xs font-bold animate-pulse"
+                        style={{ background: '#FFD700', color: '#8B0000' }}>
+                    🔥 सबसे लोकप्रिय
+                  </span>
+                )}
+                <HavanCard havan={h} />
+              </div>
             ))}
           </div>
           <div className="text-center mt-8">
@@ -102,73 +114,6 @@ const Index = () => {
                 </Link>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Featured Products from Shop */}
-      <section className="py-20 yantra-bg" style={{ background: '#8B0000' }}>
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-3" style={{ color: '#FFD700' }}>
-              🛕 दिव्य आध्यात्मिक उत्पाद
-            </h2>
-            <p className="text-white/70 max-w-xl mx-auto">
-              पंडित जी द्वारा अभिमंत्रित सिद्ध सामग्री — सीधे घर पर मंगवाएं
-            </p>
-          </div>
-          <div className="grid sm:grid-cols-2 gap-6">
-            {products
-              .filter((p) => ["tabiz", "kavach"].includes(p.id))
-              .map((product) => (
-                <div
-                  key={product.id}
-                  className="rounded-xl border overflow-hidden transition-all group"
-                  style={{ background: '#FF8C00', borderColor: 'rgba(255,215,0,0.4)', boxShadow: '0 4px 20px rgba(0,0,0,0.25)' }}
-                >
-                  <div className="relative overflow-hidden">
-                    <img
-                      src={product.image}
-                      alt={product.name}
-                      loading="lazy"
-                      width={512}
-                      height={512}
-                      className="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
-                    {product.tag && (
-                      <span className="absolute top-3 left-3 px-3 py-1 rounded-full text-xs font-bold"
-                            style={{ background: '#8B0000', color: '#FFD700' }}>
-                        {product.tag === "Best Seller" ? "⭐ बेस्ट सेलर" : product.tag === "Most Powerful" ? "🔥 सबसे शक्तिशाली" : "⏰ सीमित स्टॉक"}
-                      </span>
-                    )}
-                  </div>
-                  <div className="p-5">
-                    <h3 className="font-bold text-lg mb-1 text-golden-outline" style={{ color: '#FFD700' }}>{product.name}</h3>
-                    <p className="text-white text-sm mb-3">{product.description}</p>
-                    <div className="flex items-center gap-1 mb-3">
-                      {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="h-3.5 w-3.5 fill-yellow-500 text-yellow-500" />
-                      ))}
-                    </div>
-                    <p className="font-bold text-xl mb-4 text-golden-outline" style={{ color: '#FFD700' }}>{product.priceRange}</p>
-                    <Link
-                      to="/shop"
-                      className="btn-shimmer inline-flex items-center gap-2 w-full justify-center px-4 py-2.5 rounded-lg font-semibold text-sm hover:scale-105 transition-all"
-                    >
-                      <ShoppingCart className="h-4 w-4" /> अभी खरीदें
-                    </Link>
-                  </div>
-                </div>
-              ))}
-          </div>
-          <div className="text-center mt-8">
-            <Link
-              to="/shop"
-              className="inline-flex items-center gap-2 font-semibold hover:underline"
-              style={{ color: '#FFD700' }}
-            >
-              सभी उत्पाद देखें <ArrowRight className="h-4 w-4" />
-            </Link>
           </div>
         </div>
       </section>

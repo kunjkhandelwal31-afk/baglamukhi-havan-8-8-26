@@ -17,7 +17,7 @@ const ContactPage = () => {
         <div className="grid md:grid-cols-2 gap-6">
           <a href="tel:+918103960297" className="bg-card rounded-xl border border-border p-8 text-center hover:shadow-golden transition-all group">
             <Phone className="h-10 w-10 mx-auto mb-3 text-accent group-hover:scale-110 transition-transform" />
-            <h3 className="font-bold text-foreground mb-1">फ़ोन</h3>
+            <h3 className="font-bold text-foreground mb-1">संपर्क करें</h3>
             <p className="text-muted-foreground">+91 81039 60297</p>
           </a>
 
