@@ -105,6 +105,16 @@
   }
 }
 
+/* Enhanced visible shine animation for CTA button */
+@keyframes shine-sweep {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 200%;
+  }
+}
+
 .btn-shimmer {
   position: relative;
   overflow: hidden;
@@ -119,6 +129,60 @@
   background-size: 200% 100%;
   animation: shimmer 2.5s ease-in-out infinite;
   color: #1a1a1a;
+}
+
+/* Enhanced shine effect with pseudo-element */
+.btn-shine-visible {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #FFD700 0%, #FFC107 50%, #FFD700 100%);
+  color: #1a1a1a;
+  font-weight: 700;
+  z-index: 1;
+}
+
+.btn-shine-visible::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.8) 50%,
+    transparent 100%
+  );
+  transform: skewX(-25deg);
+  animation: shine-sweep 2.5s ease-in-out infinite;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.btn-shine-visible::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(90deg, #FFD700, #FFFFFF, #FFD700, #FFFFFF, #FFD700);
+  border-radius: inherit;
+  z-index: -1;
+  opacity: 0;
+  animation: border-glow 3s ease-in-out infinite;
+}
+
+@keyframes border-glow {
+  0%, 100% {
+    opacity: 0;
+    filter: blur(4px);
+  }
+  50% {
+    opacity: 0.6;
+    filter: blur(8px);
+  }
 }
 
 /* Yantra background pattern — 20-25% opacity */
