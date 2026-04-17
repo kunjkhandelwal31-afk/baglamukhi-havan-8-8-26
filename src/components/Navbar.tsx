@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Phone, Flame } from "lucide-react";
 import LanguageToggle from "./LanguageToggle";
+import { PHONE_TEL_HREF, PHONE_NUMBER_DISPLAY } from "@/lib/contact";
 
 const navItems = [
   { path: "/", label: "होम" },
