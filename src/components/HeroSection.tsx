@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import { Flame, ArrowRight, Phone } from "lucide-react";
 import WhatsAppIcon from "@/components/icons/WhatsAppIcon";
 import heroVideo from "@/assets/hero-video.mp4";
-import heroPoster from "@/assets/hero-poster.jpg";
 
 const HeroSection = () => {
   return (
@@ -11,12 +10,10 @@ const HeroSection = () => {
       <div className="w-full" style={{ background: '#4A0000' }}>
         <video
           src={heroVideo}
-          poster={heroPoster}
           autoPlay
           loop
           muted
           playsInline
-          preload="metadata"
           className="w-full h-auto block mx-auto"
         />
       </div>
