@@ -45,7 +45,7 @@ const HeroSection = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-2">
             <Link
               to="/booking"
-              aria-label="अभी हवन बुक करें - Book Pandit for Maa Baglamukhi Hawan"
+              aria-label="अभी हवन बुक करें - Book Pandit Online for Maa Baglamukhi Hawan"
               className="btn-shine-visible px-8 py-4 rounded-lg text-lg font-bold shadow-lg hover:shadow-xl transition-all inline-flex items-center justify-center gap-2 hover:scale-105"
             >
               अभी हवन बुक करें (Book Pandit)
@@ -53,12 +53,16 @@ const HeroSection = () => {
             </Link>
             <Link
               to="/havan-types"
+              aria-label="हवन के प्रकार - baglamukhi puja service types"
               className="border-2 px-8 py-4 rounded-lg text-lg font-bold hover:bg-white/10 transition-all inline-flex items-center justify-center"
               style={{ borderColor: '#FFD700', color: '#FFD700' }}
             >
               हवन के प्रकार
             </Link>
           </div>
+          <p className="text-xs text-white/70 -mt-1">
+            तुरंत पंडित बुक करें | Instant online hawan booking available
+          </p>
 
           <div className="flex items-center justify-center gap-6 pt-4 text-white/80">
             <div className="text-center">
