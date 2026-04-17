@@ -1,5 +1,6 @@
 import { Phone } from "lucide-react";
 import WhatsAppIcon from "@/components/icons/WhatsAppIcon";
+import { PHONE_TEL_HREF, PHONE_NUMBER_DISPLAY, WHATSAPP_URL } from "@/lib/contact";
 
 interface ContactStripProps {
   className?: string;
@@ -11,15 +12,15 @@ const ContactStrip = ({ className = "", compact = false }: ContactStripProps) =>
     return (
       <div className={`flex items-center justify-center gap-4 flex-wrap ${className}`}>
         <a
-          href="tel:+918103960297"
+          href={PHONE_TEL_HREF}
           className="inline-flex items-center gap-1.5 font-semibold hover:underline text-sm"
           style={{ color: '#FFD700' }}
         >
           <Phone className="h-4 w-4" />
-          +91 81039 60297
+          {PHONE_NUMBER_DISPLAY}
         </a>
         <a
-          href="https://wa.me/918103960297?text=मुझे हवन बुक करना है"
+          href={WHATSAPP_URL}
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-1.5 font-semibold hover:underline text-sm"
@@ -35,15 +36,15 @@ const ContactStrip = ({ className = "", compact = false }: ContactStripProps) =>
   return (
     <div className={`flex flex-col sm:flex-row items-center justify-center gap-3 ${className}`}>
       <a
-        href="tel:+918103960297"
+        href={PHONE_TEL_HREF}
         className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg font-semibold text-sm hover:opacity-80 transition-colors"
         style={{ background: '#FF8C00', border: '1px solid rgba(255,215,0,0.3)', color: '#FFD700' }}
       >
         <Phone className="h-4 w-4" />
-        📞 +91 81039 60297
+        📞 {PHONE_NUMBER_DISPLAY}
       </a>
       <a
-        href="https://wa.me/918103960297?text=मुझे हवन बुक करना है"
+        href={WHATSAPP_URL}
         target="_blank"
         rel="noopener noreferrer"
         className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg font-semibold text-sm hover:opacity-80 transition-colors"
