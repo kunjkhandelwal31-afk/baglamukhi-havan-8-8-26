@@ -44,8 +44,8 @@ const Index = () => {
   return (
     <main className="pb-16">
       <Helmet>
-        <title>Maa Baglamukhi Hawan Service | मां बगलामुखी हवन सेवा | Pandit Booking in Madhya Pradesh</title>
-        <meta name="description" content="Book Maa Baglamukhi Hawan Service and Pandit Booking in Madhya Pradesh. हम मां बगलामुखी हवन, अनुष्ठान और पंडित सेवा प्रदान करते हैं। Trusted and quick booking." />
+        <title>Maa Baglamukhi Hawan Service | मां बगलामुखी हवन सेवा | Hawan Booking in Madhya Pradesh</title>
+        <meta name="description" content="Book Maa Baglamukhi Hawan Service and Hawan Booking in Madhya Pradesh. हम मां बगलामुखी हवन, अनुष्ठान और पंडित सेवा प्रदान करते हैं। Trusted and quick booking." />
         <link rel="canonical" href="https://maa-baglamukhi-hawan-pujan.lovable.app/" />
       </Helmet>
       <HeroSection />
@@ -183,11 +183,11 @@ const Index = () => {
               },
               {
                 q: "हवन पंडित कैसे बुक करें?",
-                a: "आप हमारी वेबसाइट पर बुकिंग फ़ॉर्म भरकर या +91 81039 60297 पर कॉल/WhatsApp करके पंडित बुक कर सकते हैं। 24 घंटे में हमारी टीम संपर्क करेगी।",
+                a: "आप हमारी वेबसाइट पर बुकिंग फ़ॉर्म भरकर या +91 70000 54787 पर कॉल/WhatsApp करके हवन बुक कर सकते हैं। 24 घंटे में हमारी टीम संपर्क करेगी।",
               },
               {
                 q: "क्या ऑनलाइन हवन बुकिंग संभव है?",
-                a: "हाँ, ऑनलाइन हवन बुकिंग की सुविधा उपलब्ध है। आप घर बैठे मध्य प्रदेश और आसपास के क्षेत्रों में बगलामुखी पूजा सेवा एवं पंडित बुक कर सकते हैं।",
+                a: "हाँ, ऑनलाइन हवन बुकिंग की सुविधा उपलब्ध है। आप घर बैठे मध्य प्रदेश और आसपास के क्षेत्रों में बगलामुखी पूजा सेवा एवं हवन बुक कर सकते हैं।",
               },
             ].map((f) => (
               <div
@@ -210,12 +210,12 @@ const Index = () => {
             Maa Baglamukhi Hawan Service in Madhya Pradesh
           </h2>
           <p className="text-white/80 text-sm md:text-base leading-relaxed">
-            हम <strong style={{ color: '#FFD700' }}>Maa Baglamukhi Hawan Service</strong> और हवन पंडित बुकिंग की सेवा
-            <strong> मध्य प्रदेश</strong> और आसपास के क्षेत्रों में प्रदान करते हैं। आप घर बैठे आसानी से पंडित बुक कर सकते हैं।
+            हम <strong style={{ color: '#FFD700' }}>Maa Baglamukhi Hawan Service</strong> और हवन हवन बुकिंग की सेवा
+            <strong> मध्य प्रदेश</strong> और आसपास के क्षेत्रों में प्रदान करते हैं। आप घर बैठे आसानी से हवन बुक कर सकते हैं।
             अनुभवी पंडित जी द्वारा माँ बगलामुखी हवन, अनुष्ठान और विशेष पूजा — विश्वसनीय एवं त्वरित बुकिंग।
           </p>
           <p className="text-white/60 text-xs md:text-sm mt-4">
-            ऑनलाइन हवन बुकिंग • बगलामुखी पूजा सेवा • हवन पंडित का नंबर • baglamukhi pandit near me • book pandit online • हवन सेवा मध्य प्रदेश
+            ऑनलाइन हवन बुकिंग • बगलामुखी पूजा सेवा • हवन पंडित का नंबर • baglamukhi pandit near me • book hawan online • हवन सेवा मध्य प्रदेश
           </p>
         </div>
       </section>
