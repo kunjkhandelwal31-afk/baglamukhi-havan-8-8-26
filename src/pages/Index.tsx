@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import HeroSection from "@/components/HeroSection";
 import HavanCard from "@/components/HavanCard";
 import PanditSection from "@/components/PanditSection";
@@ -42,6 +43,11 @@ const homeHavans = homeHavanIds
 const Index = () => {
   return (
     <main className="pb-16">
+      <Helmet>
+        <title>Maa Baglamukhi Hawan Service | मां बगलामुखी हवन सेवा | Pandit Booking in Madhya Pradesh</title>
+        <meta name="description" content="Book Maa Baglamukhi Hawan Service and Pandit Booking in Madhya Pradesh. हम मां बगलामुखी हवन, अनुष्ठान और पंडित सेवा प्रदान करते हैं। Trusted and quick booking." />
+        <link rel="canonical" href="https://maa-baglamukhi-hawan-pujan.lovable.app/" />
+      </Helmet>
       <HeroSection />
 
       {/* Top Havans */}

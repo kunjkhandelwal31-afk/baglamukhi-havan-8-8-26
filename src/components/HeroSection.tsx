@@ -45,9 +45,10 @@ const HeroSection = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-2">
             <Link
               to="/booking"
+              aria-label="अभी हवन बुक करें - Book Pandit for Maa Baglamukhi Hawan"
               className="btn-shine-visible px-8 py-4 rounded-lg text-lg font-bold shadow-lg hover:shadow-xl transition-all inline-flex items-center justify-center gap-2 hover:scale-105"
             >
-              अभी हवन बुक करें
+              अभी हवन बुक करें (Book Pandit)
               <ArrowRight className="h-5 w-5" />
             </Link>
             <Link
