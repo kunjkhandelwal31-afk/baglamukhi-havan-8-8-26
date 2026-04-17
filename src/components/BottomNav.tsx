@@ -1,11 +1,12 @@
 import { Home, Flame, BookOpen, Phone } from "lucide-react";
 import { useLocation, useNavigate } from "react-router-dom";
+import { PHONE_TEL_HREF } from "@/lib/contact";
 
 const navItems = [
   { id: "home", label: "होम", icon: Home, action: "scroll", target: "hero-section" },
   { id: "hawan", label: "हवन", icon: Flame, action: "scroll", target: "hawan-section" },
   { id: "anushthan", label: "अनुष्ठान", icon: BookOpen, action: "scroll", target: "anushthan-section" },
-  { id: "call", label: "कॉल करें", icon: Phone, action: "call", target: "tel:+918103960297" },
+  { id: "call", label: "कॉल करें", icon: Phone, action: "call", target: PHONE_TEL_HREF },
 ];
 
 const BottomNav = () => {
