@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { Award, CheckCircle, Shield, Star, ArrowRight } from "lucide-react";
-import panditImg from "@/assets/pandit-ji.jpg";
 import ContactStrip from "@/components/ContactStrip";
 
 const features = [
