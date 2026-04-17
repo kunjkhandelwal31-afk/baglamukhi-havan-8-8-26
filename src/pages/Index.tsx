@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import HeroSection from "@/components/HeroSection";
 import HavanCard from "@/components/HavanCard";
 import PanditSection from "@/components/PanditSection";
@@ -42,6 +43,11 @@ const homeHavans = homeHavanIds
 const Index = () => {
   return (
     <main className="pb-16">
+      <Helmet>
+        <title>Maa Baglamukhi Hawan Service | मां बगलामुखी हवन सेवा | Pandit Booking in Madhya Pradesh</title>
+        <meta name="description" content="Book Maa Baglamukhi Hawan Service and Pandit Booking in Madhya Pradesh. हम मां बगलामुखी हवन, अनुष्ठान और पंडित सेवा प्रदान करते हैं। Trusted and quick booking." />
+        <link rel="canonical" href="https://maa-baglamukhi-hawan-pujan.lovable.app/" />
+      </Helmet>
       <HeroSection />
 
       {/* Top Havans */}
@@ -153,6 +159,20 @@ const Index = () => {
       </section>
 
       <TestimonialsSection />
+
+      {/* SEO Content */}
+      <section className="py-10" style={{ background: '#5A0000' }}>
+        <div className="container mx-auto px-4 max-w-3xl text-center">
+          <h2 className="text-xl md:text-2xl font-bold mb-4" style={{ color: '#FFD700' }}>
+            Maa Baglamukhi Hawan Service in Madhya Pradesh
+          </h2>
+          <p className="text-white/80 text-sm md:text-base leading-relaxed">
+            हम <strong style={{ color: '#FFD700' }}>Maa Baglamukhi Hawan Service</strong> और हवन पंडित बुकिंग की सेवा
+            <strong> मध्य प्रदेश</strong> और आसपास के क्षेत्रों में प्रदान करते हैं। आप घर बैठे आसानी से पंडित बुक कर सकते हैं।
+            अनुभवी पंडित जी द्वारा माँ बगलामुखी हवन, अनुष्ठान और विशेष पूजा — विश्वसनीय एवं त्वरित बुकिंग।
+          </p>
+        </div>
+      </section>
     </main>
   );
 };

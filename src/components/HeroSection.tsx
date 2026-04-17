@@ -32,9 +32,10 @@ const HeroSection = () => {
             className="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight text-golden-shadow"
             style={{ color: '#FFD700' }}
           >
-            माँ बगलामुखी{" "}
-            <span className="text-white">हवन सेवा</span>
+            मां बगलामुखी हवन सेवा{" "}
+            <span className="text-white block text-xl md:text-2xl lg:text-3xl mt-2 font-bold">(Maa Baglamukhi Hawan Service)</span>
           </h1>
+          <p className="text-sm text-white/70">हवन पंडित बुकिंग • मध्य प्रदेश, भारत</p>
 
           <p className="text-base md:text-lg leading-relaxed text-white/85">
             अनुभवी पंडित जी द्वारा बगलामुखी पूजा, हवन एवं अनुष्ठान बुक करें।
@@ -44,9 +45,10 @@ const HeroSection = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-2">
             <Link
               to="/booking"
+              aria-label="अभी हवन बुक करें - Book Pandit for Maa Baglamukhi Hawan"
               className="btn-shine-visible px-8 py-4 rounded-lg text-lg font-bold shadow-lg hover:shadow-xl transition-all inline-flex items-center justify-center gap-2 hover:scale-105"
             >
-              अभी हवन बुक करें
+              अभी हवन बुक करें (Book Pandit)
               <ArrowRight className="h-5 w-5" />
             </Link>
             <Link
