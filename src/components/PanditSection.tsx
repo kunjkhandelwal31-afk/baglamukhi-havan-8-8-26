@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { Award, CheckCircle, Shield, Star, ArrowRight } from "lucide-react";
-import panditImg from "@/assets/pandit-ji.jpg";
 import ContactStrip from "@/components/ContactStrip";
 
 const features = [
@@ -41,12 +40,11 @@ const PanditSection = () => {
         </div>
 
         <div
-          className={`max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center transition-all duration-700 ${
+          className={`max-w-3xl mx-auto transition-all duration-700 ${
             visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
-          {/* Text */}
-          <div className="order-2 md:order-1">
+          <div>
             <p className="text-white/85 leading-relaxed mb-6">
               हमारे पंडित जी वैदिक अनुष्ठानों और विशेष रूप से माँ बगलामुखी साधना में 10+ वर्षों का गहरा अनुभव रखते हैं। उन्होंने अनेक सफल हवन और अनुष्ठान सम्पन्न कराए हैं, जिससे हजारों भक्तों को शांति, सुरक्षा और सफलता प्राप्त हुई है।
             </p>
@@ -87,20 +85,6 @@ const PanditSection = () => {
             </Link>
 
             <ContactStrip compact className="mt-4 justify-start" />
-          </div>
-
-          {/* Image */}
-          <div className="order-1 md:order-2">
-            <div className="rounded-2xl overflow-hidden shadow-golden" style={{ border: '2px solid rgba(255,215,0,0.3)' }}>
-              <img
-                src={panditImg}
-                alt="पंडित जी हवन करते हुए"
-                loading="lazy"
-                width={768}
-                height={768}
-                className="w-full h-auto object-cover"
-              />
-            </div>
           </div>
         </div>
       </div>

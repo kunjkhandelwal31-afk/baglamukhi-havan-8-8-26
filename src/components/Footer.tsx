@@ -30,8 +30,8 @@ const Footer = () => {
           <div>
             <h4 className="font-bold mb-4" style={{ color: '#FFD700' }}>संपर्क</h4>
             <div className="space-y-3 text-sm">
-              <a href="tel:+918103960297" className="flex items-center gap-2 hover:text-yellow-400 transition-colors">
-                <Phone className="h-4 w-4" /> +91 81039 60297
+              <a href="tel:+917000054787" className="flex items-center gap-2 hover:text-yellow-400 transition-colors">
+                <Phone className="h-4 w-4" /> +91 70000 54787
               </a>
               <a href="mailto:info@baglamukhihavan.com" className="flex items-center gap-2 hover:text-yellow-400 transition-colors">
                 <Mail className="h-4 w-4" /> info@baglamukhihavan.com
@@ -46,7 +46,7 @@ const Footer = () => {
           <p>© 2026 माँ बगलामुखी हवन सेवा। सर्वाधिकार सुरक्षित। 🙏</p>
           <p className="text-white/50">
             वेबसाइट निर्माता: <span className="text-white/70 font-semibold">Kunj Khandelwal</span> •{" "}
-            <a href="tel:+918103960297" className="hover:text-yellow-400 transition-colors">📞 8103960297</a>
+            <a href="tel:+917000054787" className="hover:text-yellow-400 transition-colors">📞 7000054787</a>
             {" "}• वेबसाइट बनवाने के लिए संपर्क करें
           </p>
         </div>

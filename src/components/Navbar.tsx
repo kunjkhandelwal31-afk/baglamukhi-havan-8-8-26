@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Phone, Flame } from "lucide-react";
 import LanguageToggle from "./LanguageToggle";
+import { PHONE_TEL_HREF, PHONE_NUMBER_DISPLAY } from "@/lib/contact";
 
 const navItems = [
   { path: "/", label: "होम" },
@@ -31,12 +32,12 @@ const Navbar = () => {
           <div className="hidden md:flex lg:hidden items-center gap-3">
             <LanguageToggle />
             <a
-              href="tel:+918103960297"
+              href="tel:+917000054787"
               className="flex items-center gap-1.5 font-semibold text-sm"
               style={{ color: '#FFD700' }}
             >
               <Phone className="h-4 w-4" />
-              +91 81039 60297
+              +91 70000 54787
             </a>
           </div>
 
@@ -58,12 +59,12 @@ const Navbar = () => {
             ))}
             <LanguageToggle />
             <a
-              href="tel:+918103960297"
+              href="tel:+917000054787"
               className="ml-3 flex items-center gap-1.5 px-4 py-2 rounded-lg text-sm font-semibold"
               style={{ background: '#FF8C00', color: '#FFD700' }}
             >
               <Phone className="h-4 w-4" />
-              +91 81039 60297
+              +91 70000 54787
             </a>
           </div>
 
@@ -100,12 +101,12 @@ const Navbar = () => {
               </Link>
             ))}
             <a
-              href="tel:+918103960297"
+              href="tel:+917000054787"
               className="flex items-center gap-2 mx-4 mt-2 px-4 py-2.5 rounded-lg text-sm font-semibold justify-center"
               style={{ background: '#FF8C00', color: '#FFD700' }}
             >
               <Phone className="h-4 w-4" />
-              +91 81039 60297
+              +91 70000 54787
             </a>
           </div>
         )}

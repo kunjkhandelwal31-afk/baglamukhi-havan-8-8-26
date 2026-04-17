@@ -15,13 +15,13 @@ const ContactPage = () => {
         </div>
 
         <div className="grid md:grid-cols-2 gap-6">
-          <a href="tel:+918103960297" className="bg-card rounded-xl border border-border p-8 text-center hover:shadow-golden transition-all group">
+          <a href="tel:+917000054787" className="bg-card rounded-xl border border-border p-8 text-center hover:shadow-golden transition-all group">
             <Phone className="h-10 w-10 mx-auto mb-3 text-accent group-hover:scale-110 transition-transform" />
             <h3 className="font-bold text-foreground mb-1">संपर्क करें</h3>
-            <p className="text-muted-foreground">+91 81039 60297</p>
+            <p className="text-muted-foreground">+91 70000 54787</p>
           </a>
 
-          <a href="https://wa.me/918103960297?text=मुझे हवन बुक करना है" target="_blank" rel="noopener noreferrer" className="bg-card rounded-xl border border-border p-8 text-center hover:shadow-golden transition-all group">
+          <a href="https://wa.me/917000054787?text=जय माता दी गुरुजी 🙏 मुझे हवन/अनुष्ठान करवाना है" target="_blank" rel="noopener noreferrer" className="bg-card rounded-xl border border-border p-8 text-center hover:shadow-golden transition-all group">
             <WhatsAppIcon className="h-10 w-10 mx-auto mb-3 text-accent group-hover:scale-110 transition-transform" />
             <h3 className="font-bold text-foreground mb-1">WhatsApp</h3>
             <p className="text-muted-foreground">अभी चैट करें</p>

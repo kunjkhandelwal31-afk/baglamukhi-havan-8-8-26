@@ -1,5 +1,6 @@
 import { Phone, Instagram } from "lucide-react";
 import WhatsAppIcon from "@/components/icons/WhatsAppIcon";
+import { PHONE_TEL_HREF, PHONE_NUMBER_DISPLAY, WHATSAPP_URL, INSTAGRAM_URL } from "@/lib/contact";
 
 const CallSection = () => {
   return (
@@ -17,15 +18,15 @@ const CallSection = () => {
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
           <a
-            href="tel:+918103960297"
+            href={PHONE_TEL_HREF}
             className="flex items-center gap-3 px-8 py-4 rounded-xl font-bold text-lg shadow-lg hover:scale-105 transition-transform"
             style={{ background: '#FF8C00', color: '#FFD700' }}
           >
             <Phone className="h-6 w-6" />
-            +91 81039 60297
+            {PHONE_NUMBER_DISPLAY}
           </a>
           <a
-            href="https://wa.me/918103960297?text=मुझे हवन बुक करना है"
+            href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-3 bg-[#25D366] text-white px-8 py-4 rounded-xl font-bold text-lg shadow-lg hover:scale-105 transition-transform"
@@ -34,7 +35,7 @@ const CallSection = () => {
             WhatsApp
           </a>
           <a
-            href="https://www.instagram.com/"
+            href={INSTAGRAM_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-3 px-8 py-4 rounded-xl font-bold text-lg shadow-lg hover:scale-105 transition-transform text-white"
@@ -49,7 +50,7 @@ const CallSection = () => {
           ⏰ सुबह 7:00 बजे से रात 9:00 बजे तक उपलब्ध
         </p>
         <p className="text-white/50 text-xs mt-2">
-          मध्य प्रदेश में हवन पंडित सेवा • near me pandit booking available
+          मध्य प्रदेश में हवन पंडित सेवा • near me hawan booking available
         </p>
       </div>
     </section>
