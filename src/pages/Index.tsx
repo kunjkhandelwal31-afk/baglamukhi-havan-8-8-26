@@ -12,25 +12,25 @@ import { ArrowRight, BookOpen } from "lucide-react";
 
 const anushthanTypes = [
   {
-    icon: "🔱",
-    title: "बगलामुखी अनुष्ठान",
-    description: "शत्रु नाश, मुकदमे में विजय और सभी बाधाओं के निवारण के लिए 11,000 मंत्र जाप सहित पूर्ण अनुष्ठान।",
-    duration: "3-7 दिन",
-    price: "₹21,000 से",
+    icon: "🔴",
+    title: "36,000 मंत्र सिद्धि अनुष्ठान",
+    description: "6 अनुभवी ब्राह्मणों द्वारा माँ बगलामुखी के बीज मंत्रों का 36,000 बार जाप एवं दशांश हवन। त्वरित सिद्धि प्रदान करने वाली साधना।",
+    duration: "1-2 दिन",
+    price: "₹31,000",
   },
   {
-    icon: "📿",
-    title: "सवा लाख मंत्र जाप",
-    description: "1,25,000 मंत्र जाप के साथ हवन और तर्पण — अत्यंत शक्तिशाली अनुष्ठान।",
-    duration: "11 दिन",
-    price: "₹51,000 से",
+    icon: "🟠",
+    title: "सवा लाख (1.25 लाख मंत्र) महाजाप अनुष्ठान",
+    description: "11 विद्वान पंडितों द्वारा लगभग 6 घंटे का अखंड मंत्र जाप एवं शास्त्रोक्त हवन। बड़े संकटों के निवारण हेतु अत्यंत प्रभावी।",
+    duration: "1 दिन",
+    price: "₹61,000",
   },
   {
-    icon: "🪔",
-    title: "नवरात्रि विशेष अनुष्ठान",
-    description: "नवरात्रि के 9 दिनों में विशेष विधि-विधान से माँ बगलामुखी का पूर्ण अनुष्ठान।",
-    duration: "9 दिन",
-    price: "₹31,000 से",
+    icon: "🟡",
+    title: "पंचलक्षी (5,00,000 मंत्र) महा-साधना अनुष्ठान",
+    description: "21 सिद्ध ब्राह्मणों द्वारा 5,00,000 मंत्रों का महा-जाप एवं विशाल महा-हवन। ‘असंभव को संभव’ करने वाली महा-साधना।",
+    duration: "1 दिन",
+    price: "₹1,51,000",
   },
 ];
 
@@ -102,22 +102,31 @@ const Index = () => {
             {anushthanTypes.map((a) => (
               <div
                 key={a.title}
-                className="rounded-xl p-6 hover:shadow-golden transition-all group"
+                className="rounded-xl p-6 hover:shadow-golden transition-all group flex flex-col"
                 style={{ background: '#F57C00', border: '1px solid rgba(255,215,0,0.4)', boxShadow: '0 4px 20px rgba(0,0,0,0.25)' }}
               >
                 <div className="text-4xl mb-4">{a.icon}</div>
                 <h3 className="text-xl font-bold mb-2 text-golden-outline" style={{ color: '#FFD700' }}>{a.title}</h3>
-                <p className="text-white text-sm mb-4 leading-relaxed">{a.description}</p>
+                <p className="text-white text-sm mb-4 leading-relaxed flex-1">{a.description}</p>
                 <div className="flex items-center justify-between text-sm mb-4">
                   <span className="text-white/90">⏱️ {a.duration}</span>
                   <span className="font-bold text-golden-outline" style={{ color: '#FFD700' }}>{a.price}</span>
                 </div>
-                <Link
-                  to="/booking"
-                  className="btn-shimmer w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg font-semibold text-sm transition-all hover:scale-105"
-                >
-                  <BookOpen className="h-4 w-4" /> अनुष्ठान बुक करें
-                </Link>
+                <div className="space-y-2 mt-auto">
+                  <Link
+                    to="/anushthan"
+                    className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg font-semibold text-sm transition-all hover:scale-105"
+                    style={{ background: 'rgba(139,0,0,0.55)', color: '#FFD700', border: '1px solid rgba(255,215,0,0.4)' }}
+                  >
+                    विस्तार से देखें <ArrowRight className="h-4 w-4" />
+                  </Link>
+                  <Link
+                    to="/booking"
+                    className="btn-shimmer w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg font-semibold text-sm transition-all hover:scale-105"
+                  >
+                    <BookOpen className="h-4 w-4" /> अभी हवन बुक करें
+                  </Link>
+                </div>
               </div>
             ))}
           </div>
