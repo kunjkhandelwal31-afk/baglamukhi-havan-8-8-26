@@ -14,6 +14,9 @@ const Footer = () => {
             <p className="text-sm leading-relaxed text-white/70">
               अनुभवी पंडित जी द्वारा विधिवत माँ बगलामुखी हवन सेवा। शत्रु नाश, विजय प्राप्ति और जीवन में सफलता के लिए संपर्क करें।
             </p>
+            <p className="text-xs text-white/50 mt-3">
+              ऑनलाइन हवन बुकिंग की सुविधा उपलब्ध • बगलामुखी पूजा सेवा • Baglamukhi pandit near me service available
+            </p>
           </div>
           <div>
             <h4 className="font-bold mb-4" style={{ color: '#FFD700' }}>त्वरित लिंक</h4>

@@ -8,8 +8,11 @@ const CallSection = () => {
         <h2 className="text-3xl md:text-4xl font-bold mb-3" style={{ color: '#FFD700' }}>
           पंडित जी से सीधे बात करें
         </h2>
-        <p className="mb-8 max-w-xl mx-auto text-white/80">
+        <p className="mb-2 max-w-xl mx-auto text-white/80">
           हवन बुकिंग, पूजा विधि या किसी भी प्रश्न के लिए अभी कॉल करें
+        </p>
+        <p className="mb-8 max-w-xl mx-auto text-white/60 text-sm">
+          यहाँ आप हवन पंडित का नंबर प्राप्त कर सकते हैं • baglamukhi pandit near me
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
@@ -44,6 +47,9 @@ const CallSection = () => {
 
         <p className="text-white/60 text-sm">
           ⏰ सुबह 7:00 बजे से रात 9:00 बजे तक उपलब्ध
+        </p>
+        <p className="text-white/50 text-xs mt-2">
+          मध्य प्रदेश में हवन पंडित सेवा • near me pandit booking available
         </p>
       </div>
     </section>

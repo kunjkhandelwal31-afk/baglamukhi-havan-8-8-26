@@ -160,6 +160,40 @@ const Index = () => {
 
       <TestimonialsSection />
 
+      {/* FAQ Section - SEO */}
+      <section className="py-14" style={{ background: '#6B0000' }}>
+        <div className="container mx-auto px-4 max-w-3xl">
+          <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center" style={{ color: '#FFD700' }}>
+            अक्सर पूछे जाने वाले प्रश्न (FAQ)
+          </h2>
+          <div className="space-y-4">
+            {[
+              {
+                q: "बगलामुखी हवन क्या है?",
+                a: "बगलामुखी हवन माँ बगलामुखी की कृपा प्राप्त करने के लिए किया जाने वाला विशेष वैदिक अनुष्ठान है — शत्रु नाश, मुकदमे में विजय और जीवन की बाधाओं के निवारण के लिए।",
+              },
+              {
+                q: "हवन पंडित कैसे बुक करें?",
+                a: "आप हमारी वेबसाइट पर बुकिंग फ़ॉर्म भरकर या +91 81039 60297 पर कॉल/WhatsApp करके पंडित बुक कर सकते हैं। 24 घंटे में हमारी टीम संपर्क करेगी।",
+              },
+              {
+                q: "क्या ऑनलाइन हवन बुकिंग संभव है?",
+                a: "हाँ, ऑनलाइन हवन बुकिंग की सुविधा उपलब्ध है। आप घर बैठे मध्य प्रदेश और आसपास के क्षेत्रों में बगलामुखी पूजा सेवा एवं पंडित बुक कर सकते हैं।",
+              },
+            ].map((f) => (
+              <div
+                key={f.q}
+                className="rounded-lg p-5"
+                style={{ background: 'rgba(255,140,0,0.15)', border: '1px solid rgba(255,215,0,0.3)' }}
+              >
+                <h3 className="font-bold mb-2" style={{ color: '#FFD700' }}>{f.q}</h3>
+                <p className="text-white/85 text-sm leading-relaxed">{f.a}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* SEO Content */}
       <section className="py-10" style={{ background: '#5A0000' }}>
         <div className="container mx-auto px-4 max-w-3xl text-center">
@@ -170,6 +204,9 @@ const Index = () => {
             हम <strong style={{ color: '#FFD700' }}>Maa Baglamukhi Hawan Service</strong> और हवन पंडित बुकिंग की सेवा
             <strong> मध्य प्रदेश</strong> और आसपास के क्षेत्रों में प्रदान करते हैं। आप घर बैठे आसानी से पंडित बुक कर सकते हैं।
             अनुभवी पंडित जी द्वारा माँ बगलामुखी हवन, अनुष्ठान और विशेष पूजा — विश्वसनीय एवं त्वरित बुकिंग।
+          </p>
+          <p className="text-white/60 text-xs md:text-sm mt-4">
+            ऑनलाइन हवन बुकिंग • बगलामुखी पूजा सेवा • हवन पंडित का नंबर • baglamukhi pandit near me • book pandit online • हवन सेवा मध्य प्रदेश
           </p>
         </div>
       </section>
