@@ -11,7 +11,7 @@ const HavanCard = ({ havan }: { havan: Havan }) => {
       <Link to={`/havan/${havan.id}`} className="relative h-48 overflow-hidden block">
         <img
           src={havan.image}
-          alt={`${havan.name} - Maa Baglamukhi Hawan Service, हवन पूजा पंडित बुकिंग मध्य प्रदेश`}
+          alt={`${havan.name} - baglamukhi hawan pandit, online hawan booking service, हवन पूजा पंडित बुकिंग मध्य प्रदेश`}
           loading="lazy"
           width={512}
           height={512}
