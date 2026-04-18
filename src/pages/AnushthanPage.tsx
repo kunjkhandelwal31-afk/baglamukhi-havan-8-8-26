@@ -160,6 +160,7 @@ const AnushthanPage = () => {
                   संपर्क करें <ArrowRight className="h-4 w-4" />
                 </Link>
               </div>
+              </div>
             </article>
           ))}
         </div>
