@@ -16,6 +16,7 @@ import ContactPage from "./pages/ContactPage";
 import LiveDarshanPage from "./pages/LiveDarshanPage";
 import HavanDetailPage from "./pages/HavanDetailPage";
 import AnushthanPage from "./pages/AnushthanPage";
+import AnushthanDetailPage from "./pages/AnushthanDetailPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -37,6 +38,7 @@ const App = () => (
           <Route path="/booking" element={<BookingPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/anushthan" element={<AnushthanPage />} />
+          <Route path="/anushthan/:id" element={<AnushthanDetailPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
