@@ -33,13 +33,12 @@ const AnushthanDetailPage = () => {
             boxShadow: "0 4px 20px rgba(0,0,0,0.25)",
           }}
         >
-          <div className="w-full overflow-hidden bg-black/20" style={{ aspectRatio: '16/9' }}>
+          <div className="w-full bg-black/20 flex items-center justify-center">
             <img
               src={a.image}
               alt={`${a.title} - baglamukhi anushthan, mantra jaap, online booking`}
               loading="lazy"
-              className="w-full h-full object-cover"
-              style={{ objectPosition: 'center top' }}
+              className="w-full h-auto max-h-[60vh] object-contain"
             />
           </div>
           <div className="p-6 md:p-8">

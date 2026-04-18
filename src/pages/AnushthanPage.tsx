@@ -23,13 +23,12 @@ const AnushthanPage = () => {
               className="rounded-xl overflow-hidden flex flex-col"
               style={{ background: '#F57C00', border: '1px solid rgba(255,215,0,0.4)', boxShadow: '0 4px 20px rgba(0,0,0,0.25)' }}
             >
-              <div className="w-full overflow-hidden bg-black/20" style={{ aspectRatio: '4/3' }}>
+              <div className="w-full bg-black/20 flex items-center justify-center" style={{ aspectRatio: '4/3' }}>
                 <img
                   src={a.image}
                   alt={`${a.title} - baglamukhi anushthan, mantra jaap, online booking`}
                   loading="lazy"
-                  className="w-full h-full object-cover"
-                  style={{ objectPosition: 'center top' }}
+                  className="w-full h-full object-contain"
                 />
               </div>
               <div className="p-5 flex flex-col flex-1">
