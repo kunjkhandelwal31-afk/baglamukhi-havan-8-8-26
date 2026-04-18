@@ -20,7 +20,7 @@ const CallSection = () => {
           <a
             href={PHONE_TEL_HREF}
             className="flex items-center gap-3 px-8 py-4 rounded-xl font-bold text-lg shadow-lg hover:scale-105 transition-transform"
-            style={{ background: '#FF8C00', color: '#FFD700' }}
+            style={{ background: '#FF8C00', color: '#FFD700', textShadow: '1px 1px 3px rgba(0,0,0,0.85), 0 0 6px rgba(0,0,0,0.5)' }}
           >
             <Phone className="h-6 w-6" />
             {PHONE_NUMBER_DISPLAY}

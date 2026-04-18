@@ -21,10 +21,13 @@ const HavanCard = ({ havan }: { havan: Havan }) => {
 
       <div className="p-5 flex flex-col flex-1">
         <Link to={`/havan/${havan.id}`}>
-          <h3 className="text-lg font-bold mb-2 transition-colors text-golden-outline" style={{ color: '#FFD700' }}>
+          <h3 className="text-lg font-bold mb-1 transition-colors text-golden-outline" style={{ color: '#FFD700' }}>
             {havan.name}
           </h3>
         </Link>
+        <div className="mb-3 text-lg md:text-xl font-extrabold tracking-wide text-golden-outline" style={{ color: '#FFD700' }}>
+          {havan.price}
+        </div>
         <p className="text-sm text-white mb-4 leading-relaxed flex-1">
           {havan.description}
         </p>
