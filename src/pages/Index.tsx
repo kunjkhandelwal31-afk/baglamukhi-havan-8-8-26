@@ -9,16 +9,36 @@ import BookingForm from "@/components/BookingForm";
 import { havans } from "@/data/havans";
 import { Link } from "react-router-dom";
 import { ArrowRight, BookOpen } from "lucide-react";
-import { anushthanList } from "@/data/anushthan";
+import anushthan36000 from "@/assets/anushthan-36000.jpg";
+import anushthanSavalakh from "@/assets/anushthan-savalakh.jpg";
+import anushthanPanchlakshi from "@/assets/anushthan-panchlakshi.jpg";
 
-const anushthanTypes = anushthanList.map((a) => ({
-  id: a.id,
-  title: a.title,
-  description: a.shortDescription,
-  duration: a.duration,
-  price: a.price,
-  image: a.image,
-}));
+const anushthanTypes = [
+  {
+    icon: "🔴",
+    title: "36,000 मंत्र सिद्धि अनुष्ठान",
+    description: "6 अनुभवी ब्राह्मणों द्वारा माँ बगलामुखी के बीज मंत्रों का 36,000 बार जाप एवं दशांश हवन। त्वरित सिद्धि प्रदान करने वाली साधना।",
+    duration: "1-2 दिन",
+    price: "₹31,000",
+    image: anushthan36000,
+  },
+  {
+    icon: "🟠",
+    title: "सवा लाख (1.25 लाख मंत्र) महाजाप अनुष्ठान",
+    description: "11 विद्वान पंडितों द्वारा लगभग 6 घंटे का अखंड मंत्र जाप एवं शास्त्रोक्त हवन। बड़े संकटों के निवारण हेतु अत्यंत प्रभावी।",
+    duration: "1 दिन",
+    price: "₹61,000",
+    image: anushthanSavalakh,
+  },
+  {
+    icon: "🟡",
+    title: "पंचलक्षी (5,00,000 मंत्र) महा-साधना अनुष्ठान",
+    description: "21 सिद्ध ब्राह्मणों द्वारा 5,00,000 मंत्रों का महा-जाप एवं विशाल महा-हवन। ‘असंभव को संभव’ करने वाली महा-साधना।",
+    duration: "1 दिन",
+    price: "₹1,51,000",
+    image: anushthanPanchlakshi,
+  },
+];
 
 // Show only these 4 havans on home page in this order
 const homeHavanIds = ["lal-mirch", "shanti", "vijay-prapti", "dhan-prapti"];
@@ -87,19 +107,20 @@ const Index = () => {
           <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {anushthanTypes.map((a) => (
               <div
-                key={a.id}
+                key={a.title}
                 className="rounded-xl overflow-hidden hover:shadow-golden transition-all group flex flex-col"
                 style={{ background: '#F57C00', border: '1px solid rgba(255,215,0,0.4)', boxShadow: '0 4px 20px rgba(0,0,0,0.25)' }}
               >
-                <div className="w-full bg-black/20 flex items-center justify-center" style={{ aspectRatio: '4/3' }}>
+                <div className="relative h-44 overflow-hidden">
                   <img
                     src={a.image}
                     alt={`${a.title} - baglamukhi anushthan, online booking`}
                     loading="lazy"
-                    className="w-full h-full object-contain"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
                 <div className="p-6 flex flex-col flex-1">
+                  <div className="text-4xl mb-3">{a.icon}</div>
                   <h3 className="text-xl font-bold mb-2 text-golden-outline" style={{ color: '#FFD700' }}>{a.title}</h3>
                   <p className="text-white text-sm mb-4 leading-relaxed flex-1">{a.description}</p>
                   <div className="flex items-center justify-between mb-4">
@@ -108,7 +129,7 @@ const Index = () => {
                   </div>
                   <div className="space-y-2 mt-auto">
                     <Link
-                      to={`/anushthan/${a.id}`}
+                      to="/anushthan"
                       className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg font-semibold text-sm transition-all hover:scale-105"
                       style={{ background: 'rgba(139,0,0,0.55)', color: '#FFD700', border: '1px solid rgba(255,215,0,0.4)' }}
                     >
