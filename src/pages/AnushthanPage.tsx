@@ -1,11 +1,15 @@
 import { Link } from "react-router-dom";
 import { BookOpen, ArrowRight, CheckCircle } from "lucide-react";
+import anushthan36000 from "@/assets/anushthan-36000.jpg";
+import anushthanSavalakh from "@/assets/anushthan-savalakh.jpg";
+import anushthanPanchlakshi from "@/assets/anushthan-panchlakshi.jpg";
 
 interface Anushthan {
   id: string;
   emoji: string;
   title: string;
   price: string;
+  image: string;
   intro: string;
   vidhi: string;
   special: string;
@@ -18,6 +22,7 @@ const anushthanList: Anushthan[] = [
     emoji: "🔴",
     title: "1. 36,000 मंत्र सिद्धि अनुष्ठान",
     price: "₹31,000",
+    image: anushthan36000,
     intro:
       "यह अनुष्ठान उन श्रद्धालुओं के लिए अत्यंत प्रभावशाली है जो अपने जीवन में आ रही बाधाओं को शीघ्र समाप्त करना चाहते हैं या किसी विशेष मनोकामना की पूर्ति चाहते हैं। यह साधना “त्वरित सिद्धि” प्रदान करने वाली मानी जाती है।",
     vidhi:
@@ -37,6 +42,7 @@ const anushthanList: Anushthan[] = [
     emoji: "🟠",
     title: "2. सवा लाख (1.25 लाख मंत्र) महाजाप अनुष्ठान",
     price: "₹61,000",
+    image: anushthanSavalakh,
     intro:
       "यह अनुष्ठान शास्त्रों में अत्यंत प्रभावशाली और सिद्धि प्रदान करने वाला माना गया है। सवा लाख मंत्र जाप को आध्यात्मिक शक्ति जागरण का प्रमुख माध्यम माना जाता है, जो जीवन के बड़े संकटों को दूर करने में सहायक होता है।",
     vidhi:
@@ -56,6 +62,7 @@ const anushthanList: Anushthan[] = [
     emoji: "🟡",
     title: "3. पंचलक्षी (5,00,000 मंत्र) महा-साधना अनुष्ठान",
     price: "₹1,51,000",
+    image: anushthanPanchlakshi,
     intro:
       "यह माँ बगलामुखी की सबसे विशाल, दिव्य और शक्तिशाली साधना मानी जाती है। इसे ‘असंभव को संभव’ करने वाली महा-साधना कहा जाता है, जो अत्यंत जटिल समस्याओं के समाधान हेतु की जाती है।",
     vidhi:
@@ -90,15 +97,24 @@ const AnushthanPage = () => {
           {anushthanList.map((a) => (
             <article
               key={a.id}
-              className="rounded-xl p-6 md:p-8"
+              className="rounded-xl overflow-hidden"
               style={{ background: '#F57C00', border: '1px solid rgba(255,215,0,0.4)', boxShadow: '0 4px 20px rgba(0,0,0,0.25)' }}
             >
+              <div className="relative w-full aspect-[16/9] overflow-hidden">
+                <img
+                  src={a.image}
+                  alt={`${a.title} - baglamukhi anushthan, mantra jaap, online booking`}
+                  loading="lazy"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="p-6 md:p-8">
               <div className="flex flex-wrap items-start justify-between gap-3 mb-4">
                 <h2 className="text-xl md:text-2xl font-bold text-golden-outline" style={{ color: '#FFD700' }}>
                   {a.emoji} {a.title}
                 </h2>
                 <span
-                  className="text-lg md:text-xl font-bold px-4 py-1.5 rounded-lg text-golden-outline"
+                  className="text-xl md:text-2xl font-extrabold px-4 py-1.5 rounded-lg text-golden-outline tracking-wide"
                   style={{ background: 'rgba(139,0,0,0.55)', color: '#FFD700', border: '1px solid rgba(255,215,0,0.4)' }}
                 >
                   {a.price}
@@ -134,7 +150,7 @@ const AnushthanPage = () => {
                   to="/booking"
                   className="btn-shimmer flex-1 inline-flex items-center justify-center gap-2 px-4 py-3 rounded-lg font-bold text-sm md:text-base transition-all hover:scale-105"
                 >
-                  <BookOpen className="h-4 w-4" /> अभी हवन बुक करें
+                  <BookOpen className="h-4 w-4" /> अभी अनुष्ठान बुक करें
                 </Link>
                 <Link
                   to="/contact"
