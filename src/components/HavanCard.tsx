@@ -10,14 +10,15 @@ const HavanCard = ({ havan }: { havan: Havan }) => {
     >
       <Link
         to={`/havan/${havan.id}`}
-        className="w-full bg-black/20 flex items-center justify-center block"
-        style={{ aspectRatio: '4/3' }}
+        className="w-full bg-black/20 block overflow-hidden"
+        style={{ aspectRatio: havan.id === 'lal-mirch' ? '16/9' : '4/3' }}
       >
         <img
           src={havan.image}
           alt={`${havan.name} - baglamukhi hawan pandit, online hawan booking service, हवन पूजा पंडित बुकिंग मध्य प्रदेश`}
           loading="lazy"
-          className="w-full h-full object-contain"
+          className="w-full h-full object-cover"
+          style={{ objectPosition: havan.id === 'lal-mirch' ? 'center' : 'top center' }}
         />
       </Link>
 
