@@ -50,19 +50,19 @@ const HavanCard = ({ havan }: { havan: Havan }) => {
             <span>{havan.duration}</span>
           </div>
 
-          <div className="flex items-center justify-between pt-3 gap-2" style={{ borderTop: '1px solid rgba(255,215,0,0.25)' }}>
+          <div className="space-y-2 pt-3" style={{ borderTop: '1px solid rgba(255,215,0,0.25)' }}>
             <Link
               to={`/havan/${havan.id}`}
-              className="text-sm font-medium hover:underline inline-flex items-center gap-1 text-soft-shadow"
-              style={{ color: '#FFD700' }}
+              className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg font-semibold text-sm transition-all hover:scale-105"
+              style={{ background: 'rgba(139,0,0,0.55)', color: '#FFD700', border: '1px solid rgba(255,215,0,0.4)' }}
             >
-              विस्तार से देखें <ArrowRight className="h-3.5 w-3.5" />
+              विस्तार से देखें <ArrowRight className="h-4 w-4" />
             </Link>
             <Link
               to={`/booking?havan=${havan.id}`}
-              className="btn-shimmer px-4 py-2 rounded-lg text-sm font-bold inline-flex items-center gap-1.5 shadow-golden hover:shadow-lg hover:scale-105 transition-all"
+              className="btn-shimmer w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg font-bold text-sm shadow-golden hover:shadow-lg hover:scale-105 transition-all"
             >
-              👉 अभी बुक करें
+              👉 अभी हवन बुक करें
             </Link>
           </div>
         </div>

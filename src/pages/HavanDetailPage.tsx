@@ -17,31 +17,36 @@ const HavanDetailPage = () => {
 
   return (
     <main className="pb-16">
-      {/* Hero Banner */}
-      <section className="relative h-[50vh] md:h-[60vh] overflow-hidden">
+      {/* Hero Image - clean, no overlay */}
+      <section className="w-full">
         <img
           src={havan.image}
           alt={havan.name}
-          className="w-full h-full object-cover"
+          className="w-full h-auto max-h-[60vh] object-cover block"
         />
-        <div className="absolute inset-0 bg-foreground/60 backdrop-blur-sm" />
-        <div className="absolute bottom-0 left-0 right-0 p-6 md:p-10">
-          <div className="container mx-auto">
-            <Link
-              to="/havan-types"
-              className="inline-flex items-center gap-1 text-primary mb-4 text-sm font-medium hover:underline"
-            >
-              <ChevronLeft className="h-4 w-4" /> सभी हवन
-            </Link>
-            <h1
-              className="text-3xl md:text-5xl font-extrabold mb-2 drop-shadow-lg"
-              style={{ color: "hsl(45, 100%, 95%)" }}
-            >
-              {havan.icon} {havan.name}
-            </h1>
-            <p className="text-lg" style={{ color: "hsl(40, 30%, 85%)" }}>
-              {havan.description}
-            </p>
+      </section>
+
+      {/* Title & Price below image */}
+      <section className="bg-card border-b border-border">
+        <div className="container mx-auto px-4 py-6 md:py-8">
+          <Link
+            to="/havan-types"
+            className="inline-flex items-center gap-1 text-primary mb-3 text-sm font-medium hover:underline"
+          >
+            <ChevronLeft className="h-4 w-4" /> सभी हवन
+          </Link>
+          <div className="flex flex-wrap items-start justify-between gap-4">
+            <div className="flex-1 min-w-0">
+              <h1 className="text-2xl md:text-4xl font-extrabold text-foreground mb-2">
+                {havan.icon} {havan.name}
+              </h1>
+              <p className="text-base md:text-lg text-muted-foreground">
+                {havan.description}
+              </p>
+            </div>
+            <div className="text-2xl md:text-3xl font-extrabold text-gradient-golden whitespace-nowrap">
+              {havan.price}
+            </div>
           </div>
         </div>
       </section>
