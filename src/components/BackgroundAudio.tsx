@@ -16,14 +16,32 @@ const BackgroundAudio = () => {
     }
     audio.muted = false;
 
+    const events: Array<keyof WindowEventMap> = [
+      "scroll",
+      "wheel",
+      "touchstart",
+      "touchmove",
+      "mousemove",
+      "pointerdown",
+      "click",
+      "keydown",
+    ];
+
+    const removeInteractionListeners = () => {
+      events.forEach((e) => window.removeEventListener(e, onInteraction));
+    };
+
     const tryPlay = async () => {
       if (!audioBus.audio || audioStarted) return audioStarted;
       try {
         audioBus.audio.muted = false;
+        audioBus.audio.volume = 0.5;
         await audioBus.audio.play();
         audioStarted = true;
         audioBus.setMuted(false);
         removeInteractionListeners();
+        // eslint-disable-next-line no-console
+        console.log("Audio started");
         return true;
       } catch {
         return false;
@@ -34,20 +52,11 @@ const BackgroundAudio = () => {
       if (!audioStarted) tryPlay();
     };
 
-    const events: Array<keyof WindowEventMap> = [
-      "click",
-      "scroll",
-      "touchstart",
-      "keydown",
-    ];
-
-    const removeInteractionListeners = () => {
-      events.forEach((e) => window.removeEventListener(e, onInteraction));
-    };
-
     const addInteractionListeners = () => {
       events.forEach((e) =>
-        window.addEventListener(e, onInteraction, { passive: true } as AddEventListenerOptions)
+        window.addEventListener(e, onInteraction, {
+          passive: true,
+        } as AddEventListenerOptions)
       );
     };
 
@@ -74,7 +83,6 @@ const BackgroundAudio = () => {
       audio?.removeEventListener("play", handlePlay);
       audio?.removeEventListener("pause", handlePause);
       audio?.removeEventListener("volumechange", handlePlay);
-      // Keep interaction listeners alive across remounts until audio starts
     };
   }, []);
 
