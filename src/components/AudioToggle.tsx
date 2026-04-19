@@ -6,7 +6,8 @@ const AudioToggle = () => {
   const [muted, setMuted] = useState(audioBus.muted);
 
   useEffect(() => {
-    return audioBus.subscribe(setMuted);
+    const unsub = audioBus.subscribe(setMuted);
+    return () => { unsub(); };
   }, []);
 
   return (
