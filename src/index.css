@@ -185,6 +185,23 @@
   }
 }
 
+/* Mantra marquee (right -> left, seamless) */
+@keyframes mantra-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.mantra-marquee {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+}
+.mantra-track {
+  display: inline-block;
+  white-space: nowrap;
+  animation: mantra-scroll 40s linear infinite;
+  will-change: transform;
+}
+
 /* Yantra background pattern — 20-25% opacity */
 .yantra-bg {
   position: relative;

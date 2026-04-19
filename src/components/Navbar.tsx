@@ -17,7 +17,7 @@ const Navbar = () => {
   const location = useLocation();
 
   return (
-    <nav className="sticky top-[36px] z-50 backdrop-blur-md border-b -mt-px"
+    <nav className="sticky top-0 z-50 backdrop-blur-md border-b"
          style={{ background: 'rgba(90,0,0,0.95)', borderColor: 'rgba(255,215,0,0.15)' }}>
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">

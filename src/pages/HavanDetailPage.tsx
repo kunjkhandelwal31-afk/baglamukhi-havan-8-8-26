@@ -44,9 +44,12 @@ const HavanDetailPage = () => {
                 {havan.description}
               </p>
             </div>
-            <div className="text-2xl md:text-3xl font-extrabold text-gradient-golden whitespace-nowrap">
+            <span
+              className="text-xl md:text-2xl font-extrabold px-4 py-2 rounded-lg tracking-wide whitespace-nowrap text-golden-outline"
+              style={{ background: '#F57C00', color: '#FFD700', border: '1px solid rgba(255,215,0,0.4)', boxShadow: '0 4px 12px rgba(0,0,0,0.25)' }}
+            >
               {havan.price}
-            </div>
+            </span>
           </div>
         </div>
       </section>

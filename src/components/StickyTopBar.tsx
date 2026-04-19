@@ -1,31 +1,23 @@
-import { Phone } from "lucide-react";
-import WhatsAppIcon from "@/components/icons/WhatsAppIcon";
-import { PHONE_TEL_HREF, PHONE_NUMBER_DISPLAY, WHATSAPP_URL } from "@/lib/contact";
+const MANTRA = "ॐ ह्लीं बगलामुखी सर्वदुष्टानां वाचं मुखं पदं स्तम्भय जिह्वां कीलय बुद्धिं विनाशय ह्लीं ॐ स्वाहा ॥";
 
 const StickyTopBar = () => {
   return (
-    <div className="sticky top-0 z-[60] py-1.5 border-b border-yellow-900/30"
-         style={{ background: '#8B0000' }}>
-      <div className="container mx-auto px-4 flex items-center justify-center gap-4 text-sm">
-        <a
-          href={PHONE_TEL_HREF}
-          className="inline-flex items-center gap-1.5 font-semibold transition-colors hover:opacity-80"
+    <div
+      className="relative w-full overflow-hidden py-2 border-b border-yellow-900/30"
+      style={{ background: '#8B0000' }}
+      aria-label="Baglamukhi Mantra"
+    >
+      <div className="mantra-marquee whitespace-nowrap">
+        <span
+          className="mantra-track inline-block font-semibold text-sm md:text-base"
           style={{ color: '#FFD700' }}
         >
-          <Phone className="h-3.5 w-3.5" />
-          {PHONE_NUMBER_DISPLAY}
-        </a>
-        <span style={{ color: 'rgba(255,215,0,0.3)' }}>|</span>
-        <a
-          href={WHATSAPP_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-1.5 font-semibold transition-colors hover:opacity-80"
-          style={{ color: '#FFD700' }}
-        >
-          <WhatsAppIcon className="h-6 w-6" />
-          WhatsApp करें
-        </a>
+          {Array.from({ length: 6 }).map((_, i) => (
+            <span key={i} className="mx-12">
+              {MANTRA}
+            </span>
+          ))}
+        </span>
       </div>
     </div>
   );
