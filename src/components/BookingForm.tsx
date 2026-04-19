@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { havans } from "@/data/havans";
+import { anushthans } from "@/data/anushthans";
 import { toast } from "@/hooks/use-toast";
 import { Shield, Star, Users } from "lucide-react";
 import WhatsAppIcon from "@/components/icons/WhatsAppIcon";
@@ -25,8 +26,9 @@ const BookingForm = ({ preselectedHavan }: { preselectedHavan?: string }) => {
     }
 
     const selectedHavan = havans.find((h) => h.id === form.havanType);
-    const havanName = selectedHavan?.name || form.havanType;
-    const price = selectedHavan?.price || "N/A";
+    const selectedAnushthan = anushthans.find((a) => `anushthan-${a.id}` === form.havanType);
+    const havanName = selectedHavan?.name || selectedAnushthan?.shortTitle || form.havanType;
+    const price = selectedHavan?.price || selectedAnushthan?.price || "N/A";
 
     const message = `${WHATSAPP_MESSAGE}\n\n🙏 *नई हवन बुकिंग*\n\n👤 नाम: ${form.name}\n📞 मोबाइल: ${form.phone}\n📍 स्थान: ${form.location || "N/A"}\n🔥 हवन: ${havanName}\n💰 शुल्क: ${price}\n📅 तिथि: ${form.date}\n🪷 गोत्र: ${form.gotra || "N/A"}\n⭐ नक्षत्र: ${form.nakshatra || "N/A"}`;
 
@@ -78,13 +80,20 @@ const BookingForm = ({ preselectedHavan }: { preselectedHavan?: string }) => {
         className={selectClass}
       >
         <option value="">हवन / सेवा का प्रकार चुनें *</option>
-        {havans.map((h) => (
-          <option key={h.id} value={h.id}>
-            {h.name} — {h.price}
-          </option>
-        ))}
-        <option value="vip-darshan">VIP गर्भ गृह दर्शन — ₹2,100 – ₹5,100</option>
-        <option value="vip-combo">VIP + हवन कॉम्बो — ₹7,100 – ₹21,000</option>
+        <optgroup label="हवन सेवाएं">
+          {havans.map((h) => (
+            <option key={h.id} value={h.id}>
+              {h.name} — {h.price}
+            </option>
+          ))}
+        </optgroup>
+        <optgroup label="अनुष्ठान सेवाएं">
+          {anushthans.map((a) => (
+            <option key={a.id} value={`anushthan-${a.id}`}>
+              {a.shortTitle} — {a.price}
+            </option>
+          ))}
+        </optgroup>
       </select>
       <div>
         <label className="block text-sm font-bold mb-2" style={{ color: '#8B0000' }}>हवन की तिथि *</label>

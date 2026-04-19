@@ -222,11 +222,10 @@ const Index = () => {
       <section className="py-10" style={{ background: '#5A0000' }}>
         <div className="container mx-auto px-4 max-w-3xl text-center">
           <h2 className="text-xl md:text-2xl font-bold mb-4" style={{ color: '#FFD700' }}>
-            Maa Baglamukhi Hawan Service in Madhya Pradesh
+            Maa Baglamukhi Hawan Service — Worldwide Booking
           </h2>
           <p className="text-white/80 text-sm md:text-base leading-relaxed">
-            हम <strong style={{ color: '#FFD700' }}>Maa Baglamukhi Hawan Service</strong> और हवन हवन बुकिंग की सेवा
-            <strong> मध्य प्रदेश</strong> और आसपास के क्षेत्रों में प्रदान करते हैं। आप घर बैठे आसानी से हवन बुक कर सकते हैं।
+            <strong style={{ color: '#FFD700' }}>आप विश्व के किसी भी स्थान से माँ बगलामुखी पूजा सेवा एवं हवन बुक कर सकते हैं।</strong> हमारी सेवा ऑनलाइन एवं ऑफलाइन दोनों माध्यमों से उपलब्ध है।
             अनुभवी पंडित जी द्वारा माँ बगलामुखी हवन, अनुष्ठान और विशेष पूजा — विश्वसनीय एवं त्वरित बुकिंग।
           </p>
           <p className="text-white/60 text-xs md:text-sm mt-4">

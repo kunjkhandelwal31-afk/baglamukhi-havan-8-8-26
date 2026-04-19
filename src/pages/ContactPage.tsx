@@ -36,7 +36,7 @@ const ContactPage = () => {
           <div className="bg-card rounded-xl border border-border p-8 text-center">
             <MapPin className="h-10 w-10 mx-auto mb-3 text-accent" />
             <h3 className="font-bold text-foreground mb-1">स्थान</h3>
-            <p className="text-muted-foreground">उज्जैन, मध्य प्रदेश, भारत</p>
+            <p className="text-muted-foreground">मां बगलामुखी मंदिर, नलखेड़ा<br/>जिला आगर मालवा, मध्यप्रदेश</p>
           </div>
         </div>
 
