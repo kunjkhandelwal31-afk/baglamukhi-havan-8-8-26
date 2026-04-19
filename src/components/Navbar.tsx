@@ -32,6 +32,7 @@ const Navbar = () => {
 
           {/* Header phone number - always visible */}
           <div className="hidden md:flex lg:hidden items-center gap-3">
+            <AudioToggle />
             <LanguageToggle />
             <a
               href="tel:+917000054787"
@@ -59,6 +60,7 @@ const Navbar = () => {
                 {item.label}
               </Link>
             ))}
+            <AudioToggle />
             <LanguageToggle />
             <a
               href="tel:+917000054787"
@@ -72,6 +74,7 @@ const Navbar = () => {
 
           {/* Mobile toggle */}
           <div className="lg:hidden flex items-center gap-2">
+            <AudioToggle />
             <div className="md:hidden">
               <LanguageToggle />
             </div>
