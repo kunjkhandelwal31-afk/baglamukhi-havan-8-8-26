@@ -10,37 +10,65 @@ const BackgroundAudio = () => {
       audio.loop = true;
       audio.volume = 0.5;
       audio.preload = "auto";
+      audio.autoplay = true;
       audioBus.audio = audio;
     }
 
-    // Start muted to satisfy autoplay policies
-    audio.muted = true;
-    audioBus.setMuted(true);
+    // Try unmuted autoplay first
+    audio.muted = false;
 
-    const playPromise = audio.play().catch(() => {});
+    const tryPlay = async () => {
+      if (!audioBus.audio) return false;
+      try {
+        await audioBus.audio.play();
+        audioBus.audio.muted = false;
+        audioBus.setMuted(false);
+        return true;
+      } catch {
+        return false;
+      }
+    };
 
-    // After first interaction, unmute (default UNMUTED state per spec)
-    const enableSound = () => {
+    const startOnInteraction = async () => {
       if (!audioBus.audio) return;
       audioBus.audio.muted = false;
-      audioBus.setMuted(false);
-      audioBus.audio.play().catch(() => {});
-      window.removeEventListener("click", enableSound);
-      window.removeEventListener("touchstart", enableSound);
-      window.removeEventListener("keydown", enableSound);
-      window.removeEventListener("scroll", enableSound);
+      const ok = await tryPlay();
+      if (ok) removeInteractionListeners();
     };
-    window.addEventListener("click", enableSound, { once: true });
-    window.addEventListener("touchstart", enableSound, { once: true });
-    window.addEventListener("keydown", enableSound, { once: true });
-    window.addEventListener("scroll", enableSound, { once: true, passive: true });
+
+    const removeInteractionListeners = () => {
+      window.removeEventListener("click", startOnInteraction);
+      window.removeEventListener("touchstart", startOnInteraction);
+      window.removeEventListener("keydown", startOnInteraction);
+      window.removeEventListener("scroll", startOnInteraction);
+    };
+
+    (async () => {
+      const ok = await tryPlay();
+      if (!ok) {
+        // Browser blocked unmuted autoplay; wait for first interaction
+        audioBus.setMuted(true);
+        window.addEventListener("click", startOnInteraction);
+        window.addEventListener("touchstart", startOnInteraction);
+        window.addEventListener("keydown", startOnInteraction);
+        window.addEventListener("scroll", startOnInteraction, { passive: true });
+      }
+    })();
+
+    // Sync UI state with actual playback
+    const handlePlay = () => {
+      if (audioBus.audio) audioBus.setMuted(audioBus.audio.muted || audioBus.audio.paused);
+    };
+    const handlePause = () => audioBus.setMuted(true);
+    audio.addEventListener("play", handlePlay);
+    audio.addEventListener("pause", handlePause);
+    audio.addEventListener("volumechange", handlePlay);
 
     return () => {
-      window.removeEventListener("click", enableSound);
-      window.removeEventListener("touchstart", enableSound);
-      window.removeEventListener("keydown", enableSound);
-      window.removeEventListener("scroll", enableSound);
-      void playPromise;
+      removeInteractionListeners();
+      audio?.removeEventListener("play", handlePlay);
+      audio?.removeEventListener("pause", handlePause);
+      audio?.removeEventListener("volumechange", handlePlay);
     };
   }, []);
 
