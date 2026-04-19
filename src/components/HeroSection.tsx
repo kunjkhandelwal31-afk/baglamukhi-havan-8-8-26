@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Flame, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import heroVideo from "@/assets/hero-video.mp4";
 
 const HeroSection = () => {
