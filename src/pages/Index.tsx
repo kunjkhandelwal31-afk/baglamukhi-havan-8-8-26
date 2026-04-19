@@ -1,5 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import HeroSection from "@/components/HeroSection";
+import BackgroundAudio from "@/components/BackgroundAudio";
 import HavanCard from "@/components/HavanCard";
 import PanditSection from "@/components/PanditSection";
 import CallSection from "@/components/CallSection";
@@ -55,6 +56,7 @@ const Index = () => {
         <link rel="canonical" href="https://maa-baglamukhi-hawan-pujan.lovable.app/" />
       </Helmet>
       <HeroSection />
+      <BackgroundAudio />
 
       {/* Top Havans */}
       <section id="hawan-section" className="py-20 yantra-bg" style={{ background: '#8B0000' }}>
