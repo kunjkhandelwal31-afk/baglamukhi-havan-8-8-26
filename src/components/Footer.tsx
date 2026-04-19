@@ -36,8 +36,9 @@ const Footer = () => {
               <a href="mailto:info@baglamukhihavan.com" className="flex items-center gap-2 hover:text-yellow-400 transition-colors">
                 <Mail className="h-4 w-4" /> info@baglamukhihavan.com
               </a>
-              <div className="flex items-center gap-2">
-                <MapPin className="h-4 w-4" /> उज्जैन, मध्य प्रदेश
+              <div className="flex items-start gap-2">
+                <MapPin className="h-4 w-4 mt-0.5 shrink-0" />
+                <span>मां बगलामुखी मंदिर, नलखेड़ा<br/>जिला आगर मालवा, मध्यप्रदेश</span>
               </div>
             </div>
           </div>
