@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Flame, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import heroVideo from "@/assets/hero-video.mp4";
 
 const HeroSection = () => {
@@ -20,13 +20,6 @@ const HeroSection = () => {
       {/* Content Below Video */}
       <div className="py-10 md:py-14" style={{ background: '#6B0000' }}>
         <div className="container mx-auto px-4 max-w-2xl text-center space-y-5">
-          <div className="flex items-center justify-center gap-2" style={{ color: '#FFD700' }}>
-            <Flame className="h-6 w-6 animate-flame" />
-            <span className="text-sm font-semibold tracking-wider uppercase">
-              ॐ ह्लीं बगलामुखी सर्वदुष्टानां वाचं मुखं पदं स्तम्भय
-            </span>
-          </div>
-
           <h1
             className="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight text-golden-shadow"
             style={{ color: '#FFD700' }}
