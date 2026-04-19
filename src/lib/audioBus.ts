@@ -24,12 +24,14 @@ class AudioBus {
 
   toggle() {
     if (!this.audio) return;
-    const next = !this.audio.muted;
-    this.audio.muted = next;
-    if (!next) {
-      this.audio.play().catch(() => {});
+    const shouldPlay = this.audio.paused || this.audio.muted;
+    if (shouldPlay) {
+      this.audio.muted = false;
+      this.audio.play().then(() => this.setMuted(false)).catch(() => {});
+    } else {
+      this.audio.pause();
+      this.setMuted(true);
     }
-    this.setMuted(next);
   }
 }
 
