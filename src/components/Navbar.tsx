@@ -11,6 +11,7 @@ const navItems = [
   { path: "/havan-types", label: "हवन के प्रकार" },
   { path: "/anushthan", label: "📿 अनुष्ठान के प्रकार" },
   { path: "/live-darshan", label: "🔴 लाइव दर्शन" },
+  { path: "/blog", label: "📝 ब्लॉग" },
   { path: "/contact", label: "संपर्क" },
 ];
 

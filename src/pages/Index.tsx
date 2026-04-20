@@ -51,11 +51,25 @@ const Index = () => {
   return (
     <main className="pb-16">
       <Helmet>
-        <title>Maa Baglamukhi Hawan Service | मां बगलामुखी हवन सेवा | Hawan Booking in Madhya Pradesh</title>
-        <meta name="description" content="Book Maa Baglamukhi Hawan Service and Hawan Booking in Madhya Pradesh. हम मां बगलामुखी हवन, अनुष्ठान और पंडित सेवा प्रदान करते हैं। Trusted and quick booking." />
-        <link rel="canonical" href="https://maa-baglamukhi-hawan-pujan.lovable.app/" />
+        <title>Baglamukhi Havan Booking | Maa Baglamukhi Puja & Anushthan</title>
+        <meta name="description" content="Book Baglamukhi Havan & Puja with experienced pandits. Lal Mirch Havan, Tantra Nivaran & Anushthan services available worldwide. Contact now." />
+        <link rel="canonical" href="https://www.baglamukhihavananushthan.com/" />
       </Helmet>
       <HeroSection />
+
+      {/* SEO H1 — sits below hero, semantic for Google */}
+      <section className="py-8" style={{ background: '#5A0000' }}>
+        <div className="container mx-auto px-4 max-w-3xl text-center">
+          <h1 className="text-2xl md:text-4xl font-extrabold text-golden-shadow" style={{ color: '#FFD700' }}>
+            Baglamukhi Havan & Anushthan Booking | Maa Baglamukhi Puja Services
+          </h1>
+          <p className="text-white/85 mt-3 text-sm md:text-base">
+            अनुभवी पंडितों द्वारा <strong>baglamukhi havan</strong>, <strong>lal mirch havan</strong>, <strong>baglamukhi anushthan</strong> एवं
+            tantra nivaran हवन — India एवं worldwide booking उपलब्ध।
+          </p>
+        </div>
+      </section>
+
       <BackgroundAudio />
 
       {/* Top Havans */}
@@ -220,18 +234,101 @@ const Index = () => {
         </div>
       </section>
 
-      {/* SEO Content */}
-      <section className="py-10" style={{ background: '#5A0000' }}>
-        <div className="container mx-auto px-4 max-w-3xl text-center">
-          <h2 className="text-xl md:text-2xl font-bold mb-4" style={{ color: '#FFD700' }}>
-            Maa Baglamukhi Hawan Service — Worldwide Booking
+      {/* Long-form SEO content — 800+ words */}
+      <section className="py-14" style={{ background: '#5A0000' }}>
+        <div className="container mx-auto px-4 max-w-3xl text-white/85 leading-relaxed text-sm md:text-base">
+          <h2 className="text-2xl md:text-3xl font-bold mb-4" style={{ color: '#FFD700' }}>
+            Baglamukhi Havan Benefits — बगलामुखी हवन के लाभ
           </h2>
-          <p className="text-white/80 text-sm md:text-base leading-relaxed">
-            <strong style={{ color: '#FFD700' }}>आप विश्व के किसी भी स्थान से माँ बगलामुखी पूजा सेवा एवं हवन बुक कर सकते हैं।</strong> हमारी सेवा ऑनलाइन एवं ऑफलाइन दोनों माध्यमों से उपलब्ध है।
-            अनुभवी पंडित जी द्वारा माँ बगलामुखी हवन, अनुष्ठान और विशेष पूजा — विश्वसनीय एवं त्वरित बुकिंग।
+          <p className="mb-4">
+            <strong style={{ color: '#FFD700' }}>Baglamukhi Havan</strong> दस महाविद्याओं में आठवीं शक्ति माँ बगलामुखी
+            की उपासना का सिद्ध रूप है। यह हवन शत्रु-स्तंभन, <strong>vijay prapti havan</strong>,{" "}
+            <strong>court case havan</strong> एवं तंत्र-बाधा निवारण के लिए जाना जाता है। नियमित बगलामुखी पूजा
+            एवं हवन से जीवन में सुरक्षा-कवच बनता है, गुप्त शत्रुओं के षड्यंत्र निष्फल होते हैं और साधक को
+            माँ की विशेष कृपा प्राप्त होती है।
           </p>
-          <p className="text-white/60 text-xs md:text-sm mt-4">
-            ऑनलाइन हवन बुकिंग • बगलामुखी पूजा सेवा • हवन पंडित का नंबर • baglamukhi pandit near me • book hawan online • हवन सेवा मध्य प्रदेश
+
+          <h2 className="text-2xl md:text-3xl font-bold mt-8 mb-4" style={{ color: '#FFD700' }}>
+            Types of Havan Services — हवन सेवाओं के प्रकार
+          </h2>
+          <p className="mb-3">
+            हम विभिन्न प्रकार के हवन एवं अनुष्ठान सम्पन्न कराते हैं —
+          </p>
+          <ul className="list-disc pl-6 space-y-1 mb-4">
+            <li><Link to="/baglamukhi-havan" className="underline" style={{ color: '#FFD700' }}>बगलामुखी हवन</Link> — शत्रु नाश एवं vijay prapti</li>
+            <li><Link to="/lal-mirch-havan" className="underline" style={{ color: '#FFD700' }}>Lal Mirch Havan</Link> — tantra nivaran एवं nazar dosh havan</li>
+            <li><Link to="/baglamukhi-anushthan" className="underline" style={{ color: '#FFD700' }}>बगलामुखी अनुष्ठान</Link> — 36000, सवा लाख, पंचलक्षी</li>
+            <li>Court Case Havan — कानूनी मामलों में विजय</li>
+            <li>नवग्रह शांति हवन — ग्रह दोष निवारण</li>
+            <li>वास्तु शांति एवं गृह प्रवेश हवन</li>
+          </ul>
+
+          <h2 className="text-2xl md:text-3xl font-bold mt-8 mb-4" style={{ color: '#FFD700' }}>
+            What is Baglamukhi Havan — बगलामुखी हवन क्या है
+          </h2>
+          <p className="mb-4">
+            बगलामुखी हवन माँ बगलामुखी के बीज मंत्र — <em>"ॐ ह्लीं बगलामुखी सर्वदुष्टानां वाचं मुखं पदं
+            स्तम्भय जिह्वां कीलय बुद्धिं विनाशय ह्लीं ॐ स्वाहा"</em> — के निर्धारित संख्या में जाप एवं
+            दशांश हवन से सम्पन्न होता है। यह वैदिक अनुष्ठान साधक के चारों ओर रक्षात्मक ऊर्जा-क्षेत्र
+            बनाता है और शत्रुओं की बुद्धि एवं वाणी को स्तंभित कर देता है।
+          </p>
+
+          <h2 className="text-2xl md:text-3xl font-bold mt-8 mb-4" style={{ color: '#FFD700' }}>
+            Who Should Perform This Havan — यह हवन किसे करवाना चाहिए
+          </h2>
+          <p className="mb-4">
+            जिन्हें बार-बार court case में पराजय का सामना करना पड़ रहा है, business में अकारण हानि एवं
+            षड्यंत्र हो रहे हैं, गुप्त शत्रुओं का भय है, या <strong>nazar dosh havan</strong> एवं तांत्रिक
+            बाधा का अनुभव हो रहा है — उनके लिए <strong>baglamukhi puja</strong> एवं हवन विशेष फलदायी है।
+            यह हवन पुरुष, स्त्री एवं संपूर्ण परिवार के निमित्त सम्पन्न कराया जा सकता है। प्रतियोगी परीक्षा,
+            नौकरी, विवाह में अड़चन एवं स्वास्थ्य संबंधी समस्याओं में भी यह हवन अद्भुत फल देता है।
+          </p>
+
+          <h2 className="text-2xl md:text-3xl font-bold mt-8 mb-4" style={{ color: '#FFD700' }}>
+            Process of Havan — हवन की विधि
+          </h2>
+          <ol className="list-decimal pl-6 space-y-1 mb-4">
+            <li>साधक के नाम-गोत्र से संकल्प</li>
+            <li>गणपति, कलश एवं नवग्रह स्थापन</li>
+            <li>माँ बगलामुखी का यंत्र पूजन एवं आवाहन</li>
+            <li>निर्धारित संख्या में बीज मंत्र का अखंड जाप</li>
+            <li>दशांश हवन — पीली सरसों, हल्दी, गुग्गुल एवं विशेष शास्त्रोक्त सामग्री से</li>
+            <li>पूर्णाहुति, ब्राह्मण भोज एवं प्रसाद वितरण</li>
+            <li>साधक को हवन का video/photo proof एवं प्रसाद/यंत्र भेजा जाता है</li>
+          </ol>
+
+          <h2 className="text-2xl md:text-3xl font-bold mt-8 mb-4" style={{ color: '#FFD700' }}>
+            Why Choose Us — हमारी सेवा क्यों चुनें
+          </h2>
+          <p className="mb-3">
+            हम मां बगलामुखी मंदिर, नलखेड़ा (जिला आगर मालवा, मध्यप्रदेश) के सिद्ध स्थान से सेवा प्रदान
+            करते हैं। हमारी विशेषताएँ —
+          </p>
+          <ul className="list-disc pl-6 space-y-1 mb-4">
+            <li>अनुभवी एवं विद्वान <strong>baglamukhi pandit</strong></li>
+            <li>पूर्ण शास्त्रोक्त विधि-विधान — कोई shortcut नहीं</li>
+            <li>India + worldwide service — कहीं से भी online <strong>havan booking</strong></li>
+            <li>पारदर्शी pricing — ₹5,100 से प्रारंभ, कोई छुपा शुल्क नहीं</li>
+            <li>Video / photo proof of complete हवन</li>
+            <li>247+ संतुष्ट साधकों की 4.9/5 रेटिंग</li>
+            <li>50% advance पर booking, बाकी हवन दिवस पर</li>
+          </ul>
+
+          <h2 className="text-2xl md:text-3xl font-bold mt-8 mb-4" style={{ color: '#FFD700' }}>
+            Book Baglamukhi Havan — अभी बुकिंग करें
+          </h2>
+          <p className="mb-4">
+            <strong>हम भारत एवं विश्वभर में बगलामुखी हवन एवं पूजा सेवा प्रदान करते हैं।</strong> बुकिंग के
+            लिए <Link to="/havan-booking" className="underline" style={{ color: '#FFD700' }}>online booking page</Link> पर
+            जाएँ या +91 70000 54787 पर कॉल / WhatsApp करें। हमारी टीम 24 घंटे के भीतर आपसे संपर्क करेगी।
+            अधिक जानकारी के लिए हमारा{" "}
+            <Link to="/blog" className="underline" style={{ color: '#FFD700' }}>spiritual blog</Link> भी पढ़ें।
+          </p>
+
+          <p className="text-white/60 text-xs md:text-sm mt-6">
+            Keywords: baglamukhi havan • baglamukhi havan booking • baglamukhi puja • baglamukhi anushthan •
+            lal mirch havan • baglamukhi pandit • havan booking • tantra nivaran havan • court case havan •
+            nazar dosh havan • vijay prapti havan • online havan booking • Nalkheda Agar Malwa Madhya Pradesh
           </p>
         </div>
       </section>

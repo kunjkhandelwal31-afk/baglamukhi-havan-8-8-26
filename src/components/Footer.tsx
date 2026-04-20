@@ -21,9 +21,13 @@ const Footer = () => {
           <div>
             <h4 className="font-bold mb-4" style={{ color: '#FFD700' }}>त्वरित लिंक</h4>
             <div className="space-y-2 text-sm">
+              <Link to="/baglamukhi-havan" className="block hover:text-yellow-400 transition-colors">Baglamukhi Havan</Link>
+              <Link to="/lal-mirch-havan" className="block hover:text-yellow-400 transition-colors">Lal Mirch Havan</Link>
+              <Link to="/baglamukhi-anushthan" className="block hover:text-yellow-400 transition-colors">Baglamukhi Anushthan</Link>
+              <Link to="/havan-booking" className="block hover:text-yellow-400 transition-colors">Havan Booking</Link>
               <Link to="/havan-types" className="block hover:text-yellow-400 transition-colors">हवन के प्रकार</Link>
               <Link to="/anushthan" className="block hover:text-yellow-400 transition-colors">अनुष्ठान के प्रकार</Link>
-              <Link to="/booking" className="block hover:text-yellow-400 transition-colors">बुकिंग</Link>
+              <Link to="/blog" className="block hover:text-yellow-400 transition-colors">ब्लॉग</Link>
               <Link to="/contact" className="block hover:text-yellow-400 transition-colors">संपर्क करें</Link>
             </div>
           </div>
