@@ -17,6 +17,12 @@ import LiveDarshanPage from "./pages/LiveDarshanPage";
 import HavanDetailPage from "./pages/HavanDetailPage";
 import AnushthanPage from "./pages/AnushthanPage";
 import AnushthanDetailPage from "./pages/AnushthanDetailPage";
+import BaglamukhiHavanPage from "./pages/BaglamukhiHavanPage";
+import LalMirchHavanPage from "./pages/LalMirchHavanPage";
+import BaglamukhiAnushthanPage from "./pages/BaglamukhiAnushthanPage";
+import HavanBookingPage from "./pages/HavanBookingPage";
+import BlogIndexPage from "./pages/BlogIndexPage";
+import BlogPostPage from "./pages/BlogPostPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -39,6 +45,14 @@ const App = () => (
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/anushthan" element={<AnushthanPage />} />
           <Route path="/anushthan/:id" element={<AnushthanDetailPage />} />
+          {/* SEO landing pages */}
+          <Route path="/baglamukhi-havan" element={<BaglamukhiHavanPage />} />
+          <Route path="/lal-mirch-havan" element={<LalMirchHavanPage />} />
+          <Route path="/baglamukhi-anushthan" element={<BaglamukhiAnushthanPage />} />
+          <Route path="/havan-booking" element={<HavanBookingPage />} />
+          {/* Blog */}
+          <Route path="/blog" element={<BlogIndexPage />} />
+          <Route path="/blog/:slug" element={<BlogPostPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
