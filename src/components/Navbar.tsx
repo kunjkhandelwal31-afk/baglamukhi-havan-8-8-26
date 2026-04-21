@@ -3,12 +3,12 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Phone } from "lucide-react";
 import LanguageToggle from "./LanguageToggle";
 import AudioToggle from "./AudioToggle";
-import logo from "@/assets/logo-baglamukhi.png";
+import logo from "@/assets/logo-baglamukhi.webp";
 import { PHONE_TEL_HREF, PHONE_NUMBER_DISPLAY } from "@/lib/contact";
 
 const navItems = [
   { path: "/", label: "होम" },
-  { path: "/havan-types", label: "हवन के प्रकार" },
+  { path: "/havan", label: "हवन के प्रकार" },
   { path: "/anushthan", label: "📿 अनुष्ठान के प्रकार" },
   { path: "/live-darshan", label: "🔴 लाइव दर्शन" },
   { path: "/blog", label: "📝 ब्लॉग" },

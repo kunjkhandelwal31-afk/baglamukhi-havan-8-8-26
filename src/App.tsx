@@ -38,6 +38,7 @@ const App = () => (
         <Navbar />
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/havan" element={<HavanTypes />} />
           <Route path="/havan-types" element={<HavanTypes />} />
           <Route path="/live-darshan" element={<LiveDarshanPage />} />
           <Route path="/havan/:id" element={<HavanDetailPage />} />

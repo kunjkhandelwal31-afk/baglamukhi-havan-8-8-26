@@ -10,9 +10,9 @@ import BookingForm from "@/components/BookingForm";
 import { havans } from "@/data/havans";
 import { Link } from "react-router-dom";
 import { ArrowRight, BookOpen } from "lucide-react";
-import anushthan36000 from "@/assets/anushthan-36000.jpg";
-import anushthanSavalakh from "@/assets/anushthan-savalakh.jpg";
-import anushthanPanchlakshi from "@/assets/anushthan-panchlakshi.jpg";
+import anushthan36000 from "@/assets/anushthan-36000.webp";
+import anushthanSavalakh from "@/assets/anushthan-savalakh.webp";
+import anushthanPanchlakshi from "@/assets/anushthan-panchlakshi.webp";
 
 const anushthanTypes = [
   {
