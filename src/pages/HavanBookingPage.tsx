@@ -7,34 +7,37 @@ import { CheckCircle2 } from "lucide-react";
 const HavanBookingPage = () => (
   <>
     <Seo
-      title="Havan Booking | Online Baglamukhi Havan Booking — India & Worldwide"
-      description="Online Havan Booking — Baglamukhi Havan, Lal Mirch Havan, Anushthan के लिए instant booking। 24-घंटे संपर्क की गारंटी। India + worldwide service."
+      title="Havan Booking Online | Baglamukhi Havan & Puja Booking — India & Worldwide"
+      description="Online Havan Booking — Baglamukhi Havan, Lal Mirch Havan, Anushthan booking with experienced pandits. Transparent pricing. India + worldwide service."
       path="/havan-booking"
-      keywords="havan booking, baglamukhi havan booking, online havan booking, baglamukhi pandit, book havan online"
+      keywords="havan booking, baglamukhi havan booking, baglamukhi puja booking online, online havan booking, book havan online, pandit for havan"
     />
     <main className="py-14" style={{ background: '#6B0000', color: 'white' }}>
       <article className="container mx-auto px-4 max-w-3xl">
         <h1 className="text-3xl md:text-5xl font-extrabold mb-4 text-golden-shadow" style={{ color: '#FFD700' }}>
-          Havan Booking — ऑनलाइन हवन बुकिंग
+          Online Havan Booking — ऑनलाइन हवन बुकिंग
         </h1>
         <p className="text-white/85 text-lg leading-relaxed mb-6">
-          <strong style={{ color: '#FFD700' }}>Havan booking</strong> अब केवल एक क्लिक दूर है। आप विश्व
-          के किसी भी स्थान से <Link to="/baglamukhi-havan" className="underline" style={{ color: '#FFD700' }}>Baglamukhi Havan</Link>,{" "}
+          <strong style={{ color: '#FFD700' }}>Havan booking</strong> अब आसान है — आप भारत या विश्व के
+          किसी भी स्थान से <Link to="/baglamukhi-havan" className="underline" style={{ color: '#FFD700' }}>Baglamukhi Havan</Link>,{" "}
           <Link to="/lal-mirch-havan" className="underline" style={{ color: '#FFD700' }}>Lal Mirch Havan</Link> एवं{" "}
           <Link to="/baglamukhi-anushthan" className="underline" style={{ color: '#FFD700' }}>Baglamukhi Anushthan</Link> book कर सकते हैं।
+          नलखेड़ा (Nalkheda, Agar Malwa, MP) के सिद्ध बगलामुखी मंदिर में अनुभवी <strong>pandit for havan</strong> द्वारा
+          पूर्ण विधि-विधान से अनुष्ठान सम्पन्न होता है।
         </p>
 
         <h2 className="text-2xl md:text-3xl font-bold mt-8 mb-3" style={{ color: '#FFD700' }}>
-          हमारी सेवाएं
+          हमारी सेवाएं — Available Havan Services
         </h2>
         <ul className="space-y-2 mb-4">
           {[
-            "बगलामुखी हवन — शत्रु नाश, vijay prapti",
-            "लाल मिर्च हवन — tantra nivaran, नज़र दोष",
-            "Court Case Havan — कानूनी मामलों में विजय",
-            "बगलामुखी अनुष्ठान — 36000 / सवा लाख / पंचलक्षी",
-            "ग्रह शांति, नवग्रह हवन",
-            "गृह प्रवेश, वास्तु शांति हवन",
+            "बगलामुखी हवन — शत्रु नाश, vijay prapti, स्तंभन",
+            "लाल मिर्च हवन — tantra nivaran, काला जादू निवारण, nazar dosh",
+            "Court Case Havan — कानूनी विवादों एवं मुकदमों में विजय",
+            "Shatru Nash Havan — गुप्त एवं प्रत्यक्ष शत्रुओं का नाश",
+            "बगलामुखी अनुष्ठान — 36,000 / सवा लाख / पंचलक्षी",
+            "नवग्रह शांति हवन — ग्रह दोष निवारण",
+            "गृह प्रवेश, वास्तु शांति एवं business growth havan",
           ].map((b) => (
             <li key={b} className="flex items-start gap-2 text-white/90">
               <CheckCircle2 className="h-5 w-5 shrink-0 mt-0.5" style={{ color: '#FFD700' }} /> {b}
@@ -43,37 +46,41 @@ const HavanBookingPage = () => (
         </ul>
 
         <h2 className="text-2xl md:text-3xl font-bold mt-8 mb-3" style={{ color: '#FFD700' }}>
-          Booking कैसे करें — Process
+          Booking कैसे करें — Simple Booking Process
         </h2>
         <ol className="list-decimal pl-6 space-y-2 text-white/85 mb-4">
-          <li>नीचे form भरें या +91 70000 54787 पर कॉल/WhatsApp करें</li>
+          <li>नीचे form भरें या <strong>+91 70000 54787</strong> पर कॉल/WhatsApp करें</li>
           <li>हमारी टीम 24 घंटे में आपसे संपर्क करेगी</li>
           <li>अनुष्ठान की तिथि, सामग्री एवं विधि finalise करें</li>
-          <li>50% advance payment से booking confirm</li>
-          <li>निर्धारित दिन पर हवन सम्पन्न + video/photo proof</li>
-          <li>प्रसाद / यंत्र साधक को भेजा जाता है</li>
+          <li>50% advance payment से <strong>booking confirm</strong></li>
+          <li>निर्धारित दिन हवन सम्पन्न — live video/photo proof</li>
+          <li>सिद्ध प्रसाद एवं अभिमंत्रित यंत्र कूरियर द्वारा</li>
         </ol>
 
         <h2 className="text-2xl md:text-3xl font-bold mt-8 mb-3" style={{ color: '#FFD700' }}>
-          Pricing — पारदर्शी मूल्य
+          Transparent Pricing — पारदर्शी मूल्य
         </h2>
         <ul className="space-y-2 mb-4 text-white/90">
-          <li>सामान्य बगलामुखी हवन — ₹5,100 से प्रारंभ</li>
-          <li>लाल मिर्च हवन — ₹11,000 से</li>
-          <li>36,000 मंत्र अनुष्ठान — ₹31,000</li>
-          <li>सवा लाख मंत्र अनुष्ठान — ₹61,000</li>
-          <li>पंचलक्षी महा-अनुष्ठान — ₹1,51,000</li>
+          <li>सामान्य बगलामुखी हवन — <strong>₹5,100</strong> से</li>
+          <li>लाल मिर्च हवन — <strong>₹11,000</strong> से</li>
+          <li>36,000 मंत्र अनुष्ठान — <strong>₹31,000</strong></li>
+          <li>सवा लाख मंत्र अनुष्ठान — <strong>₹61,000</strong></li>
+          <li>पंचलक्षी महा-अनुष्ठान — <strong>₹1,51,000</strong></li>
         </ul>
+        <p className="text-white/70 text-sm mb-6">
+          कोई छुपा शुल्क नहीं। सम्पूर्ण सामग्री, ब्राह्मण भोज, video/photo proof एवं प्रसाद/यंत्र — सब शामिल।
+        </p>
 
         <h2 className="text-2xl md:text-3xl font-bold mt-8 mb-3" style={{ color: '#FFD700' }}>
-          Why Choose Our Booking Service
+          Why Book With Us
         </h2>
         <ul className="space-y-2 mb-6">
           {[
-            "नलखेड़ा (Agar Malwa, MP) के सिद्ध मंदिर के अनुभवी पंडित",
+            "नलखेड़ा (Nalkheda, Agar Malwa, MP) के सिद्ध मंदिर — 15+ वर्षों का अनुभव",
             "India + worldwide service — कहीं से भी book करें",
-            "पारदर्शी pricing, कोई छुपा शुल्क नहीं",
-            "हवन का video/photo proof",
+            "पारदर्शी pricing — कोई छुपा शुल्क नहीं",
+            "हवन का live video / photo proof",
+            "सिद्ध प्रसाद एवं अभिमंत्रित यंत्र कूरियर द्वारा",
             "247+ संतुष्ट साधक — 4.9/5 rating",
           ].map((b) => (
             <li key={b} className="flex items-start gap-2 text-white/90">
@@ -87,6 +94,13 @@ const HavanBookingPage = () => (
         </div>
 
         <SeoCta headline="अभी कॉल करें या WhatsApp पर संपर्क करें" />
+
+        <p className="text-white/70 text-sm mt-6">
+          संबंधित: <Link to="/baglamukhi-havan" className="underline" style={{ color: '#FFD700' }}>Baglamukhi Havan</Link> •{" "}
+          <Link to="/lal-mirch-havan" className="underline" style={{ color: '#FFD700' }}>Lal Mirch Havan</Link> •{" "}
+          <Link to="/baglamukhi-anushthan" className="underline" style={{ color: '#FFD700' }}>Anushthan</Link> •{" "}
+          <Link to="/havan" className="underline" style={{ color: '#FFD700' }}>सभी हवन सेवाएं</Link>
+        </p>
       </article>
     </main>
   </>
