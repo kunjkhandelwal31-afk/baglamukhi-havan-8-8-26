@@ -34,7 +34,7 @@ const HavanTypes = () => {
         </div>
       </section>
 
-      {/* SEO Content */}
+      {/* SEO Content — expanded with keyword clusters */}
       <section className="py-14" style={{ background: '#5A0000' }}>
         <div className="container mx-auto px-4 max-w-3xl text-white/85 leading-relaxed text-sm md:text-base space-y-4">
           <h2 className="text-2xl font-bold" style={{ color: '#FFD700' }}>
@@ -44,7 +44,7 @@ const HavanTypes = () => {
             <strong>Baglamukhi Havan</strong> दस महाविद्याओं में से एक माँ बगलामुखी की उपासना का सबसे प्रभावशाली माध्यम है।
             यह वैदिक अनुष्ठान शत्रु-स्तंभन, <strong>court case havan</strong>, <strong>nazar dosh havan</strong> एवं
             तंत्र-बाधा निवारण के लिए विश्वभर में प्रसिद्ध है। हमारे अनुभवी <strong>pandit for havan</strong> माँ बगलामुखी
-            मंदिर, नलखेड़ा (Nalkheda) में पूर्ण विधि-विधान से हवन सम्पन्न कराते हैं।
+            मंदिर, नलखेड़ा (Nalkheda, Agar Malwa, Madhya Pradesh) में पूर्ण विधि-विधान से हवन सम्पन्न कराते हैं।
           </p>
 
           <h2 className="text-xl font-bold pt-4" style={{ color: '#FFD700' }}>
@@ -52,11 +52,13 @@ const HavanTypes = () => {
           </h2>
           <ul className="list-disc pl-6 space-y-1">
             <li><strong>शत्रु नाश (Enemy Destruction)</strong> — शत्रुओं की वाणी एवं बुद्धि स्तंभित होती है</li>
-            <li><strong>Court Case Victory</strong> — कानूनी मामलों एवं मुकदमों में विजय प्राप्ति</li>
-            <li><strong>तंत्र-बाधा निवारण</strong> — काला जादू, नज़र दोष एवं नकारात्मक ऊर्जा का नाश</li>
-            <li><strong>Vijay Prapti</strong> — चुनाव, प्रतियोगिता एवं व्यापार में सफलता</li>
-            <li><strong>धन लाभ</strong> — आर्थिक समृद्धि एवं ऋण मुक्ति</li>
-            <li><strong>मानसिक शांति</strong> — भय, चिंता एवं तनाव से मुक्ति</li>
+            <li><strong>Court Case Victory</strong> — कानूनी मामलों, सम्पत्ति विवाद एवं मुकदमों में विजय प्राप्ति</li>
+            <li><strong>तंत्र-बाधा निवारण (Tantra Nivaran)</strong> — काला जादू, नज़र दोष एवं नकारात्मक ऊर्जा का नाश</li>
+            <li><strong>Vijay Prapti</strong> — चुनाव, प्रतियोगिता, interview एवं व्यापार में सफलता</li>
+            <li><strong>धन लाभ एवं Business Growth</strong> — आर्थिक समृद्धि एवं ऋण मुक्ति</li>
+            <li><strong>मानसिक शांति</strong> — भय, चिंता, तनाव एवं अनिद्रा से मुक्ति</li>
+            <li><strong>Nazar Dosh Nivaran</strong> — बच्चों, व्यापार एवं परिवार पर लगी बुरी नज़र का निवारण</li>
+            <li><strong>विवाह बाधा निवारण</strong> — विवाह में आ रही अड़चनों का समाधान</li>
           </ul>
 
           <h2 className="text-xl font-bold pt-4" style={{ color: '#FFD700' }}>
@@ -66,6 +68,7 @@ const HavanTypes = () => {
             जो व्यक्ति शत्रुओं के षड्यंत्र, court case, business loss, nazar dosh, तांत्रिक बाधा या
             जीवन में बार-बार असफलता का सामना कर रहे हैं — उनके लिए <strong>baglamukhi puja</strong> एवं हवन
             विशेष रूप से फलदायी है। यह हवन पुरुष, स्त्री एवं संपूर्ण परिवार के लिए किया जा सकता है।
+            NRI साधक भी <Link to="/havan-booking" className="underline" style={{ color: '#FFD700' }}>online havan booking</Link> द्वारा लाभ ले सकते हैं।
           </p>
 
           <h2 className="text-xl font-bold pt-4" style={{ color: '#FFD700' }}>
@@ -77,10 +80,27 @@ const HavanTypes = () => {
             सम्पूर्ण हवन की <strong>live video</strong> एवं <strong>photo documentation</strong> आपको भेजी जाती है।
           </p>
 
+          <h2 className="text-xl font-bold pt-4" style={{ color: '#FFD700' }}>
+            Havan FAQ — अक्सर पूछे जाने वाले प्रश्न
+          </h2>
+          <div className="space-y-3 mt-2">
+            {[
+              { q: "Baglamukhi Havan near me कहाँ होता है?", a: "हमारी सेवा नलखेड़ा (Nalkheda), Agar Malwa, MP में होती है। Online booking से विश्व के किसी भी स्थान से लाभ उठाएँ।" },
+              { q: "How to do Baglamukhi Havan at home?", a: "शास्त्रानुसार बगलामुखी हवन विद्वान पंडित द्वारा ही सम्पन्न होना चाहिए। हम मंदिर में हवन करते हैं एवं video/प्रसाद आपको भेजते हैं।" },
+              { q: "Baglamukhi Havan for enemies — क्या यह शत्रुओं के विरुद्ध काम करता है?", a: "हाँ, माँ बगलामुखी स्तंभन की देवी हैं। यह हवन शत्रुओं की वाणी, बुद्धि एवं षड्यंत्रों को निष्क्रिय करता है।" },
+            ].map((f) => (
+              <div key={f.q} className="rounded-lg p-4" style={{ background: 'rgba(255,140,0,0.12)', border: '1px solid rgba(255,215,0,0.25)' }}>
+                <h3 className="font-bold mb-1 text-sm" style={{ color: '#FFD700' }}>{f.q}</h3>
+                <p className="text-white/80 text-sm">{f.a}</p>
+              </div>
+            ))}
+          </div>
+
           <div className="flex flex-wrap gap-3 pt-4">
             <Link to="/baglamukhi-havan" className="underline" style={{ color: '#FFD700' }}>बगलामुखी हवन →</Link>
             <Link to="/lal-mirch-havan" className="underline" style={{ color: '#FFD700' }}>लाल मिर्च हवन →</Link>
             <Link to="/baglamukhi-anushthan" className="underline" style={{ color: '#FFD700' }}>अनुष्ठान →</Link>
+            <Link to="/havan-booking" className="underline" style={{ color: '#FFD700' }}>बुकिंग →</Link>
             <Link to="/contact" className="underline" style={{ color: '#FFD700' }}>संपर्क →</Link>
           </div>
         </div>
