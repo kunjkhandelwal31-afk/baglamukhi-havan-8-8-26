@@ -1,9 +1,9 @@
-import havanShatruNash from "@/assets/havan-shatru-nash.jpg";
-import havanLalMirch from "@/assets/havan-lal-mirch.jpg";
-import havanVijay from "@/assets/havan-vijay.jpg";
-import havanDhan from "@/assets/havan-dhan.jpg";
-import havanShanti from "@/assets/havan-shanti.jpg";
-import havanSarvKarya from "@/assets/havan-sarv-karya.jpg";
+import havanShatruNash from "@/assets/havan-shatru-nash.webp";
+import havanLalMirch from "@/assets/havan-lal-mirch.webp";
+import havanVijay from "@/assets/havan-vijay.webp";
+import havanDhan from "@/assets/havan-dhan.webp";
+import havanShanti from "@/assets/havan-shanti.webp";
+import havanSarvKarya from "@/assets/havan-sarv-karya.webp";
 
 export interface Havan {
   id: string;
