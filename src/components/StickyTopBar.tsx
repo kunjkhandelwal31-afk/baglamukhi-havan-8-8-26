@@ -1,6 +1,3 @@
-import { Link } from "react-router-dom";
-import { BookOpen } from "lucide-react";
-
 const MANTRA = "ॐ ह्लीं बगलामुखी सर्वदुष्टानां वाचं मुखं पदं स्तम्भय जिह्वां कीलय बुद्धिं विनाशय ह्लीं ॐ स्वाहा ॥";
 
 const StickyTopBar = () => {
@@ -23,15 +20,6 @@ const StickyTopBar = () => {
             ))}
           </span>
         </div>
-        <Link
-          to="/booking"
-          aria-label="Book Havan Now"
-          className="shrink-0 mr-2 md:mr-3 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md text-xs md:text-sm font-bold whitespace-nowrap transition-transform hover:scale-105"
-          style={{ background: '#FFD700', color: '#5A0000' }}
-        >
-          <BookOpen className="h-3.5 w-3.5 md:h-4 md:w-4" />
-          Book Havan Now
-        </Link>
       </div>
     </div>
   );
