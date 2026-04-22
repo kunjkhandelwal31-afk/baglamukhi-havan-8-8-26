@@ -1,8 +1,8 @@
 import { Star } from "lucide-react";
 import ContactStrip from "@/components/ContactStrip";
-import testimonial1 from "@/assets/testimonial-1.webp";
-import testimonial2 from "@/assets/testimonial-2.webp";
-import testimonial3 from "@/assets/testimonial-3.webp";
+import testimonial1 from "@/assets/testimonial-1.jpg";
+import testimonial2 from "@/assets/testimonial-2.jpg";
+import testimonial3 from "@/assets/testimonial-3.jpg";
 
 const testimonials = [
   {
@@ -53,7 +53,6 @@ const TestimonialsSection = () => {
                   src={t.image}
                   alt={`${t.name} - माँ बगलामुखी हवन सेवा भक्त समीक्षा`}
                   loading="lazy"
-                  decoding="async"
                   width={64}
                   height={64}
                   className="h-14 w-14 rounded-full object-cover border-2"

@@ -35,9 +35,6 @@ const AnushthanDetailPage = () => {
                 src={a.image}
                 alt={`${a.title} - baglamukhi anushthan, mantra jaap, online booking`}
                 loading="lazy"
-                decoding="async"
-                width={768}
-                height={432}
                 className="w-full h-full object-cover"
               />
             </div>

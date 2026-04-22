@@ -1,4 +1,4 @@
-import whatsappLogo from "@/assets/whatsapp-logo.webp";
+import whatsappLogo from "@/assets/whatsapp-logo.png";
 
 interface WhatsAppIconProps {
   className?: string;
@@ -11,9 +11,6 @@ const WhatsAppIcon = ({ className = "h-8 w-8" }: WhatsAppIconProps) => {
       alt="WhatsApp"
       className={className}
       loading="lazy"
-      decoding="async"
-      width={96}
-      height={96}
     />
   );
 };

@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
 import { Eye, Flame, Volume2 } from "lucide-react";
 import ContactStrip from "@/components/ContactStrip";
-import darshan1 from "@/assets/darshan-1.webp";
-import darshan2 from "@/assets/darshan-2.webp";
-import darshan3 from "@/assets/darshan-3.webp";
-import darshan4 from "@/assets/darshan-4.webp";
-import heroImg from "@/assets/darshan-hero.webp";
+import darshan1 from "@/assets/darshan-1.jpg";
+import darshan2 from "@/assets/darshan-2.jpg";
+import darshan3 from "@/assets/darshan-3.jpg";
+import darshan4 from "@/assets/darshan-4.jpg";
+import heroImg from "@/assets/darshan-hero.jpg";
 
 const gallery = [
   { src: darshan1, alt: "माँ बगलामुखी दिव्य दर्शन" },
@@ -19,7 +19,7 @@ const LiveDarshanPage = () => {
     <main>
       {/* Hero */}
       <section className="relative h-[50vh] min-h-[320px] flex items-center justify-center overflow-hidden">
-        <img src={heroImg} alt="माँ बगलामुखी मंदिर" className="absolute inset-0 w-full h-full object-cover" width={1280} height={427} fetchPriority="high" decoding="async" />
+        <img src={heroImg} alt="माँ बगलामुखी मंदिर" className="absolute inset-0 w-full h-full object-cover" width={1920} height={640} />
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70" />
         <div className="relative z-10 text-center px-4">
           <div className="inline-flex items-center gap-2 bg-destructive/90 text-destructive-foreground px-4 py-1.5 rounded-full text-sm font-semibold mb-4 animate-pulse">
@@ -46,7 +46,6 @@ const LiveDarshanPage = () => {
                   src={img.src}
                   alt={img.alt}
                   loading="lazy"
-                  decoding="async"
                   width={640}
                   height={640}
                   className="w-full aspect-square object-cover transition-transform duration-500 group-hover:scale-110"
