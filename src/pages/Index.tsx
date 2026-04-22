@@ -132,6 +132,9 @@ const Index = () => {
                     src={a.image}
                     alt={`${a.title} - baglamukhi anushthan, online booking`}
                     loading="lazy"
+                    decoding="async"
+                    width={768}
+                    height={432}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>

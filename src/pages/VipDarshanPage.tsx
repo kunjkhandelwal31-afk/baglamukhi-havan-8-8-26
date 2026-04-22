@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Crown, Flame, Users, Clock, HandHeart, ShieldCheck, Star } from "lucide-react";
 import ContactStrip from "@/components/ContactStrip";
-import heroImg from "@/assets/vip-hero.jpg";
+import heroImg from "@/assets/vip-hero.webp";
 
 const benefits = [
   { icon: Users, text: "भीड़ से मुक्त दर्शन" },
@@ -21,7 +21,7 @@ const VipDarshanPage = () => {
     <main>
       {/* Hero */}
       <section className="relative h-[50vh] min-h-[320px] flex items-center justify-center overflow-hidden">
-        <img src={heroImg} alt="VIP गर्भ गृह" className="absolute inset-0 w-full h-full object-cover" width={1920} height={640} />
+        <img src={heroImg} alt="VIP गर्भ गृह" className="absolute inset-0 w-full h-full object-cover" width={1280} height={427} fetchPriority="high" decoding="async" />
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/80" />
         <div className="relative z-10 text-center px-4">
           <div className="inline-flex items-center gap-2 gradient-golden text-primary-foreground px-4 py-1.5 rounded-full text-sm font-semibold mb-4">

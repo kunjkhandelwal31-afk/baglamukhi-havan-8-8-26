@@ -1,10 +1,10 @@
-import productTabiz from "@/assets/product-tabiz.jpg";
-import productPrasad from "@/assets/product-prasad.jpg";
-import productKavach from "@/assets/product-kavach.jpg";
-import productYantra from "@/assets/product-yantra.jpg";
-import productPattika from "@/assets/product-pattika.jpg";
-import productPitambar from "@/assets/product-pitambar.jpg";
-import productPujaKit from "@/assets/product-puja-kit.jpg";
+import productTabiz from "@/assets/product-tabiz.webp";
+import productPrasad from "@/assets/product-prasad.webp";
+import productKavach from "@/assets/product-kavach.webp";
+import productYantra from "@/assets/product-yantra.webp";
+import productPattika from "@/assets/product-pattika.webp";
+import productPitambar from "@/assets/product-pitambar.webp";
+import productPujaKit from "@/assets/product-puja-kit.webp";
 
 export interface Product {
   id: string;
