@@ -14,6 +14,170 @@ import anushthan36000 from "@/assets/anushthan-36000.webp";
 import anushthanSavalakh from "@/assets/anushthan-savalakh.webp";
 import anushthanPanchlakshi from "@/assets/anushthan-panchlakshi.webp";
 
+const homepageBottomContent = `[HINDI]
+
+माँ बगलामुखी का महत्व
+
+माँ बगलामुखी दस महाविद्याओं में से एक प्रमुख देवी हैं जिन्हें स्तंभन शक्ति की देवी कहा जाता है। इनकी पूजा और हवन करने से शत्रुओं की वाणी, बुद्धि और शक्ति को रोकने की क्षमता प्राप्त होती है। जीवन में जब व्यक्ति को बार-बार असफलता, विरोध, या नकारात्मक शक्तियों का सामना करना पड़ता है, तब माँ बगलामुखी की साधना अत्यंत प्रभावी मानी जाती है। मध्य प्रदेश के नलखेड़ा में स्थित माँ बगलामुखी मंदिर इस साधना का प्रमुख केंद्र है।
+
+---
+
+माँ बगलामुखी का इतिहास
+
+पुराणों के अनुसार, जब संसार में अत्यधिक अशांति और अधर्म बढ़ गया था, तब देवी बगलामुखी प्रकट हुईं और उन्होंने अपनी शक्ति से दुष्ट शक्तियों का नाश किया। उन्हें पीताम्बरा देवी भी कहा जाता है क्योंकि वे पीले वस्त्र धारण करती हैं। उनकी साधना विशेष रूप से तांत्रिक विधियों में महत्वपूर्ण मानी जाती है।
+
+---
+
+बगलामुखी हवन क्या है
+
+बगलामुखी हवन एक शक्तिशाली अनुष्ठान है जो विशेष मंत्रों और विधियों के साथ किया जाता है। यह हवन शत्रु नाश, कोर्ट केस में विजय, और जीवन में सफलता के लिए किया जाता है।
+
+हवन के प्रकार:
+
+- शत्रु नाश हवन
+
+- कोर्ट केस विजय हवन
+
+- व्यापार वृद्धि हवन
+
+- लाल मिर्च हवन
+
+---
+
+बगलामुखी अनुष्ठान क्या है
+
+अनुष्ठान एक दीर्घकालिक साधना होती है जो 3, 5, 7 या 11 दिनों तक की जाती है। यह विशेष रूप से गंभीर समस्याओं जैसे शत्रु बाधा, तांत्रिक प्रभाव और जीवन में बड़ी बाधाओं के लिए किया जाता है।
+
+---
+
+हवन के लाभ
+
+- शत्रु नाश
+
+- कोर्ट केस में विजय
+
+- नकारात्मक ऊर्जा से सुरक्षा
+
+- मानसिक शांति
+
+- आत्मविश्वास में वृद्धि
+
+---
+
+अनुष्ठान के लाभ
+
+- जीवन की बाधाओं का नाश
+
+- सफलता और विजय
+
+- आध्यात्मिक शक्ति में वृद्धि
+
+- ग्रह दोषों का शमन
+
+---
+
+कब करवाना चाहिए
+
+जब जीवन में बार-बार समस्याएं आ रही हों, शत्रु परेशान कर रहे हों, कोर्ट केस चल रहा हो, या व्यापार में नुकसान हो रहा हो।
+
+---
+
+संपर्क करें
+
+यदि आप माँ बगलामुखी हवन या अनुष्ठान करवाना चाहते हैं तो अभी हमसे संपर्क करें।
+
+📞 कॉल / व्हाट्सएप: +91 XXXXX XXXXX  
+📍 स्थान: नलखेड़ा, मध्य प्रदेश  
+
+हमारे अनुभवी पंडितों द्वारा विधि-विधान से पूजा करवाई जाती है। आप घर बैठे भी ऑनलाइन हवन बुक कर सकते हैं। हमारी सेवा पूरे भारत में उपलब्ध है।
+
+----------------------------------------
+
+[ENGLISH]
+
+Importance of Maa Baglamukhi
+
+Maa Baglamukhi is one of the ten Mahavidyas and is known as the goddess of stambhan (power to stop enemies). Worshipping her helps control enemies, remove negativity, and bring success. The temple in Nalkheda, Madhya Pradesh, is a major center for her worship.
+
+---
+
+History of Maa Baglamukhi
+
+According to scriptures, Maa Baglamukhi appeared to destroy evil forces when chaos increased in the world. She is also known as Pitambara Devi due to her yellow attire.
+
+---
+
+What is Baglamukhi Havan
+
+Baglamukhi havan is a powerful ritual performed using sacred mantras for enemy destruction, court case success, and life improvement.
+
+Types of havan:
+
+- Enemy destruction havan
+
+- Court case havan
+
+- Business growth havan
+
+- Lal mirch havan
+
+---
+
+What is Baglamukhi Anushthan
+
+Anushthan is a long-duration ritual performed for 3, 5, 7, or 11 days for serious problems like enemies and negative energies.
+
+---
+
+Benefits of Havan
+
+- Enemy removal
+
+- Court case success
+
+- Protection from negativity
+
+- Mental peace
+
+- Confidence boost
+
+---
+
+Benefits of Anushthan
+
+- Removes life obstacles
+
+- Brings success
+
+- Increases spiritual power
+
+- Reduces planetary issues
+
+---
+
+When to perform
+
+When facing enemies, legal issues, business losses, or life problems.
+
+---
+
+Contact Us
+
+If you want to perform Maa Baglamukhi havan or anushthan, contact us now.
+
+📞 Call / WhatsApp: +91 XXXXX XXXXX  
+📍 Location: Nalkheda, Madhya Pradesh  
+
+We provide services with experienced pandits. Online havan booking is also available across India.
+
+----------------------------------------
+
+SEO KEYWORDS:
+
+माँ बगलामुखी हवन, बगलामुखी पूजा, बगलामुखी अनुष्ठान, शत्रु नाश हवन, कोर्ट केस हवन, नलखेड़ा मंदिर
+
+maa baglamukhi havan, baglamukhi puja, baglamukhi anushthan, court case havan, lal mirch havan, baglamukhi temple nalkheda`;
+
 const anushthanTypes = [
   {
     id: "36000",
@@ -392,6 +556,13 @@ const Index = () => {
             सेवा क्षेत्र: Nalkheda, Agar Malwa, Madhya Pradesh, India — Delhi, Mumbai, Bangalore, Hyderabad, Kolkata, Chennai,
             Pune, Jaipur, Lucknow, Ahmedabad, Bhopal, Indore, USA, UK, Canada, Australia, Dubai, Singapore एवं सम्पूर्ण विश्व।
           </p>
+        </div>
+      </section>
+      <section className="py-14 bg-secondary">
+        <div className="container mx-auto px-4 max-w-3xl">
+          <pre className="whitespace-pre-wrap break-words text-foreground/90 leading-relaxed text-sm md:text-base font-hindi">
+            {homepageBottomContent}
+          </pre>
         </div>
       </section>
     </main>
