@@ -13,6 +13,8 @@ const HavanCard = ({ havan }: { havan: Havan }) => {
           src={havan.image}
           alt={`${havan.name} - baglamukhi hawan pandit, online hawan booking service, हवन पूजा पंडित बुकिंग मध्य प्रदेश`}
           loading="lazy"
+          decoding="async"
+          sizes="(min-width: 1024px) 25vw, (min-width: 768px) 50vw, 100vw"
           width={512}
           height={512}
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
