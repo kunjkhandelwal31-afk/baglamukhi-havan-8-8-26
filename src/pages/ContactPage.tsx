@@ -9,8 +9,8 @@ const ContactPage = () => {
   return (
     <main className="pb-16">
       <Seo
-        title="संपर्क करें | Baglamukhi Havan Booking Contact"
-        description="Book Baglamukhi Havan & Anushthan — call, WhatsApp or visit. Nalkheda, Agar Malwa, Madhya Pradesh. 24/7 booking available across India & worldwide."
+        title="Contact for Baglamukhi Havan Booking"
+        description="Call or WhatsApp for Baglamukhi Havan, Puja and Anushthan booking in Nalkheda, Madhya Pradesh, India with clear guidance."
         path="/contact"
         keywords="baglamukhi havan booking, contact pandit, havan booking, baglamukhi puja contact"
       />
@@ -22,7 +22,10 @@ const ContactPage = () => {
             संपर्क करें — Contact for Baglamukhi Havan Booking
           </h1>
           <p className="text-white/80 max-w-2xl mx-auto">
-            माँ बगलामुखी हवन, अनुष्ठान एवं पूजा बुकिंग के लिए अभी संपर्क करें। हम India एवं worldwide सेवा प्रदान करते हैं।
+            माँ बगलामुखी हवन, अनुष्ठान एवं पूजा बुकिंग के लिए अभी संपर्क करें।
+          </p>
+          <p className="text-white/70 max-w-2xl mx-auto mt-3">
+            Contact us for Baglamukhi Havan, Puja and Anushthan guidance from Nalkheda, Madhya Pradesh.
           </p>
         </div>
       </section>
@@ -97,26 +100,31 @@ const ContactPage = () => {
         {/* SEO Content */}
         <section className="text-white/85 leading-relaxed text-sm md:text-base mb-12 space-y-4">
           <h2 className="text-2xl font-bold" style={{ color: '#FFD700' }}>
-            Baglamukhi Havan Booking — बगलामुखी हवन बुकिंग सेवा
+            बगलामुखी हवन बुकिंग सेवा
           </h2>
           <p>
-            माँ बगलामुखी मंदिर, <strong>नलखेड़ा (Nalkheda), आगर मालवा (Agar Malwa), मध्यप्रदेश</strong> में स्थित
-            हमारी संस्था अनुभवी एवं सिद्ध पंडितों द्वारा <strong>baglamukhi havan</strong>, <strong>lal mirch havan</strong>,
-            <strong> baglamukhi anushthan</strong> एवं tantra nivaran havan की सेवा प्रदान करती है।
+            माँ बगलामुखी हवन, बगलामुखी पूजा और बगलामुखी अनुष्ठान की बुकिंग के लिए आप सीधे कॉल या WhatsApp द्वारा संपर्क कर सकते हैं। हमारी सेवा नलखेड़ा, मध्य प्रदेश, भारत से जुड़ी हुई है, जहाँ माँ बगलामुखी की उपासना को विशेष महत्व दिया जाता है। यदि आप शत्रु बाधा, कोर्ट केस, व्यापार में रुकावट, नज़र दोष, तंत्र बाधा, मानसिक भय या जीवन में लगातार आ रही असफलताओं से परेशान हैं, तो पंडित जी आपकी स्थिति समझकर उचित पूजा या हवन का मार्गदर्शन देते हैं।
           </p>
           <p>
-            हम <strong>India एवं worldwide</strong> सेवा देते हैं। चाहे आप दिल्ली, मुंबई, बैंगलोर, हैदराबाद में हों
-            या USA, UK, Canada, Australia में — आप हमसे ऑनलाइन <strong>havan booking</strong> कर सकते हैं।
-            हवन की सम्पूर्ण प्रक्रिया का वीडियो एवं फ़ोटो आपको भेजा जाता है।
+            बुकिंग प्रक्रिया सरल और स्पष्ट है। सबसे पहले आप अपनी समस्या, नाम, गोत्र और स्थान की जानकारी साझा करते हैं। इसके बाद उपलब्ध तिथि, मुहूर्त, पूजा सामग्री, मंत्र संख्या और सेवा का प्रकार बताया जाता है। श्रद्धालु अपनी आवश्यकता के अनुसार लाल मिर्च हवन, शत्रु नाश हवन, कोर्ट केस हवन, विजय प्राप्ति हवन या विस्तृत बगलामुखी अनुष्ठान चुन सकते हैं। हवन booking के बाद पूजा विधि पूर्ण श्रद्धा और शास्त्रसम्मत नियमों के अनुसार संपन्न की जाती है।
           </p>
           <p>
-            <strong>Pandit for havan</strong> — हमारे पंडित जी 15+ वर्षों के अनुभवी हैं और माँ बगलामुखी की विशेष
-            कृपापात्र हैं। शत्रु नाश, court case victory, nazar dosh nivaran एवं vijay prapti के लिए
-            हज़ारों श्रद्धालुओं ने हमारी सेवा का लाभ उठाया है।
+            जो भक्त नलखेड़ा नहीं आ सकते, वे भी फोन या WhatsApp के माध्यम से baglamukhi puja booking online कर सकते हैं। पूजा सम्पन्न होने के बाद आवश्यक जानकारी, फोटो या वीडियो अपडेट उपलब्ध कराए जा सकते हैं। हमारा उद्देश्य भक्त को भरोसेमंद मार्गदर्शन देना, अनावश्यक भ्रम से बचाना और सही पूजा चयन में मदद करना है।
           </p>
 
           <h2 className="text-xl font-bold pt-4" style={{ color: '#FFD700' }}>
-            हमारी सेवाएं — Our Havan & Anushthan Services
+            बुकिंग के लिए क्या जानकारी दें?
+          </h2>
+          <ul className="list-disc pl-6 space-y-1">
+            <li>अपना नाम, गोत्र और शहर बताएं।</li>
+            <li>समस्या या उद्देश्य स्पष्ट रूप से बताएं, जैसे court case havan, shatru nash havan या success havan।</li>
+            <li>यदि कोई विशेष तिथि, जन्म विवरण या मुहूर्त की इच्छा हो तो साझा करें।</li>
+            <li>फोन नंबर और WhatsApp उपलब्ध रखें ताकि पंडित जी सही मार्गदर्शन दे सकें।</li>
+            <li>पूजा सेवा, सामग्री और प्रक्रिया की पुष्टि के बाद बुकिंग पूरी करें।</li>
+          </ul>
+
+          <h2 className="text-xl font-bold pt-4" style={{ color: '#FFD700' }}>
+            हमारी सेवाएं
           </h2>
           <ul className="list-disc pl-6 space-y-1">
             <li><Link to="/baglamukhi-havan" className="underline" style={{ color: '#FFD700' }}>बगलामुखी हवन</Link> — शत्रु स्तंभन एवं सुरक्षा</li>
@@ -124,6 +132,43 @@ const ContactPage = () => {
             <li><Link to="/baglamukhi-anushthan" className="underline" style={{ color: '#FFD700' }}>बगलामुखी अनुष्ठान</Link> — 36000, सवा लाख, पंचलक्षी मंत्र जाप</li>
             <li><Link to="/havan-booking" className="underline" style={{ color: '#FFD700' }}>Online Havan Booking</Link> — विश्वभर से बुकिंग</li>
           </ul>
+
+          <h2 className="text-2xl font-bold pt-8" style={{ color: '#FFD700' }}>
+            Baglamukhi Havan Booking Contact
+          </h2>
+          <p>
+            For Baglamukhi Havan booking, you can call or send a WhatsApp message with your purpose, name, gotra and location. The service is guided from Nalkheda, Madhya Pradesh, India, and is suitable for devotees who want clear spiritual guidance for protection, success, court case stress, enemies, business obstacles or negative energy. The pandit for havan will suggest the right puja only after understanding your situation respectfully.
+          </p>
+          <p>
+            Devotees can choose baglamukhi havan, baglamukhi anushthan, lal mirch havan, court case havan or a general baglamukhi puja based on their needs. Online guidance is available for people living in other cities or outside India. If you are searching for baglamukhi havan near me or baglamukhi havan in nalkheda, this contact page helps you reach the right booking channel quickly without confusion.
+          </p>
+
+          <h2 className="text-xl font-bold pt-4" style={{ color: '#FFD700' }}>
+            WhatsApp and Call CTA
+          </h2>
+          <p>
+            Call {PHONE_NUMBER_DISPLAY} for direct consultation or use WhatsApp to share your details. For faster response, mention whether you need havan booking, baglamukhi puja booking online, anushthan guidance, lal mirch havan benefits, or a ritual for enemies, court case, nazar dosh or business growth. Clear information helps the pandit recommend the most suitable puja and duration.
+          </p>
+
+          <h2 className="text-xl font-bold pt-4" style={{ color: '#FFD700' }}>
+            FAQs
+          </h2>
+          <div className="space-y-3">
+            {[
+              { q: "फोन नंबर क्या है?", a: `आप सीधे ${PHONE_NUMBER_DISPLAY} पर कॉल कर सकते हैं या WhatsApp द्वारा संपर्क कर सकते हैं।` },
+              { q: "Where is the service location?", a: "The service is connected with Maa Baglamukhi worship in Nalkheda, Madhya Pradesh, India." },
+              { q: "Can I book from outside India?", a: "Yes, devotees can contact through WhatsApp for online booking guidance and ritual updates." },
+            ].map((f) => (
+              <div key={f.q} className="rounded-lg p-4" style={{ background: 'rgba(255,140,0,0.12)', border: '1px solid rgba(255,215,0,0.25)' }}>
+                <h3 className="font-bold mb-1 text-sm" style={{ color: '#FFD700' }}>{f.q}</h3>
+                <p className="text-white/80 text-sm">{f.a}</p>
+              </div>
+            ))}
+          </div>
+
+          <p className="pt-3">
+            पहले <Link to="/havan" className="underline" style={{ color: '#FFD700' }}>हवन के प्रकार</Link> देखें, फिर <Link to="/anushthan" className="underline" style={{ color: '#FFD700' }}>अनुष्ठान सेवा</Link> पढ़ें और अंत में इस पेज से बुकिंग पूरी करें।
+          </p>
 
           <h2 className="text-xl font-bold pt-4" style={{ color: '#FFD700' }}>
             सेवा समय — Service Availability
