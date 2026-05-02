@@ -254,141 +254,185 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Long-form SEO content — 1200+ words, semantic keyword clusters */}
+      {/* Long-form SEO content — strict Hindi block then English block */}
       <section className="py-14" style={{ background: '#5A0000' }}>
-        <div className="container mx-auto px-4 max-w-3xl text-white/85 leading-relaxed text-sm md:text-base">
-          <h2 className="text-2xl md:text-3xl font-bold mb-4" style={{ color: '#FFD700' }}>
-            Baglamukhi Havan — माँ बगलामुखी हवन की सम्पूर्ण जानकारी
-          </h2>
-          <p className="mb-4">
-            <strong style={{ color: '#FFD700' }}>माँ बगलामुखी</strong> दस महाविद्याओं में आठवीं शक्ति हैं।
-            इन्हें "स्तंभन की देवी" कहा जाता है — ये शत्रुओं की वाणी, बुद्धि एवं षड्यंत्रों को स्तंभित
-            करने वाली परम शक्ति हैं। <strong>Baglamukhi Havan</strong> इनकी उपासना का सबसे प्रभावी माध्यम है,
-            जो वैदिक एवं तांत्रिक दोनों परम्पराओं में सिद्ध माना गया है। यह अनुष्ठान विशेषकर शत्रु नाश,
-            मुकदमे में विजय (court case victory), तांत्रिक बाधा निवारण (tantra nivaran), नज़र दोष (nazar dosh)
-            एवं जीवन की विभिन्न समस्याओं के समाधान हेतु किया जाता है।
-          </p>
+        <div className="container mx-auto px-4 max-w-3xl text-white/85 leading-relaxed text-sm md:text-base space-y-10">
 
-          <h3 className="text-xl font-bold mt-6 mb-3" style={{ color: '#FFD700' }}>
-            बगलामुखी हवन का महत्व — Spiritual Significance
-          </h3>
-          <p className="mb-4">
-            शास्त्रों के अनुसार माँ बगलामुखी की आराधना से साधक को "वाक्-सिद्धि" एवं "स्तंभन-शक्ति" की
-            प्राप्ति होती है। पीताम्बरा देवी के रूप में इनकी पूजा पीले वस्त्र, पीले पुष्प, हल्दी एवं
-            पीली सरसों से की जाती है। हवन में विशेष मंत्रों की आहुतियाँ दी जाती हैं जो साधक के चारों ओर
-            एक अदृश्य रक्षा-कवच (spiritual protection shield) बनाती हैं। यह ऊर्जा शत्रुओं को निष्क्रिय
-            करती है और साधक को मानसिक शांति, आत्मविश्वास एवं सफलता प्रदान करती है।
-          </p>
+            {/* 1. Introduction */}
+            <article className="space-y-4">
+              <h2 className="text-2xl md:text-3xl font-bold" style={{ color: '#FFD700' }}>माँ बगलामुखी हवन — सम्पूर्ण परिचय</h2>
+              <p>
+                माँ बगलामुखी दस महाविद्याओं में आठवीं शक्ति हैं और इन्हें स्तंभन की देवी कहा जाता है। ये शत्रुओं की वाणी, बुद्धि और
+                षड्यंत्रों को स्तंभित करने वाली परम शक्ति हैं। बगलामुखी हवन इनकी उपासना का सबसे प्रभावी माध्यम है, जो वैदिक एवं
+                तांत्रिक दोनों परम्पराओं में सिद्ध माना गया है। यह अनुष्ठान विशेष रूप से शत्रु नाश, मुकदमे में विजय, तांत्रिक बाधा निवारण,
+                नज़र दोष और जीवन की विभिन्न समस्याओं के समाधान हेतु किया जाता है। नलखेड़ा (आगर मालवा, मध्यप्रदेश) का प्रसिद्ध
+                बगलामुखी मंदिर इस साधना का सबसे सिद्ध स्थान माना जाता है।
+              </p>
 
-          <h2 className="text-2xl md:text-3xl font-bold mt-8 mb-4" style={{ color: '#FFD700' }}>
-            Benefits of Baglamukhi Havan — हवन के विस्तृत लाभ
-          </h2>
-          <ul className="list-disc pl-6 space-y-2 mb-4">
-            <li><strong>शत्रु नाश एवं स्तंभन (Enemy Destruction)</strong> — गुप्त एवं प्रत्यक्ष शत्रुओं की बुद्धि, वाणी एवं षड्यंत्रों को स्तंभित करता है। प्रतिस्पर्धा, राजनीति एवं व्यापार में विरोधियों से सुरक्षा।</li>
-            <li><strong>कोर्ट केस विजय (Court Case Victory)</strong> — मुकदमे, कानूनी विवाद एवं सम्पत्ति के झगड़ों में अनुकूल निर्णय हेतु court case havan अत्यंत प्रभावी है।</li>
-            <li><strong>तांत्रिक बाधा निवारण (Tantra Nivaran)</strong> — काला जादू, टोना-टोटका, भूत-प्रेत बाधा एवं ऊपरी हवा के प्रभाव से मुक्ति। Lal Mirch Havan विशेष रूप से इसी उद्देश्य हेतु किया जाता है।</li>
-            <li><strong>नज़र दोष निवारण (Nazar Dosh Nivaran)</strong> — बच्चों, व्यापार, सम्पत्ति एवं परिवार पर लगी बुरी नज़र का तत्काल निवारण।</li>
-            <li><strong>विजय प्राप्ति (Success & Victory)</strong> — चुनाव, प्रतियोगी परीक्षा, साक्षात्कार, खेल प्रतियोगिता एवं व्यापार में सफलता।</li>
-            <li><strong>धन एवं समृद्धि (Wealth & Prosperity)</strong> — आर्थिक बाधाओं का निवारण, ऋण मुक्ति एवं business growth havan से व्यापार में वृद्धि।</li>
-            <li><strong>ग्रह दोष शांति</strong> — शनि, राहु, केतु एवं अन्य ग्रहों के बाधक प्रभाव का निवारण।</li>
-            <li><strong>मानसिक शांति एवं आत्मविश्वास</strong> — भय, चिंता, तनाव, अनिद्रा एवं नकारात्मक विचारों से मुक्ति।</li>
-            <li><strong>विवाह बाधा निवारण</strong> — विवाह में आ रही अड़चनें, मंगल दोष एवं वैवाहिक कलह का समाधान।</li>
-          </ul>
+              <h2 className="text-2xl md:text-3xl font-bold pt-2" style={{ color: '#FFD700' }}>Maa Baglamukhi Havan — Complete Introduction</h2>
+              <p>
+                Maa Baglamukhi is the eighth power among the ten Mahavidyas and is known as the Goddess of Stambhan (paralysis of
+                opposing forces). She is the supreme energy that stills the speech, intellect and conspiracies of enemies.
+                Baglamukhi Havan is the most effective form of her worship, established in both Vedic and Tantric traditions.
+                The ritual is performed for enemy protection, court case victory, tantra removal, nazar dosh and many life
+                difficulties. The famous Baglamukhi Mandir at Nalkheda (Agar Malwa, Madhya Pradesh, India) is considered the
+                most powerful seat of this sadhana.
+              </p>
+            </article>
 
-          <h2 className="text-2xl md:text-3xl font-bold mt-8 mb-4" style={{ color: '#FFD700' }}>
-            Types of Havan — हवन सेवाओं के प्रकार
-          </h2>
-          <p className="mb-3">
-            हम विभिन्न प्रकार की <strong>baglamukhi puja</strong> एवं हवन सेवाएं प्रदान करते हैं — प्रत्येक
-            साधना का उद्देश्य एवं विधि भिन्न है:
-          </p>
-          <ul className="list-disc pl-6 space-y-1 mb-4">
-            <li><Link to="/baglamukhi-havan" className="underline" style={{ color: '#FFD700' }}>बगलामुखी हवन</Link> — शत्रु स्तंभन, विजय प्राप्ति एवं सुरक्षा</li>
-            <li><Link to="/lal-mirch-havan" className="underline" style={{ color: '#FFD700' }}>लाल मिर्च हवन (Lal Mirch Havan)</Link> — tantra nivaran, काला जादू निवारण एवं उग्र शत्रु नाश</li>
-            <li><Link to="/baglamukhi-anushthan" className="underline" style={{ color: '#FFD700' }}>बगलामुखी अनुष्ठान</Link> — 36,000 / सवा लाख / पंचलक्षी मंत्र जाप सहित महा-साधना</li>
-            <li>शत्रु नाश हवन (Shatru Nash Havan) — विशेष शत्रु-विनाशक अनुष्ठान</li>
-            <li>विजय प्राप्ति हवन (Vijay Prapti Havan) — प्रतियोगिता, चुनाव एवं व्यापार में सफलता</li>
-            <li>धन प्राप्ति हवन — आर्थिक समृद्धि एवं business growth</li>
-            <li>नवग्रह शांति हवन — ग्रह दोष निवारण</li>
-            <li>वास्तु शांति एवं गृह प्रवेश हवन</li>
-          </ul>
+            {/* 2. Significance */}
+            <article className="space-y-4">
+              <h2 className="text-2xl md:text-3xl font-bold" style={{ color: '#FFD700' }}>बगलामुखी हवन का आध्यात्मिक महत्व</h2>
+              <p>
+                शास्त्रों के अनुसार माँ बगलामुखी की आराधना से साधक को वाक्-सिद्धि एवं स्तंभन-शक्ति की प्राप्ति होती है। पीताम्बरा देवी के
+                रूप में इनकी पूजा पीले वस्त्र, पीले पुष्प, हल्दी एवं पीली सरसों से की जाती है। हवन में विशेष मंत्रों की आहुतियाँ दी जाती हैं
+                जो साधक के चारों ओर एक अदृश्य रक्षा-कवच बनाती हैं। यह ऊर्जा शत्रुओं के दुष्प्रभाव को निष्क्रिय करती है और साधक को
+                मानसिक शांति, आत्मविश्वास तथा सकारात्मक दिशा प्रदान करती है।
+              </p>
 
-          <h2 className="text-2xl md:text-3xl font-bold mt-8 mb-4" style={{ color: '#FFD700' }}>
-            Who Should Perform Baglamukhi Havan — किसे करवाना चाहिए
-          </h2>
-          <p className="mb-4">
-            जिन व्यक्तियों को जीवन में निम्नलिखित समस्याओं का सामना करना पड़ रहा है, उन्हें
-            <strong> baglamukhi puja</strong> एवं हवन अवश्य करवाना चाहिए:
-          </p>
-          <ul className="list-disc pl-6 space-y-1 mb-4">
-            <li>लंबे समय से चल रहे <strong>court case</strong> में बार-बार पराजय</li>
-            <li>Business में अकारण हानि, षड्यंत्र या प्रतिस्पर्धियों का भारी दबाव</li>
-            <li>गुप्त शत्रुओं का भय — ऑफिस, पड़ोस या परिवार में</li>
-            <li>तांत्रिक बाधा, काला जादू, टोना-टोटका का अनुभव</li>
-            <li>बार-बार बीमारी, अकारण भय, बुरे सपने या अनिद्रा</li>
-            <li>प्रतियोगी परीक्षा, नौकरी या चुनाव में सफलता की कामना</li>
-            <li>विवाह में बाधा, वैवाहिक कलह या पारिवारिक अशांति</li>
-            <li>ग्रह दोष — विशेषकर शनि, राहु, केतु का बाधक प्रभाव</li>
-          </ul>
-          <p className="mb-4">
-            यह हवन पुरुष, स्त्री, बालक एवं संपूर्ण परिवार के निमित्त सम्पन्न कराया जा सकता है।
-            NRI / overseas साधक भी <Link to="/havan-booking" className="underline" style={{ color: '#FFD700' }}>online booking</Link> द्वारा सेवा प्राप्त कर सकते हैं।
-          </p>
+              <h2 className="text-2xl md:text-3xl font-bold pt-2" style={{ color: '#FFD700' }}>Spiritual Significance of Baglamukhi Havan</h2>
+              <p>
+                According to the scriptures, the worship of Maa Baglamukhi grants the devotee the powers of Vak-Siddhi (mastery
+                of speech) and Stambhan-Shakti (the power to stop opposing forces). As the Pitambara Devi, she is worshipped
+                with yellow cloth, yellow flowers, turmeric and yellow mustard. During the havan, special mantras and offerings
+                form an invisible shield of protection around the devotee, neutralising negative influences and bringing mental
+                peace, confidence and positive direction.
+              </p>
+            </article>
 
-          <h2 className="text-2xl md:text-3xl font-bold mt-8 mb-4" style={{ color: '#FFD700' }}>
-            Havan Process — हवन की विस्तृत विधि
-          </h2>
-          <p className="mb-3">
-            प्रत्येक <strong>baglamukhi havan</strong> पूर्ण शास्त्रोक्त विधि-विधान से सम्पन्न होता है:
-          </p>
-          <ol className="list-decimal pl-6 space-y-1 mb-4">
-            <li><strong>संकल्प</strong> — साधक के नाम, गोत्र एवं कामना के अनुसार संकल्प</li>
-            <li><strong>गणपति-कलश पूजन</strong> — विघ्न-निवारण हेतु गणेश जी एवं कलश स्थापना</li>
-            <li><strong>नवग्रह एवं षोडश मातृका पूजन</strong> — ग्रह शांति एवं दिक्पालन</li>
-            <li><strong>माँ बगलामुखी यंत्र स्थापन एवं आवाहन</strong> — सिद्ध यंत्र पर माँ का आह्वान</li>
-            <li><strong>बीज मंत्र जाप</strong> — निर्धारित संख्या में अखंड मंत्र जाप</li>
-            <li><strong>दशांश हवन</strong> — पीली सरसों, हल्दी, गुग्गुल एवं विशेष तांत्रिक सामग्री से आहुतियाँ</li>
-            <li><strong>तर्पण एवं मार्जन</strong> — शुद्धि एवं ऊर्जा संचार</li>
-            <li><strong>पूर्णाहुति एवं ब्राह्मण भोज</strong> — अनुष्ठान सम्पूर्ण</li>
-            <li><strong>प्रसाद / यंत्र</strong> — सिद्ध प्रसाद एवं यंत्र साधक को कूरियर द्वारा</li>
-          </ol>
-          <p className="mb-4">
-            सम्पूर्ण हवन का <strong>live video</strong> एवं <strong>photo documentation</strong> आपको भेजा जाता है
-            ताकि आप विश्वासपूर्वक अनुष्ठान देख सकें।
-          </p>
+            {/* 3. Benefits */}
+            <article className="space-y-4">
+              <h2 className="text-2xl md:text-3xl font-bold" style={{ color: '#FFD700' }}>बगलामुखी हवन के लाभ</h2>
+              <ul className="list-disc pl-6 space-y-2">
+                <li>शत्रु नाश एवं स्तंभन — गुप्त एवं प्रत्यक्ष शत्रुओं की वाणी, बुद्धि एवं षड्यंत्रों का स्तंभन।</li>
+                <li>कोर्ट केस विजय — मुकदमे, कानूनी विवाद एवं सम्पत्ति झगड़ों में अनुकूल निर्णय।</li>
+                <li>तांत्रिक बाधा निवारण — काला जादू, टोना-टोटका एवं ऊपरी हवा से मुक्ति।</li>
+                <li>नज़र दोष निवारण — परिवार, बच्चों, व्यापार पर लगी बुरी नज़र का निवारण।</li>
+                <li>विजय प्राप्ति — चुनाव, परीक्षा, साक्षात्कार एवं प्रतियोगिता में सफलता।</li>
+                <li>धन एवं समृद्धि — आर्थिक बाधाओं का निवारण एवं व्यापार में वृद्धि।</li>
+                <li>ग्रह दोष शांति — शनि, राहु, केतु एवं अन्य ग्रह बाधाओं का निवारण।</li>
+                <li>मानसिक शांति — भय, चिंता, अनिद्रा एवं नकारात्मक विचारों से मुक्ति।</li>
+              </ul>
 
-          <h2 className="text-2xl md:text-3xl font-bold mt-8 mb-4" style={{ color: '#FFD700' }}>
-            Why Choose Our Service — हमारी सेवा क्यों चुनें
-          </h2>
-          <p className="mb-3">
-            हम <strong>मां बगलामुखी मंदिर, नलखेड़ा</strong> (जिला आगर मालवा, मध्यप्रदेश) — माँ बगलामुखी के
-            प्रसिद्ध सिद्ध स्थान से सेवा प्रदान करते हैं। हमारी विशेषताएँ:
-          </p>
-          <ul className="list-disc pl-6 space-y-1 mb-4">
-            <li>अनुभवी एवं विद्वान <strong>baglamukhi pandit</strong> — 15+ वर्षों का अनुभव</li>
-            <li>पूर्ण शास्त्रोक्त विधि — कोई shortcut नहीं, कोई अधूरा कर्मकांड नहीं</li>
-            <li><strong>India + worldwide service</strong> — भारत एवं विश्व के किसी भी स्थान से बुकिंग</li>
-            <li>पारदर्शी pricing — ₹5,100 से प्रारंभ, कोई छुपा शुल्क नहीं</li>
-            <li>सम्पूर्ण हवन का video / photo proof</li>
-            <li>247+ संतुष्ट साधक — 4.9/5 की rating</li>
-            <li>50% advance पर booking confirm, शेष राशि हवन दिवस पर</li>
-            <li>सिद्ध प्रसाद एवं अभिमंत्रित यंत्र कूरियर द्वारा</li>
-          </ul>
+              <h2 className="text-2xl md:text-3xl font-bold pt-2" style={{ color: '#FFD700' }}>Benefits of Baglamukhi Havan</h2>
+              <ul className="list-disc pl-6 space-y-2">
+                <li>Enemy stambhan — paralysing the speech, intellect and conspiracies of hidden and visible enemies.</li>
+                <li>Court case victory — favourable outcomes in legal disputes, lawsuits and property matters.</li>
+                <li>Tantra removal — relief from black magic, tona-totka and negative energies.</li>
+                <li>Nazar dosh removal — protection of family, children and business from the evil eye.</li>
+                <li>Success and victory — favourable results in elections, exams, interviews and competitions.</li>
+                <li>Wealth and prosperity — removal of financial blocks and growth in business.</li>
+                <li>Planetary peace — relief from doshas of Saturn, Rahu, Ketu and other planets.</li>
+                <li>Mental peace — freedom from fear, anxiety, insomnia and negative thoughts.</li>
+              </ul>
+            </article>
 
-          <h2 className="text-2xl md:text-3xl font-bold mt-8 mb-4" style={{ color: '#FFD700' }}>
-            Book Baglamukhi Havan — अभी बुकिंग करें
-          </h2>
-          <p className="mb-4">
-            <strong>हम भारत एवं विश्वभर में बगलामुखी हवन, पूजा एवं अनुष्ठान सेवा प्रदान करते हैं।</strong>{" "}
-            बुकिंग के लिए <Link to="/havan-booking" className="underline" style={{ color: '#FFD700' }}>online booking page</Link> पर
-            जाएँ या <strong>+91 70000 54787</strong> पर कॉल / WhatsApp करें। हमारी टीम 24 घंटे के भीतर आपसे
-            संपर्क करेगी। अधिक जानकारी एवं आध्यात्मिक मार्गदर्शन के लिए हमारा{" "}
-            <Link to="/blog" className="underline" style={{ color: '#FFD700' }}>spiritual blog</Link> भी पढ़ें।
-          </p>
-          <p className="mb-4 text-white/70 text-xs">
-            सेवा क्षेत्र: Nalkheda, Agar Malwa, Madhya Pradesh, India — Delhi, Mumbai, Bangalore, Hyderabad, Kolkata, Chennai,
-            Pune, Jaipur, Lucknow, Ahmedabad, Bhopal, Indore, USA, UK, Canada, Australia, Dubai, Singapore एवं सम्पूर्ण विश्व।
-          </p>
+            {/* 4. Types */}
+            <article className="space-y-4">
+              <h2 className="text-2xl md:text-3xl font-bold" style={{ color: '#FFD700' }}>हवन सेवाओं के प्रकार</h2>
+              <p>हम विभिन्न प्रकार की बगलामुखी पूजा एवं हवन सेवाएं प्रदान करते हैं — प्रत्येक साधना का उद्देश्य एवं विधि भिन्न है।</p>
+              <ul className="list-disc pl-6 space-y-1">
+                <li><Link to="/baglamukhi-havan" className="underline" style={{ color: '#FFD700' }}>बगलामुखी हवन</Link> — शत्रु स्तंभन एवं सुरक्षा</li>
+                <li><Link to="/lal-mirch-havan" className="underline" style={{ color: '#FFD700' }}>लाल मिर्च हवन</Link> — तंत्र निवारण एवं उग्र शत्रु नाश</li>
+                <li><Link to="/baglamukhi-anushthan" className="underline" style={{ color: '#FFD700' }}>बगलामुखी अनुष्ठान</Link> — 36,000 / सवा लाख / पंचलक्षी मंत्र महा-साधना</li>
+                <li>शत्रु नाश हवन, विजय प्राप्ति हवन, धन प्राप्ति हवन, नवग्रह शांति हवन एवं वास्तु शांति हवन।</li>
+              </ul>
+
+              <h2 className="text-2xl md:text-3xl font-bold pt-2" style={{ color: '#FFD700' }}>Types of Havan Services</h2>
+              <p>We offer several types of Baglamukhi puja and havan services — each with a distinct purpose and method.</p>
+              <ul className="list-disc pl-6 space-y-1">
+                <li><Link to="/baglamukhi-havan" className="underline" style={{ color: '#FFD700' }}>Baglamukhi Havan</Link> — enemy stambhan and protection.</li>
+                <li><Link to="/lal-mirch-havan" className="underline" style={{ color: '#FFD700' }}>Lal Mirch Havan</Link> — tantra removal and powerful enemy nash.</li>
+                <li><Link to="/baglamukhi-anushthan" className="underline" style={{ color: '#FFD700' }}>Baglamukhi Anushthan</Link> — 36,000 / 1.25 lakh / Panchlakshi mantra mahasadhana.</li>
+                <li>Shatru Nash, Vijay Prapti, Dhan Prapti, Navagraha Shanti and Vastu Shanti havans.</li>
+              </ul>
+            </article>
+
+            {/* 5. Who should perform */}
+            <article className="space-y-4">
+              <h2 className="text-2xl md:text-3xl font-bold" style={{ color: '#FFD700' }}>किसे बगलामुखी हवन करवाना चाहिए</h2>
+              <p>
+                जिन व्यक्तियों को लंबे समय से कोर्ट केस में पराजय, व्यापार में अकारण हानि, गुप्त शत्रुओं का भय, तांत्रिक बाधा, बार-बार
+                बीमारी, बुरे सपने, प्रतियोगिता में असफलता, विवाह में बाधा अथवा ग्रह दोष का अनुभव हो रहा है, उन्हें बगलामुखी हवन अवश्य
+                करवाना चाहिए। यह हवन पुरुष, स्त्री, बालक एवं संपूर्ण परिवार के निमित्त सम्पन्न कराया जा सकता है।
+              </p>
+
+              <h2 className="text-2xl md:text-3xl font-bold pt-2" style={{ color: '#FFD700' }}>Who Should Perform Baglamukhi Havan</h2>
+              <p>
+                People facing repeated losses in court cases, unexplained business loss, fear of hidden enemies, tantra-related
+                disturbances, frequent illness, bad dreams, failure in competitions, marriage obstacles or planetary doshas
+                should perform Baglamukhi Havan. The ritual can be performed for men, women, children and the entire family.
+              </p>
+            </article>
+
+            {/* 6. Process */}
+            <article className="space-y-4">
+              <h2 className="text-2xl md:text-3xl font-bold" style={{ color: '#FFD700' }}>हवन की विस्तृत विधि</h2>
+              <ol className="list-decimal pl-6 space-y-1">
+                <li>संकल्प — साधक के नाम, गोत्र एवं कामना के अनुसार।</li>
+                <li>गणपति-कलश पूजन एवं नवग्रह पूजन।</li>
+                <li>माँ बगलामुखी यंत्र स्थापन एवं आवाहन।</li>
+                <li>बीज मंत्र जाप — निर्धारित संख्या में।</li>
+                <li>दशांश हवन — पीली सरसों, हल्दी, गुग्गुल एवं विशेष सामग्री से आहुतियाँ।</li>
+                <li>तर्पण, मार्जन एवं पूर्णाहुति।</li>
+                <li>ब्राह्मण भोज एवं प्रसाद वितरण।</li>
+                <li>सिद्ध प्रसाद एवं अभिमंत्रित यंत्र साधक को कूरियर द्वारा।</li>
+              </ol>
+
+              <h2 className="text-2xl md:text-3xl font-bold pt-2" style={{ color: '#FFD700' }}>Detailed Havan Process</h2>
+              <ol className="list-decimal pl-6 space-y-1">
+                <li>Sankalp — based on the devotee's name, gotra and wish.</li>
+                <li>Ganpati-Kalash puja and Navagraha puja.</li>
+                <li>Installation and invocation of the Maa Baglamukhi Yantra.</li>
+                <li>Beej mantra jaap — for the prescribed count.</li>
+                <li>Dashansh havan — with yellow mustard, turmeric, guggul and special items.</li>
+                <li>Tarpan, marjan and purnahuti.</li>
+                <li>Brahmin bhoj and prasad distribution.</li>
+                <li>Blessed prasad and energised yantra couriered to the devotee.</li>
+              </ol>
+            </article>
+
+            {/* 7. Why choose */}
+            <article className="space-y-4">
+              <h2 className="text-2xl md:text-3xl font-bold" style={{ color: '#FFD700' }}>हमारी सेवा क्यों चुनें</h2>
+              <p>
+                हम नलखेड़ा (आगर मालवा, मध्यप्रदेश) के प्रसिद्ध बगलामुखी मंदिर से सेवा प्रदान करते हैं। हमारे विद्वान पंडितों को 15+ वर्षों
+                का अनुभव है। पूर्ण शास्त्रोक्त विधि, पारदर्शी pricing, सम्पूर्ण हवन का video/photo proof, सिद्ध प्रसाद एवं अभिमंत्रित यंत्र
+                कूरियर द्वारा भेजना हमारी विशेषताएँ हैं। 247+ संतुष्ट साधकों ने 4.9/5 की rating दी है।
+              </p>
+
+              <h2 className="text-2xl md:text-3xl font-bold pt-2" style={{ color: '#FFD700' }}>Why Choose Our Service</h2>
+              <p>
+                We serve from the famous Baglamukhi Mandir at Nalkheda (Agar Malwa, Madhya Pradesh). Our learned pandits carry
+                15+ years of experience. Complete Vedic procedure, transparent pricing, full video and photo documentation,
+                blessed prasad and an energised yantra couriered to the devotee are our key strengths. 247+ satisfied devotees
+                have rated us 4.9/5.
+              </p>
+            </article>
+
+            {/* 8. Online booking */}
+            <article className="space-y-4">
+              <h2 className="text-2xl md:text-3xl font-bold" style={{ color: '#FFD700' }}>ऑनलाइन हवन बुकिंग</h2>
+              <p>
+                हम भारत एवं विश्वभर में बगलामुखी हवन, पूजा एवं अनुष्ठान सेवा प्रदान करते हैं। बुकिंग के लिए{" "}
+                <Link to="/havan-booking" className="underline" style={{ color: '#FFD700' }}>online booking page</Link> पर जाएँ या{" "}
+                <Link to="/contact" className="underline" style={{ color: '#FFD700' }}>संपर्क पेज</Link> से जुड़ें। +91 70000 54787 पर कॉल या
+                WhatsApp भी कर सकते हैं — 24 घंटे में हमारी टीम आपसे संपर्क करेगी।
+              </p>
+
+              <h2 className="text-2xl md:text-3xl font-bold pt-2" style={{ color: '#FFD700' }}>Online Havan Booking</h2>
+              <p>
+                We provide Baglamukhi Havan, Puja and Anushthan services across India and worldwide. To book, visit our{" "}
+                <Link to="/havan-booking" className="underline" style={{ color: '#FFD700' }}>online booking page</Link> or use the{" "}
+                <Link to="/contact" className="underline" style={{ color: '#FFD700' }}>contact page</Link>. You may also call or
+                WhatsApp +91 70000 54787 — our team will respond within 24 hours.
+              </p>
+              <p className="text-white/70 text-xs">
+                Service areas: Nalkheda, Agar Malwa, Madhya Pradesh, India — Delhi, Mumbai, Bangalore, Hyderabad, Kolkata,
+                Chennai, Pune, Jaipur, Lucknow, Ahmedabad, Bhopal, Indore, USA, UK, Canada, Australia, Dubai, Singapore and
+                worldwide.
+              </p>
+            </article>
         </div>
       </section>
     </main>
