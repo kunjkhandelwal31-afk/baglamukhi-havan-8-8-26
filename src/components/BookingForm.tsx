@@ -32,7 +32,7 @@ const BookingForm = ({ preselectedHavan }: { preselectedHavan?: string }) => {
 
     const message = `${WHATSAPP_MESSAGE}\n\n🙏 *नई हवन बुकिंग*\n\n👤 नाम: ${form.name}\n📞 मोबाइल: ${form.phone}\n📍 स्थान: ${form.location || "N/A"}\n🔥 हवन: ${havanName}\n💰 शुल्क: ${price}\n📅 तिथि: ${form.date}\n🪷 गोत्र: ${form.gotra || "N/A"}\n⭐ नक्षत्र: ${form.nakshatra || "N/A"}`;
 
-    const waURL = `https://wa.me/917000054787?text=${encodeURIComponent(message)}`;
+    const waURL = `https://wa.me/918103960297?text=${encodeURIComponent(message)}`;
     window.open(waURL, "_blank");
 
     toast({

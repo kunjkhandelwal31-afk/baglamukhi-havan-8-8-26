@@ -52,13 +52,13 @@ const ShopPage = () => {
 
   const buyNow = (product: Product) => {
     const msg = `नमस्ते, मुझे "${product.name}" (${product.priceRange}) खरीदना है।`;
-    window.open(`https://wa.me/917000054787?text=${encodeURIComponent(msg)}`, "_blank");
+    window.open(`https://wa.me/918103960297?text=${encodeURIComponent(msg)}`, "_blank");
   };
 
   const checkoutViaWhatsApp = () => {
     const items = cart.map((c) => `• ${c.product.name} x${c.quantity}`).join("\n");
     const msg = `नमस्ते, मुझे ये उत्पाद खरीदने हैं:\n${items}\n\nकुल: ₹${cartTotal.toLocaleString("hi-IN")}`;
-    window.open(`https://wa.me/917000054787?text=${encodeURIComponent(msg)}`, "_blank");
+    window.open(`https://wa.me/918103960297?text=${encodeURIComponent(msg)}`, "_blank");
   };
 
   const tagColor = (tag: string) => {
