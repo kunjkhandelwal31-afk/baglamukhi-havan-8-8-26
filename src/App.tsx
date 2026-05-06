@@ -24,6 +24,9 @@ import BaglamukhiAnushthanPage from "./pages/BaglamukhiAnushthanPage";
 import HavanBookingPage from "./pages/HavanBookingPage";
 import BlogIndexPage from "./pages/BlogIndexPage";
 import BlogPostPage from "./pages/BlogPostPage";
+import AdminLoginPage from "./pages/AdminLoginPage";
+import AdminDashboardPage from "./pages/AdminDashboardPage";
+import { AdminAuthProvider } from "./contexts/AdminAuthContext";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -34,10 +37,11 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <ScrollToTop />
-        <AnalyticsTracker />
-        <StickyTopBar />
-        <Navbar />
+        <AdminAuthProvider>
+          <ScrollToTop />
+          <AnalyticsTracker />
+          <StickyTopBar />
+          <Navbar />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/havan" element={<HavanTypes />} />
