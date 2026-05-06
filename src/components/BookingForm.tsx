@@ -20,7 +20,7 @@ const BookingForm = ({ preselectedHavan }: { preselectedHavan?: string }) => {
   });
   
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!form.name || !form.phone || !form.havanType || !form.date) {
       toast({ title: "कृपया सभी आवश्यक फ़ील्ड भरें", variant: "destructive" });
@@ -32,14 +32,25 @@ const BookingForm = ({ preselectedHavan }: { preselectedHavan?: string }) => {
     const havanName = selectedHavan?.name || selectedAnushthan?.shortTitle || form.havanType;
     const price = selectedHavan?.price || selectedAnushthan?.price || "N/A";
 
+    // Save to backend
+    await supabase.from("bookings").insert({
+      name: form.name,
+      phone: form.phone,
+      havan_type: havanName,
+      preferred_date: form.date,
+      message: `स्थान: ${form.location || "N/A"} | गोत्र: ${form.gotra || "N/A"} | नक्षत्र: ${form.nakshatra || "N/A"} | शुल्क: ${price}`,
+      status: "pending",
+    });
+    trackEvent("booking_submitted", { havan: havanName, source: "booking_form" });
+
     const message = `${WHATSAPP_MESSAGE}\n\n🙏 *नई हवन बुकिंग*\n\n👤 नाम: ${form.name}\n📞 मोबाइल: ${form.phone}\n📍 स्थान: ${form.location || "N/A"}\n🔥 हवन: ${havanName}\n💰 शुल्क: ${price}\n📅 तिथि: ${form.date}\n🪷 गोत्र: ${form.gotra || "N/A"}\n⭐ नक्षत्र: ${form.nakshatra || "N/A"}`;
 
     const waURL = `https://wa.me/917000054787?text=${encodeURIComponent(message)}`;
     window.open(waURL, "_blank");
 
     toast({
-      title: "WhatsApp पर बुकिंग भेजी जा रही है! 🙏",
-      description: "कृपया WhatsApp पर मैसेज भेजें।",
+      title: "बुकिंग दर्ज हो गई! 🙏",
+      description: "हम जल्द ही आपसे संपर्क करेंगे।",
     });
     setForm({ name: "", phone: "", location: "", havanType: "", date: "", gotra: "", nakshatra: "" });
   };
