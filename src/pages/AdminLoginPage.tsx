@@ -23,6 +23,19 @@ const AdminLoginPage = () => {
     }
   }, [user, isAdmin, loading, navigate]);
 
+  useEffect(() => {
+    document.title = "Admin Login";
+    let m = document.querySelector('meta[name="robots"]') as HTMLMetaElement | null;
+    if (!m) {
+      m = document.createElement("meta");
+      m.name = "robots";
+      document.head.appendChild(m);
+    }
+    const prev = m.content;
+    m.content = "noindex, nofollow";
+    return () => { if (m) m.content = prev || "index, follow"; };
+  }, []);
+
   const ensureAdminAccount = async () => {
     // Try sign-in; if it fails (account doesn't exist), bootstrap it.
     const first = await supabase.auth.signInWithPassword({
