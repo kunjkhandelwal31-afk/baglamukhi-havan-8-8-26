@@ -5,6 +5,8 @@ import { toast } from "@/hooks/use-toast";
 import { Shield, Star, Users } from "lucide-react";
 import WhatsAppIcon from "@/components/icons/WhatsAppIcon";
 import { WHATSAPP_MESSAGE } from "@/lib/contact";
+import { supabase } from "@/integrations/supabase/client";
+import { trackEvent } from "@/lib/analytics";
 
 const BookingForm = ({ preselectedHavan }: { preselectedHavan?: string }) => {
   const [form, setForm] = useState({
