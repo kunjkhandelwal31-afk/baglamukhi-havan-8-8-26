@@ -1,6 +1,7 @@
 import { Home, Flame, BookOpen, Phone } from "lucide-react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { PHONE_TEL_HREF } from "@/lib/contact";
+import { trackEvent } from "@/lib/analytics";
 
 const navItems = [
   { id: "home", label: "होम", icon: Home, action: "scroll", target: "hero-section" },
@@ -15,6 +16,7 @@ const BottomNav = () => {
 
   const handleClick = (item: typeof navItems[0]) => {
     if (item.action === "call") {
+      trackEvent("call_click", { source: "bottom_nav" });
       window.location.href = item.target;
       return;
     }
