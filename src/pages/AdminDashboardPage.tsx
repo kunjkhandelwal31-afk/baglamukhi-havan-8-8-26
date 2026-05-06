@@ -102,6 +102,19 @@ const AdminDashboardPage = () => {
     }
   }, [authLoading, user, isAdmin, navigate]);
 
+  useEffect(() => {
+    document.title = "Admin Dashboard";
+    let m = document.querySelector('meta[name="robots"]') as HTMLMetaElement | null;
+    if (!m) {
+      m = document.createElement("meta");
+      m.name = "robots";
+      document.head.appendChild(m);
+    }
+    const prev = m.content;
+    m.content = "noindex, nofollow";
+    return () => { if (m) m.content = prev || "index, follow"; };
+  }, []);
+
   const fetchAll = async () => {
     setLoading(true);
     const [pv, ev, bk] = await Promise.all([
