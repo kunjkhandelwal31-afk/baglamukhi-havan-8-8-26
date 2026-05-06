@@ -137,11 +137,28 @@ const AdminDashboardPage = () => {
   };
 
   useEffect(() => {
-    if (user && isAdmin) {
-      fetchAll();
-      const t = setInterval(fetchAll, 30000);
-      return () => clearInterval(t);
-    }
+    if (!user || !isAdmin) return;
+    fetchAll();
+    const t = setInterval(fetchAll, 15000);
+
+    // Realtime: refresh when new rows arrive
+    const channel = supabase
+      .channel("admin-analytics")
+      .on("postgres_changes", { event: "INSERT", schema: "public", table: "page_views" }, (payload) => {
+        setPageViews((prev) => [payload.new as PageView, ...prev].slice(0, 1000));
+      })
+      .on("postgres_changes", { event: "INSERT", schema: "public", table: "interaction_events" }, (payload) => {
+        setEvents((prev) => [payload.new as Interaction, ...prev].slice(0, 1000));
+      })
+      .on("postgres_changes", { event: "*", schema: "public", table: "bookings" }, () => {
+        fetchAll();
+      })
+      .subscribe();
+
+    return () => {
+      clearInterval(t);
+      supabase.removeChannel(channel);
+    };
   }, [user, isAdmin]);
 
   const stats = useMemo(() => {
