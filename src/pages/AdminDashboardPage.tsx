@@ -325,6 +325,51 @@ const AdminDashboardPage = () => {
           <StatCard icon={Instagram} label="Instagram Clicks" value={eventCounts.instagram_click} accent="text-pink-500" />
         </section>
 
+        {/* Live Activity */}
+        <section className="grid lg:grid-cols-2 gap-4 mb-6">
+          <div className="bg-card border border-border rounded-xl p-5">
+            <h2 className="font-semibold text-foreground mb-4 flex items-center gap-2">
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+              </span>
+              Recent page views
+            </h2>
+            <ul className="space-y-2 text-sm max-h-72 overflow-y-auto">
+              {pageViews.slice(0, 15).map((p) => (
+                <li key={p.id} className="flex justify-between gap-3 border-b border-border/40 pb-1.5">
+                  <span className="text-foreground truncate">{p.path}</span>
+                  <span className="text-muted-foreground whitespace-nowrap text-xs">
+                    {p.device_type || "—"} · {new Date(p.created_at).toLocaleTimeString()}
+                  </span>
+                </li>
+              ))}
+              {pageViews.length === 0 && (
+                <li className="text-muted-foreground">No visits yet.</li>
+              )}
+            </ul>
+          </div>
+          <div className="bg-card border border-border rounded-xl p-5">
+            <h2 className="font-semibold text-foreground mb-4">Latest interactions</h2>
+            <ul className="space-y-2 text-sm max-h-72 overflow-y-auto">
+              {events.slice(0, 15).map((e) => (
+                <li key={e.id} className="flex justify-between gap-3 border-b border-border/40 pb-1.5">
+                  <span className="text-foreground truncate">
+                    <span className="font-medium">{e.event_type}</span>
+                    {e.page_path && <span className="text-muted-foreground"> · {e.page_path}</span>}
+                  </span>
+                  <span className="text-muted-foreground whitespace-nowrap text-xs">
+                    {new Date(e.created_at).toLocaleTimeString()}
+                  </span>
+                </li>
+              ))}
+              {events.length === 0 && (
+                <li className="text-muted-foreground">No interactions yet.</li>
+              )}
+            </ul>
+          </div>
+        </section>
+
         {/* Bookings */}
         <section className="bg-card border border-border rounded-xl p-5">
           <div className="flex items-center justify-between mb-4">
