@@ -114,6 +114,14 @@ const Navbar = () => {
               <Phone className="h-4 w-4" />
               +91 70000 54787
             </a>
+            <Link
+              to="/admin-login"
+              onClick={() => setIsOpen(false)}
+              className="block px-4 py-2 mt-2 text-xs text-white/40 hover:text-white/70"
+              rel="nofollow"
+            >
+              🔒 Admin Panel
+            </Link>
           </div>
         )}
       </div>
