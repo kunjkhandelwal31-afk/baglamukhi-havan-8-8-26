@@ -12,8 +12,8 @@ const MandirLocationSection = () => {
             <MapPin className="h-5 w-5" style={{ color: '#FFD700' }} />
             माँ बगलामुखी मंदिर, नलखेड़ा, जिला आगर मालवा, मध्य प्रदेश, भारत
           </p>
-          <a href="tel:+918103960297" className="inline-block mt-3 font-semibold hover:underline" style={{ color: '#FFD700' }}>
-            📞 +91 81039 60297
+          <a href="tel:+917000054787" className="inline-block mt-3 font-semibold hover:underline" style={{ color: '#FFD700' }}>
+            📞 +91 70000 54787
           </a>
         </div>
 
