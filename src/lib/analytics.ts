@@ -32,6 +32,21 @@ const getSessionId = (): string => {
   }
 };
 
+const safeInsert = (table: "page_views" | "interaction_events", row: Record<string, any>) => {
+  // IMPORTANT: supabase builders are lazy thenables — we MUST call .then()
+  // for the request to actually fire. `void supabase.from().insert()` does nothing.
+  try {
+    supabase
+      .from(table)
+      .insert(row)
+      .then(({ error }) => {
+        if (error) console.warn(`[analytics] ${table} insert failed`, error.message);
+      });
+  } catch (err) {
+    console.warn(`[analytics] ${table} insert threw`, err);
+  }
+};
+
 export const trackPageView = (path: string, title?: string) => {
   if (typeof window === "undefined") return;
   const device_type = getDeviceType();
@@ -47,8 +62,7 @@ export const trackPageView = (path: string, title?: string) => {
     });
   }
 
-  // Persist to backend (best-effort)
-  void supabase.from("page_views").insert({
+  safeInsert("page_views", {
     path,
     page_title,
     device_type,
@@ -66,10 +80,11 @@ export const trackEvent = (
   if (typeof window !== "undefined" && window.gtag) {
     window.gtag("event", eventName, { device_type, ...params });
   }
-  void supabase.from("interaction_events").insert({
+  safeInsert("interaction_events", {
     event_type: eventName,
     source: params.source ?? null,
-    page_path: params.page_path ?? (typeof window !== "undefined" ? window.location.pathname : null),
+    page_path:
+      params.page_path ?? (typeof window !== "undefined" ? window.location.pathname : null),
     device_type,
     session_id: getSessionId(),
     metadata: params,
