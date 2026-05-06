@@ -33,6 +33,8 @@ const AnalyticsTracker = () => {
         href.includes("whatsapp://")
       ) {
         trackEvent("whatsapp_click", { link_url: href, link_text: label, page_path: pathname });
+      } else if (href.includes("instagram.com")) {
+        trackEvent("instagram_click", { link_url: href, link_text: label, page_path: pathname });
       }
     };
     document.addEventListener("click", handler, { capture: true });

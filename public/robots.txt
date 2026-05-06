@@ -1,11 +1,17 @@
 User-agent: *
 Allow: /
+Disallow: /admin-dashboard
+Disallow: /admin-login
 
 User-agent: Googlebot
 Allow: /
+Disallow: /admin-dashboard
+Disallow: /admin-login
 
 User-agent: Bingbot
 Allow: /
+Disallow: /admin-dashboard
+Disallow: /admin-login
 
 User-agent: Twitterbot
 Allow: /

@@ -24,6 +24,9 @@ import BaglamukhiAnushthanPage from "./pages/BaglamukhiAnushthanPage";
 import HavanBookingPage from "./pages/HavanBookingPage";
 import BlogIndexPage from "./pages/BlogIndexPage";
 import BlogPostPage from "./pages/BlogPostPage";
+import AdminLoginPage from "./pages/AdminLoginPage";
+import AdminDashboardPage from "./pages/AdminDashboardPage";
+import { AdminAuthProvider } from "./contexts/AdminAuthContext";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -34,33 +37,38 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <ScrollToTop />
-        <AnalyticsTracker />
-        <StickyTopBar />
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/havan" element={<HavanTypes />} />
-          <Route path="/havan-types" element={<HavanTypes />} />
-          <Route path="/live-darshan" element={<LiveDarshanPage />} />
-          <Route path="/havan/:id" element={<HavanDetailPage />} />
-          <Route path="/booking" element={<BookingPage />} />
-          <Route path="/contact" element={<ContactPage />} />
-          <Route path="/anushthan" element={<AnushthanPage />} />
-          <Route path="/anushthan/:id" element={<AnushthanDetailPage />} />
-          {/* SEO landing pages */}
-          <Route path="/baglamukhi-havan" element={<BaglamukhiHavanPage />} />
-          <Route path="/lal-mirch-havan" element={<LalMirchHavanPage />} />
-          <Route path="/baglamukhi-anushthan" element={<BaglamukhiAnushthanPage />} />
-          <Route path="/havan-booking" element={<HavanBookingPage />} />
-          {/* Blog */}
-          <Route path="/blog" element={<BlogIndexPage />} />
-          <Route path="/blog/:slug" element={<BlogPostPage />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-        <Footer />
-        <WhatsAppButton />
-        <BottomNav />
+        <AdminAuthProvider>
+          <ScrollToTop />
+          <AnalyticsTracker />
+          <StickyTopBar />
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Index />} />
+            <Route path="/havan" element={<HavanTypes />} />
+            <Route path="/havan-types" element={<HavanTypes />} />
+            <Route path="/live-darshan" element={<LiveDarshanPage />} />
+            <Route path="/havan/:id" element={<HavanDetailPage />} />
+            <Route path="/booking" element={<BookingPage />} />
+            <Route path="/contact" element={<ContactPage />} />
+            <Route path="/anushthan" element={<AnushthanPage />} />
+            <Route path="/anushthan/:id" element={<AnushthanDetailPage />} />
+            {/* SEO landing pages */}
+            <Route path="/baglamukhi-havan" element={<BaglamukhiHavanPage />} />
+            <Route path="/lal-mirch-havan" element={<LalMirchHavanPage />} />
+            <Route path="/baglamukhi-anushthan" element={<BaglamukhiAnushthanPage />} />
+            <Route path="/havan-booking" element={<HavanBookingPage />} />
+            {/* Blog */}
+            <Route path="/blog" element={<BlogIndexPage />} />
+            <Route path="/blog/:slug" element={<BlogPostPage />} />
+            {/* Admin (hidden) */}
+            <Route path="/admin-login" element={<AdminLoginPage />} />
+            <Route path="/admin-dashboard" element={<AdminDashboardPage />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+          <Footer />
+          <WhatsAppButton />
+          <BottomNav />
+        </AdminAuthProvider>
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
