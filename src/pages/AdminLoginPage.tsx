@@ -36,37 +36,6 @@ const AdminLoginPage = () => {
     return () => { if (m) m.content = prev || "index, follow"; };
   }, []);
 
-  const ensureAdminAccount = async () => {
-    // Try sign-in; if it fails (account doesn't exist), bootstrap it.
-    const first = await supabase.auth.signInWithPassword({
-      email: ADMIN_EMAIL,
-      password: ADMIN_PASSWORD,
-    });
-    if (!first.error) return first;
-
-    // Bootstrap admin user once
-    const signUp = await supabase.auth.signUp({
-      email: ADMIN_EMAIL,
-      password: ADMIN_PASSWORD,
-      options: { emailRedirectTo: `${window.location.origin}/admin-dashboard` },
-    });
-    if (signUp.error) return { error: signUp.error } as any;
-
-    // Sign in to get a session
-    const second = await supabase.auth.signInWithPassword({
-      email: ADMIN_EMAIL,
-      password: ADMIN_PASSWORD,
-    });
-    if (second.error) return second;
-
-    // Insert admin role (will silently fail if not allowed; first call usually inserts)
-    const uid = second.data.user?.id;
-    if (uid) {
-      await supabase.from("user_roles").insert({ user_id: uid, role: "admin" });
-    }
-    return second;
-  };
-
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
     if (username !== ADMIN_USERNAME || password !== ADMIN_PASSWORD) {
@@ -74,28 +43,14 @@ const AdminLoginPage = () => {
       return;
     }
     setBusy(true);
-    const res = await ensureAdminAccount();
+    const { error } = await supabase.auth.signInWithPassword({
+      email: ADMIN_EMAIL,
+      password: ADMIN_PASSWORD,
+    });
     setBusy(false);
-    if ((res as any).error) {
-      toast({
-        title: "Login failed",
-        description: (res as any).error.message,
-        variant: "destructive",
-      });
+    if (error) {
+      toast({ title: "Login failed", description: error.message, variant: "destructive" });
       return;
-    }
-    // Verify role in DB
-    const uid = (res as any).data?.user?.id;
-    if (uid) {
-      const { data } = await supabase
-        .from("user_roles")
-        .select("role")
-        .eq("user_id", uid)
-        .eq("role", "admin")
-        .maybeSingle();
-      if (!data) {
-        await supabase.from("user_roles").insert({ user_id: uid, role: "admin" });
-      }
     }
     toast({ title: "Welcome, Admin" });
     navigate("/admin-dashboard", { replace: true });
