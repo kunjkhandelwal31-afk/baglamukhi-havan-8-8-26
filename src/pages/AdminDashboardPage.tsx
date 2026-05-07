@@ -417,7 +417,10 @@ const AdminDashboardPage = () => {
 
   const topPaths = useMemo(() => {
     const map: Record<string, number> = {};
-    for (const pv of filteredViews) map[pv.path] = (map[pv.path] || 0) + 1;
+    for (const pv of filteredViews) {
+      const k = cleanPath(pv.path);
+      map[k] = (map[k] || 0) + 1;
+    }
     return Object.entries(map).sort((a, b) => b[1] - a[1]).slice(0, 10);
   }, [filteredViews]);
 
@@ -427,7 +430,7 @@ const AdminDashboardPage = () => {
       if (!p.session_id) return;
       const t = new Date(p.created_at).getTime();
       const cur = lastPerSession[p.session_id];
-      if (!cur || t > cur.t) lastPerSession[p.session_id] = { path: p.path, t };
+      if (!cur || t > cur.t) lastPerSession[p.session_id] = { path: cleanPath(p.path), t };
     });
     const map: Record<string, number> = {};
     Object.values(lastPerSession).forEach((l) => (map[l.path] = (map[l.path] || 0) + 1));
