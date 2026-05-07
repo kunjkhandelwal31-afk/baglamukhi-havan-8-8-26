@@ -109,16 +109,41 @@ const StatCard = ({
   </div>
 );
 
+const isUnknownVal = (v: any) => {
+  if (v === null || v === undefined) return true;
+  const s = String(v).trim();
+  return s === "" || /^unknown$/i.test(s);
+};
+const normCountry = (v: string | null | undefined) => (isUnknownVal(v) ? "India" : (v as string));
+const normRegion = (country: string, v: string | null | undefined) =>
+  isUnknownVal(v) ? (country === "India" ? "Madhya Pradesh" : "") : (v as string);
+const normCity = (country: string, v: string | null | undefined) =>
+  isUnknownVal(v) ? (country === "India" ? "Bhopal" : "") : (v as string);
+
+const STRIP_QUERY_KEYS = /^(force[A-Za-z]*|utm_[a-z_]+|gclid|fbclid|mc_[a-z_]+|ref|source)$/i;
+const cleanPath = (path: string): string => {
+  if (!path) return path;
+  const [base, query] = path.split("?");
+  if (!query) return base;
+  const params = new URLSearchParams(query);
+  const keep: string[] = [];
+  params.forEach((val, key) => {
+    if (!STRIP_QUERY_KEYS.test(key)) keep.push(`${key}=${val}`);
+  });
+  return keep.length ? `${base}?${keep.join("&")}` : base;
+};
+
 const matchPageGroup = (path: string): string => {
-  if (path === "/") return "Homepage";
-  if (path.startsWith("/havan-booking") || path.startsWith("/booking")) return "Booking";
-  if (path.startsWith("/havan")) return "Havan";
-  if (path.startsWith("/anushthan")) return "Anushthan";
-  if (path.startsWith("/blog")) return "Blog";
-  if (path.startsWith("/contact")) return "Contact";
-  if (path.startsWith("/about")) return "About";
-  if (path.startsWith("/shop")) return "Shop";
-  if (path.startsWith("/admin")) return "Admin";
+  const p = cleanPath(path);
+  if (p === "/") return "Homepage";
+  if (p.startsWith("/havan-booking") || p.startsWith("/booking")) return "Booking";
+  if (p.startsWith("/havan")) return "Havan";
+  if (p.startsWith("/anushthan")) return "Anushthan";
+  if (p.startsWith("/blog")) return "Blog";
+  if (p.startsWith("/contact")) return "Contact";
+  if (p.startsWith("/about")) return "About";
+  if (p.startsWith("/shop")) return "Shop";
+  if (p.startsWith("/admin")) return "Admin";
   return "Other";
 };
 
