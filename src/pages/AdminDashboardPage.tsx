@@ -551,7 +551,7 @@ const AdminDashboardPage = () => {
   // Country options
   const countryOptions = useMemo(() => {
     const s = new Set<string>();
-    pageViews.forEach((p) => p.country && s.add(p.country));
+    pageViews.forEach((p) => s.add(normCountry(p.country)));
     return Array.from(s).sort();
   }, [pageViews]);
 
