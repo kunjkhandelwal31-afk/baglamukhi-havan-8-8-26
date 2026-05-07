@@ -982,15 +982,15 @@ const ListBars = ({ rows, emptyText = "No data yet." }: { rows: [string, number]
   const max = Math.max(1, ...rows.map(([, n]) => n));
   if (rows.length === 0) return <p className="text-sm text-muted-foreground">{emptyText}</p>;
   return (
-    <div className="space-y-2">
+    <div className="space-y-2 w-full max-w-full overflow-hidden">
       {rows.map(([label, count]) => (
-        <div key={label}>
-          <div className="flex items-center justify-between text-sm mb-1">
-            <span className="text-foreground truncate pr-2">{label}</span>
-            <span className="text-muted-foreground text-xs">{count}</span>
+        <div key={label} className="w-full max-w-full min-w-0">
+          <div className="flex items-center justify-between gap-2 text-sm mb-1 min-w-0">
+            <span className="text-foreground truncate min-w-0 flex-1" title={label}>{label}</span>
+            <span className="text-muted-foreground text-xs shrink-0">{count}</span>
           </div>
-          <div className="h-1.5 bg-muted rounded-full overflow-hidden">
-            <div className="h-full bg-primary" style={{ width: `${(count / max) * 100}%` }} />
+          <div className="h-1.5 w-full bg-muted rounded-full overflow-hidden">
+            <div className="h-full bg-primary" style={{ width: `${Math.min(100, (count / max) * 100)}%` }} />
           </div>
         </div>
       ))}
