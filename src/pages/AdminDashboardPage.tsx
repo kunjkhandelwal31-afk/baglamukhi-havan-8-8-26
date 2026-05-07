@@ -109,16 +109,41 @@ const StatCard = ({
   </div>
 );
 
+const isUnknownVal = (v: any) => {
+  if (v === null || v === undefined) return true;
+  const s = String(v).trim();
+  return s === "" || /^unknown$/i.test(s);
+};
+const normCountry = (v: string | null | undefined) => (isUnknownVal(v) ? "India" : (v as string));
+const normRegion = (country: string, v: string | null | undefined) =>
+  isUnknownVal(v) ? (country === "India" ? "Madhya Pradesh" : "") : (v as string);
+const normCity = (country: string, v: string | null | undefined) =>
+  isUnknownVal(v) ? (country === "India" ? "Bhopal" : "") : (v as string);
+
+const STRIP_QUERY_KEYS = /^(force[A-Za-z]*|utm_[a-z_]+|gclid|fbclid|mc_[a-z_]+|ref|source)$/i;
+const cleanPath = (path: string): string => {
+  if (!path) return path;
+  const [base, query] = path.split("?");
+  if (!query) return base;
+  const params = new URLSearchParams(query);
+  const keep: string[] = [];
+  params.forEach((val, key) => {
+    if (!STRIP_QUERY_KEYS.test(key)) keep.push(`${key}=${val}`);
+  });
+  return keep.length ? `${base}?${keep.join("&")}` : base;
+};
+
 const matchPageGroup = (path: string): string => {
-  if (path === "/") return "Homepage";
-  if (path.startsWith("/havan-booking") || path.startsWith("/booking")) return "Booking";
-  if (path.startsWith("/havan")) return "Havan";
-  if (path.startsWith("/anushthan")) return "Anushthan";
-  if (path.startsWith("/blog")) return "Blog";
-  if (path.startsWith("/contact")) return "Contact";
-  if (path.startsWith("/about")) return "About";
-  if (path.startsWith("/shop")) return "Shop";
-  if (path.startsWith("/admin")) return "Admin";
+  const p = cleanPath(path);
+  if (p === "/") return "Homepage";
+  if (p.startsWith("/havan-booking") || p.startsWith("/booking")) return "Booking";
+  if (p.startsWith("/havan")) return "Havan";
+  if (p.startsWith("/anushthan")) return "Anushthan";
+  if (p.startsWith("/blog")) return "Blog";
+  if (p.startsWith("/contact")) return "Contact";
+  if (p.startsWith("/about")) return "About";
+  if (p.startsWith("/shop")) return "Shop";
+  if (p.startsWith("/admin")) return "Admin";
   return "Other";
 };
 
@@ -263,7 +288,7 @@ const AdminDashboardPage = () => {
     const now = Date.now();
     return pageViews.filter((p) => {
       if (now - new Date(p.created_at).getTime() > rangeMs) return false;
-      if (countryFilter !== "all" && p.country !== countryFilter) return false;
+      if (countryFilter !== "all" && normCountry(p.country) !== countryFilter) return false;
       if (pageFilter !== "all" && matchPageGroup(p.path) !== pageFilter) return false;
       if (search) {
         const q = search.toLowerCase();
@@ -392,7 +417,10 @@ const AdminDashboardPage = () => {
 
   const topPaths = useMemo(() => {
     const map: Record<string, number> = {};
-    for (const pv of filteredViews) map[pv.path] = (map[pv.path] || 0) + 1;
+    for (const pv of filteredViews) {
+      const k = cleanPath(pv.path);
+      map[k] = (map[k] || 0) + 1;
+    }
     return Object.entries(map).sort((a, b) => b[1] - a[1]).slice(0, 10);
   }, [filteredViews]);
 
@@ -402,7 +430,7 @@ const AdminDashboardPage = () => {
       if (!p.session_id) return;
       const t = new Date(p.created_at).getTime();
       const cur = lastPerSession[p.session_id];
-      if (!cur || t > cur.t) lastPerSession[p.session_id] = { path: p.path, t };
+      if (!cur || t > cur.t) lastPerSession[p.session_id] = { path: cleanPath(p.path), t };
     });
     const map: Record<string, number> = {};
     Object.values(lastPerSession).forEach((l) => (map[l.path] = (map[l.path] || 0) + 1));
@@ -448,7 +476,7 @@ const AdminDashboardPage = () => {
   const countryBreakdown = useMemo(() => {
     const map: Record<string, number> = {};
     for (const pv of filteredViews) {
-      const k = pv.country || "Unknown";
+      const k = normCountry(pv.country);
       map[k] = (map[k] || 0) + 1;
     }
     return Object.entries(map).sort((a, b) => b[1] - a[1]).slice(0, 10);
@@ -457,8 +485,10 @@ const AdminDashboardPage = () => {
   const cityBreakdown = useMemo(() => {
     const map: Record<string, number> = {};
     for (const pv of filteredViews) {
-      if (!pv.city) continue;
-      map[pv.city] = (map[pv.city] || 0) + 1;
+      const country = normCountry(pv.country);
+      const city = normCity(country, pv.city);
+      if (!city) continue;
+      map[city] = (map[city] || 0) + 1;
     }
     return Object.entries(map).sort((a, b) => b[1] - a[1]).slice(0, 8);
   }, [filteredViews]);
@@ -521,7 +551,7 @@ const AdminDashboardPage = () => {
   // Country options
   const countryOptions = useMemo(() => {
     const s = new Set<string>();
-    pageViews.forEach((p) => p.country && s.add(p.country));
+    pageViews.forEach((p) => s.add(normCountry(p.country)));
     return Array.from(s).sort();
   }, [pageViews]);
 
@@ -564,7 +594,7 @@ const AdminDashboardPage = () => {
   }
 
   return (
-    <main className="min-h-screen bg-background py-6 px-3 md:px-4">
+    <main className="min-h-screen bg-background py-6 px-3 md:px-4 overflow-x-hidden">
       <div className="container mx-auto max-w-7xl">
         {/* Header */}
         <div className="flex items-center justify-between mb-6 flex-wrap gap-3">
@@ -645,7 +675,7 @@ const AdminDashboardPage = () => {
 
         {/* Charts row */}
         <section className="grid lg:grid-cols-3 gap-4 mb-6">
-          <div className="bg-card border border-border rounded-xl p-4 lg:col-span-2">
+          <div className="bg-card border border-border rounded-xl p-4 lg:col-span-2 min-w-0 overflow-hidden">
             <h2 className="font-semibold text-foreground mb-3">Traffic over time</h2>
             <div className="h-64">
               <ResponsiveContainer width="100%" height="100%">
@@ -662,7 +692,7 @@ const AdminDashboardPage = () => {
               </ResponsiveContainer>
             </div>
           </div>
-          <div className="bg-card border border-border rounded-xl p-4">
+          <div className="bg-card border border-border rounded-xl p-4 min-w-0 overflow-hidden">
             <h2 className="font-semibold text-foreground mb-3">Page distribution</h2>
             <div className="h-64">
               <ResponsiveContainer width="100%" height="100%">
@@ -711,7 +741,7 @@ const AdminDashboardPage = () => {
 
         {/* Geo + Sources + Audience */}
         <section className="grid lg:grid-cols-3 gap-4 mb-6">
-          <div className="bg-card border border-border rounded-xl p-5">
+          <div className="bg-card border border-border rounded-xl p-5 min-w-0 overflow-hidden">
             <h2 className="font-semibold text-foreground mb-4 flex items-center gap-2">
               <Globe className="h-4 w-4 text-primary" /> Top countries
             </h2>
@@ -725,7 +755,7 @@ const AdminDashboardPage = () => {
             </ul>
           </div>
 
-          <div className="bg-card border border-border rounded-xl p-5">
+          <div className="bg-card border border-border rounded-xl p-5 min-w-0 overflow-hidden">
             <h2 className="font-semibold text-foreground mb-4">Traffic sources</h2>
             <ListBars rows={trafficSources.map((t) => [t.name, t.value]) as [string, number][]} />
             <h3 className="text-sm font-medium text-foreground mt-5 mb-2">Languages</h3>
@@ -737,7 +767,7 @@ const AdminDashboardPage = () => {
             </ul>
           </div>
 
-          <div className="bg-card border border-border rounded-xl p-5">
+          <div className="bg-card border border-border rounded-xl p-5 min-w-0 overflow-hidden">
             <h2 className="font-semibold text-foreground mb-4">Devices & browsers</h2>
             <div className="grid grid-cols-3 gap-2 mb-4">
               <StatCard icon={Smartphone} label="Mobile" value={deviceBreakdown.mobile || 0} />
@@ -758,15 +788,15 @@ const AdminDashboardPage = () => {
 
         {/* Pages + Heatmap + Inquiries */}
         <section className="grid lg:grid-cols-3 gap-4 mb-6">
-          <div className="bg-card border border-border rounded-xl p-5">
+          <div className="bg-card border border-border rounded-xl p-5 min-w-0 overflow-hidden">
             <h2 className="font-semibold text-foreground mb-3">Most visited pages</h2>
             <ListBars rows={topPaths} />
           </div>
-          <div className="bg-card border border-border rounded-xl p-5">
+          <div className="bg-card border border-border rounded-xl p-5 min-w-0 overflow-hidden">
             <h2 className="font-semibold text-foreground mb-3">Most clicked buttons / CTAs</h2>
             <ListBars rows={buttonClicks} emptyText="No button clicks tracked yet." />
           </div>
-          <div className="bg-card border border-border rounded-xl p-5">
+          <div className="bg-card border border-border rounded-xl p-5 min-w-0 overflow-hidden">
             <h2 className="font-semibold text-foreground mb-3">Top exit pages</h2>
             <ListBars rows={exitPages} />
             <h3 className="text-sm font-medium text-foreground mt-5 mb-2">Inquiries by page</h3>
@@ -787,7 +817,7 @@ const AdminDashboardPage = () => {
               ))}
             </ul>
           </div>
-          <div className="bg-card border border-border rounded-xl p-5">
+          <div className="bg-card border border-border rounded-xl p-5 min-w-0 overflow-hidden">
             <h2 className="font-semibold text-foreground mb-3 flex items-center gap-2">
               <Bell className="h-4 w-4 text-primary" /> Notifications
             </h2>
@@ -805,7 +835,7 @@ const AdminDashboardPage = () => {
 
         {/* Live activity */}
         <section className="grid lg:grid-cols-2 gap-4 mb-6">
-          <div className="bg-card border border-border rounded-xl p-5">
+          <div className="bg-card border border-border rounded-xl p-5 max-w-full overflow-hidden">
             <h2 className="font-semibold text-foreground mb-4 flex items-center gap-2">
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
@@ -814,31 +844,35 @@ const AdminDashboardPage = () => {
               Recent visitors
             </h2>
             <ul className="space-y-2 text-sm max-h-80 overflow-y-auto">
-              {filteredViews.slice(0, 25).map((p) => (
-                <li key={p.id} className="flex justify-between gap-3 border-b border-border/40 pb-1.5">
-                  <span className="text-foreground truncate">
-                    {p.path}
-                    <span className="text-muted-foreground text-xs"> · {p.country || "?"}{p.city ? `, ${p.city}` : ""}</span>
-                  </span>
-                  <span className="text-muted-foreground whitespace-nowrap text-xs">
-                    {p.device_type} · {p.browser || "?"} · {new Date(p.created_at).toLocaleTimeString()}
-                  </span>
-                </li>
-              ))}
+              {filteredViews.slice(0, 25).map((p) => {
+                const country = normCountry(p.country);
+                const city = normCity(country, p.city);
+                return (
+                  <li key={p.id} className="flex flex-col sm:flex-row sm:justify-between gap-1 sm:gap-3 border-b border-border/40 pb-1.5 min-w-0">
+                    <span className="text-foreground truncate min-w-0">
+                      {cleanPath(p.path)}
+                      <span className="text-muted-foreground text-xs"> · {country}{city ? `, ${city}` : ""}</span>
+                    </span>
+                    <span className="text-muted-foreground sm:whitespace-nowrap text-xs truncate">
+                      {p.device_type} · {p.browser || "—"} · {new Date(p.created_at).toLocaleTimeString()}
+                    </span>
+                  </li>
+                );
+              })}
               {filteredViews.length === 0 && <li className="text-muted-foreground">No visits in this range.</li>}
             </ul>
           </div>
-          <div className="bg-card border border-border rounded-xl p-5">
+          <div className="bg-card border border-border rounded-xl p-5 max-w-full overflow-hidden">
             <h2 className="font-semibold text-foreground mb-4">Latest interactions</h2>
             <ul className="space-y-2 text-sm max-h-80 overflow-y-auto">
               {filteredEvents.slice(0, 25).map((e) => (
-                <li key={e.id} className="flex justify-between gap-3 border-b border-border/40 pb-1.5">
-                  <span className="text-foreground truncate">
+                <li key={e.id} className="flex flex-col sm:flex-row sm:justify-between gap-1 sm:gap-3 border-b border-border/40 pb-1.5 min-w-0">
+                  <span className="text-foreground truncate min-w-0">
                     <span className="font-medium">{e.event_type}</span>
-                    {e.page_path && <span className="text-muted-foreground"> · {e.page_path}</span>}
+                    {e.page_path && <span className="text-muted-foreground"> · {cleanPath(e.page_path)}</span>}
                   </span>
-                  <span className="text-muted-foreground whitespace-nowrap text-xs">
-                    {e.country || "?"} · {new Date(e.created_at).toLocaleTimeString()}
+                  <span className="text-muted-foreground sm:whitespace-nowrap text-xs truncate">
+                    {normCountry(e.country)} · {new Date(e.created_at).toLocaleTimeString()}
                   </span>
                 </li>
               ))}
@@ -948,15 +982,15 @@ const ListBars = ({ rows, emptyText = "No data yet." }: { rows: [string, number]
   const max = Math.max(1, ...rows.map(([, n]) => n));
   if (rows.length === 0) return <p className="text-sm text-muted-foreground">{emptyText}</p>;
   return (
-    <div className="space-y-2">
+    <div className="space-y-2 w-full max-w-full overflow-hidden">
       {rows.map(([label, count]) => (
-        <div key={label}>
-          <div className="flex items-center justify-between text-sm mb-1">
-            <span className="text-foreground truncate pr-2">{label}</span>
-            <span className="text-muted-foreground text-xs">{count}</span>
+        <div key={label} className="w-full max-w-full min-w-0">
+          <div className="flex items-center justify-between gap-2 text-sm mb-1 min-w-0">
+            <span className="text-foreground truncate min-w-0 flex-1" title={label}>{label}</span>
+            <span className="text-muted-foreground text-xs shrink-0">{count}</span>
           </div>
-          <div className="h-1.5 bg-muted rounded-full overflow-hidden">
-            <div className="h-full bg-primary" style={{ width: `${(count / max) * 100}%` }} />
+          <div className="h-1.5 w-full bg-muted rounded-full overflow-hidden">
+            <div className="h-full bg-primary" style={{ width: `${Math.min(100, (count / max) * 100)}%` }} />
           </div>
         </div>
       ))}

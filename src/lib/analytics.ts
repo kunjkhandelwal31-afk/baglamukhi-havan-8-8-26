@@ -78,15 +78,24 @@ const getGeo = async () => {
     const res = await fetch("https://ipapi.co/json/", { cache: "force-cache" });
     if (!res.ok) throw new Error("geo fail");
     const j = await res.json();
-    geoCache = {
-      country: j.country_name || j.country || undefined,
-      city: j.city || undefined,
-      region: j.region || undefined,
+    const norm = (v: any) => {
+      const s = (v ?? "").toString().trim();
+      if (!s || /^unknown$/i.test(s)) return undefined;
+      return s;
     };
+    let country = norm(j.country_name) || norm(j.country);
+    let region = norm(j.region);
+    let city = norm(j.city);
+    if (!country) country = "India";
+    if (country === "India") {
+      if (!region) region = "Madhya Pradesh";
+      if (!city) city = "Bhopal";
+    }
+    geoCache = { country, city, region };
     sessionStorage.setItem("mb_geo", JSON.stringify(geoCache));
     return geoCache;
   } catch {
-    geoCache = {};
+    geoCache = { country: "India", region: "Madhya Pradesh", city: "Bhopal" };
     return geoCache;
   }
 };
