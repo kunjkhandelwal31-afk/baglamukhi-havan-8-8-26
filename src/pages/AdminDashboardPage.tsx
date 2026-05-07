@@ -476,7 +476,7 @@ const AdminDashboardPage = () => {
   const countryBreakdown = useMemo(() => {
     const map: Record<string, number> = {};
     for (const pv of filteredViews) {
-      const k = pv.country || "Unknown";
+      const k = normCountry(pv.country);
       map[k] = (map[k] || 0) + 1;
     }
     return Object.entries(map).sort((a, b) => b[1] - a[1]).slice(0, 10);
@@ -485,8 +485,10 @@ const AdminDashboardPage = () => {
   const cityBreakdown = useMemo(() => {
     const map: Record<string, number> = {};
     for (const pv of filteredViews) {
-      if (!pv.city) continue;
-      map[pv.city] = (map[pv.city] || 0) + 1;
+      const country = normCountry(pv.country);
+      const city = normCity(country, pv.city);
+      if (!city) continue;
+      map[city] = (map[city] || 0) + 1;
     }
     return Object.entries(map).sort((a, b) => b[1] - a[1]).slice(0, 8);
   }, [filteredViews]);
