@@ -509,7 +509,13 @@ const AdminDashboardPage = () => {
       byType[k] = (byType[k] || 0) + 1;
     }
     const topType = Object.entries(byType).sort((a, b) => b[1] - a[1])[0];
-    return { ...c, topType: topType ? topType[0] : "—" };
+    return {
+      total: c.total,
+      pending: c.pending,
+      accepted: c.accepted,
+      rejected: c.rejected,
+      topType: topType ? topType[0] : "—",
+    };
   }, [bookings]);
 
   // Country options
