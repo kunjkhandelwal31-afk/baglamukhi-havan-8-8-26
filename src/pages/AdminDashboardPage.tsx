@@ -288,7 +288,7 @@ const AdminDashboardPage = () => {
     const now = Date.now();
     return pageViews.filter((p) => {
       if (now - new Date(p.created_at).getTime() > rangeMs) return false;
-      if (countryFilter !== "all" && p.country !== countryFilter) return false;
+      if (countryFilter !== "all" && normCountry(p.country) !== countryFilter) return false;
       if (pageFilter !== "all" && matchPageGroup(p.path) !== pageFilter) return false;
       if (search) {
         const q = search.toLowerCase();
