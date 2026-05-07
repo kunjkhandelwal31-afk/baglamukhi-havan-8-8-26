@@ -55,6 +55,8 @@ export type Database = {
       }
       interaction_events: {
         Row: {
+          city: string | null
+          country: string | null
           created_at: string
           device_type: string | null
           event_type: string
@@ -65,6 +67,8 @@ export type Database = {
           source: string | null
         }
         Insert: {
+          city?: string | null
+          country?: string | null
           created_at?: string
           device_type?: string | null
           event_type: string
@@ -75,6 +79,8 @@ export type Database = {
           source?: string | null
         }
         Update: {
+          city?: string | null
+          country?: string | null
           created_at?: string
           device_type?: string | null
           event_type?: string
@@ -88,33 +94,63 @@ export type Database = {
       }
       page_views: {
         Row: {
+          browser: string | null
+          city: string | null
+          country: string | null
           created_at: string
           device_type: string | null
           id: string
+          is_returning: boolean | null
+          language: string | null
+          network_type: string | null
+          os: string | null
           page_title: string | null
           path: string
           referrer: string | null
+          region: string | null
+          screen_resolution: string | null
           session_id: string | null
+          timezone: string | null
           user_agent: string | null
         }
         Insert: {
+          browser?: string | null
+          city?: string | null
+          country?: string | null
           created_at?: string
           device_type?: string | null
           id?: string
+          is_returning?: boolean | null
+          language?: string | null
+          network_type?: string | null
+          os?: string | null
           page_title?: string | null
           path: string
           referrer?: string | null
+          region?: string | null
+          screen_resolution?: string | null
           session_id?: string | null
+          timezone?: string | null
           user_agent?: string | null
         }
         Update: {
+          browser?: string | null
+          city?: string | null
+          country?: string | null
           created_at?: string
           device_type?: string | null
           id?: string
+          is_returning?: boolean | null
+          language?: string | null
+          network_type?: string | null
+          os?: string | null
           page_title?: string | null
           path?: string
           referrer?: string | null
+          region?: string | null
+          screen_resolution?: string | null
           session_id?: string | null
+          timezone?: string | null
           user_agent?: string | null
         }
         Relationships: []

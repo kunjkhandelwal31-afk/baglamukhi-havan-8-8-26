@@ -32,9 +32,66 @@ const getSessionId = (): string => {
   }
 };
 
+const isReturningVisitor = (): boolean => {
+  try {
+    const seen = localStorage.getItem("mb_visited");
+    if (seen) return true;
+    localStorage.setItem("mb_visited", "1");
+    return false;
+  } catch {
+    return false;
+  }
+};
+
+const detectBrowser = (ua: string): string => {
+  if (/Edg\//.test(ua)) return "Edge";
+  if (/OPR\//.test(ua) || /Opera/.test(ua)) return "Opera";
+  if (/Chrome\//.test(ua) && !/Chromium/.test(ua)) return "Chrome";
+  if (/Firefox\//.test(ua)) return "Firefox";
+  if (/Safari\//.test(ua)) return "Safari";
+  return "Other";
+};
+
+const detectOS = (ua: string): string => {
+  if (/Windows/i.test(ua)) return "Windows";
+  if (/Android/i.test(ua)) return "Android";
+  if (/iPhone|iPad|iPod/i.test(ua)) return "iOS";
+  if (/Mac OS X/i.test(ua)) return "macOS";
+  if (/Linux/i.test(ua)) return "Linux";
+  return "Other";
+};
+
+const getNetworkType = (): string | null => {
+  const c = (navigator as any).connection;
+  return c?.effectiveType || c?.type || null;
+};
+
+let geoCache: { country?: string; city?: string; region?: string } | null = null;
+const getGeo = async () => {
+  if (geoCache) return geoCache;
+  try {
+    const cached = sessionStorage.getItem("mb_geo");
+    if (cached) {
+      geoCache = JSON.parse(cached);
+      return geoCache!;
+    }
+    const res = await fetch("https://ipapi.co/json/", { cache: "force-cache" });
+    if (!res.ok) throw new Error("geo fail");
+    const j = await res.json();
+    geoCache = {
+      country: j.country_name || j.country || undefined,
+      city: j.city || undefined,
+      region: j.region || undefined,
+    };
+    sessionStorage.setItem("mb_geo", JSON.stringify(geoCache));
+    return geoCache;
+  } catch {
+    geoCache = {};
+    return geoCache;
+  }
+};
+
 const safeInsert = (table: "page_views" | "interaction_events", row: Record<string, any>) => {
-  // IMPORTANT: supabase builders are lazy thenables — we MUST call .then()
-  // for the request to actually fire. `void supabase.from().insert()` does nothing.
   try {
     supabase
       .from(table)
@@ -47,11 +104,12 @@ const safeInsert = (table: "page_views" | "interaction_events", row: Record<stri
   }
 };
 
-export const trackPageView = (path: string, title?: string) => {
+export const trackPageView = async (path: string, title?: string) => {
   if (typeof window === "undefined") return;
   const device_type = getDeviceType();
   const session_id = getSessionId();
   const page_title = title || document.title;
+  const ua = navigator.userAgent;
 
   if (window.gtag) {
     window.gtag("event", "page_view", {
@@ -62,17 +120,29 @@ export const trackPageView = (path: string, title?: string) => {
     });
   }
 
+  const geo = await getGeo();
+
   safeInsert("page_views", {
     path,
     page_title,
     device_type,
     referrer: document.referrer || null,
     session_id,
-    user_agent: navigator.userAgent.slice(0, 500),
+    user_agent: ua.slice(0, 500),
+    language: navigator.language || null,
+    timezone: Intl.DateTimeFormat().resolvedOptions().timeZone || null,
+    browser: detectBrowser(ua),
+    os: detectOS(ua),
+    screen_resolution: `${window.screen.width}x${window.screen.height}`,
+    network_type: getNetworkType(),
+    is_returning: isReturningVisitor(),
+    country: geo.country || null,
+    city: geo.city || null,
+    region: geo.region || null,
   });
 };
 
-export const trackEvent = (
+export const trackEvent = async (
   eventName: string,
   params: Record<string, any> = {}
 ) => {
@@ -80,6 +150,7 @@ export const trackEvent = (
   if (typeof window !== "undefined" && window.gtag) {
     window.gtag("event", eventName, { device_type, ...params });
   }
+  const geo = await getGeo();
   safeInsert("interaction_events", {
     event_type: eventName,
     source: params.source ?? null,
@@ -88,5 +159,7 @@ export const trackEvent = (
     device_type,
     session_id: getSessionId(),
     metadata: params,
+    country: geo.country || null,
+    city: geo.city || null,
   });
 };
