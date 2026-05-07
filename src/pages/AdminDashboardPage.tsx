@@ -594,7 +594,7 @@ const AdminDashboardPage = () => {
   }
 
   return (
-    <main className="min-h-screen bg-background py-6 px-3 md:px-4">
+    <main className="min-h-screen bg-background py-6 px-3 md:px-4 overflow-x-hidden">
       <div className="container mx-auto max-w-7xl">
         {/* Header */}
         <div className="flex items-center justify-between mb-6 flex-wrap gap-3">
