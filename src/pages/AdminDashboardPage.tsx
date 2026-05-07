@@ -675,7 +675,7 @@ const AdminDashboardPage = () => {
 
         {/* Charts row */}
         <section className="grid lg:grid-cols-3 gap-4 mb-6">
-          <div className="bg-card border border-border rounded-xl p-4 lg:col-span-2">
+          <div className="bg-card border border-border rounded-xl p-4 lg:col-span-2 min-w-0 overflow-hidden">
             <h2 className="font-semibold text-foreground mb-3">Traffic over time</h2>
             <div className="h-64">
               <ResponsiveContainer width="100%" height="100%">
@@ -692,7 +692,7 @@ const AdminDashboardPage = () => {
               </ResponsiveContainer>
             </div>
           </div>
-          <div className="bg-card border border-border rounded-xl p-4">
+          <div className="bg-card border border-border rounded-xl p-4 min-w-0 overflow-hidden">
             <h2 className="font-semibold text-foreground mb-3">Page distribution</h2>
             <div className="h-64">
               <ResponsiveContainer width="100%" height="100%">
@@ -741,7 +741,7 @@ const AdminDashboardPage = () => {
 
         {/* Geo + Sources + Audience */}
         <section className="grid lg:grid-cols-3 gap-4 mb-6">
-          <div className="bg-card border border-border rounded-xl p-5">
+          <div className="bg-card border border-border rounded-xl p-5 min-w-0 overflow-hidden">
             <h2 className="font-semibold text-foreground mb-4 flex items-center gap-2">
               <Globe className="h-4 w-4 text-primary" /> Top countries
             </h2>
@@ -755,7 +755,7 @@ const AdminDashboardPage = () => {
             </ul>
           </div>
 
-          <div className="bg-card border border-border rounded-xl p-5">
+          <div className="bg-card border border-border rounded-xl p-5 min-w-0 overflow-hidden">
             <h2 className="font-semibold text-foreground mb-4">Traffic sources</h2>
             <ListBars rows={trafficSources.map((t) => [t.name, t.value]) as [string, number][]} />
             <h3 className="text-sm font-medium text-foreground mt-5 mb-2">Languages</h3>
@@ -767,7 +767,7 @@ const AdminDashboardPage = () => {
             </ul>
           </div>
 
-          <div className="bg-card border border-border rounded-xl p-5">
+          <div className="bg-card border border-border rounded-xl p-5 min-w-0 overflow-hidden">
             <h2 className="font-semibold text-foreground mb-4">Devices & browsers</h2>
             <div className="grid grid-cols-3 gap-2 mb-4">
               <StatCard icon={Smartphone} label="Mobile" value={deviceBreakdown.mobile || 0} />
@@ -788,15 +788,15 @@ const AdminDashboardPage = () => {
 
         {/* Pages + Heatmap + Inquiries */}
         <section className="grid lg:grid-cols-3 gap-4 mb-6">
-          <div className="bg-card border border-border rounded-xl p-5">
+          <div className="bg-card border border-border rounded-xl p-5 min-w-0 overflow-hidden">
             <h2 className="font-semibold text-foreground mb-3">Most visited pages</h2>
             <ListBars rows={topPaths} />
           </div>
-          <div className="bg-card border border-border rounded-xl p-5">
+          <div className="bg-card border border-border rounded-xl p-5 min-w-0 overflow-hidden">
             <h2 className="font-semibold text-foreground mb-3">Most clicked buttons / CTAs</h2>
             <ListBars rows={buttonClicks} emptyText="No button clicks tracked yet." />
           </div>
-          <div className="bg-card border border-border rounded-xl p-5">
+          <div className="bg-card border border-border rounded-xl p-5 min-w-0 overflow-hidden">
             <h2 className="font-semibold text-foreground mb-3">Top exit pages</h2>
             <ListBars rows={exitPages} />
             <h3 className="text-sm font-medium text-foreground mt-5 mb-2">Inquiries by page</h3>
@@ -817,7 +817,7 @@ const AdminDashboardPage = () => {
               ))}
             </ul>
           </div>
-          <div className="bg-card border border-border rounded-xl p-5">
+          <div className="bg-card border border-border rounded-xl p-5 min-w-0 overflow-hidden">
             <h2 className="font-semibold text-foreground mb-3 flex items-center gap-2">
               <Bell className="h-4 w-4 text-primary" /> Notifications
             </h2>
