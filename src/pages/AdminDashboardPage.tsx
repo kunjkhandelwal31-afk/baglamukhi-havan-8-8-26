@@ -835,7 +835,7 @@ const AdminDashboardPage = () => {
 
         {/* Live activity */}
         <section className="grid lg:grid-cols-2 gap-4 mb-6">
-          <div className="bg-card border border-border rounded-xl p-5">
+          <div className="bg-card border border-border rounded-xl p-5 max-w-full overflow-hidden">
             <h2 className="font-semibold text-foreground mb-4 flex items-center gap-2">
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
@@ -844,31 +844,35 @@ const AdminDashboardPage = () => {
               Recent visitors
             </h2>
             <ul className="space-y-2 text-sm max-h-80 overflow-y-auto">
-              {filteredViews.slice(0, 25).map((p) => (
-                <li key={p.id} className="flex justify-between gap-3 border-b border-border/40 pb-1.5">
-                  <span className="text-foreground truncate">
-                    {p.path}
-                    <span className="text-muted-foreground text-xs"> · {p.country || "?"}{p.city ? `, ${p.city}` : ""}</span>
-                  </span>
-                  <span className="text-muted-foreground whitespace-nowrap text-xs">
-                    {p.device_type} · {p.browser || "?"} · {new Date(p.created_at).toLocaleTimeString()}
-                  </span>
-                </li>
-              ))}
+              {filteredViews.slice(0, 25).map((p) => {
+                const country = normCountry(p.country);
+                const city = normCity(country, p.city);
+                return (
+                  <li key={p.id} className="flex flex-col sm:flex-row sm:justify-between gap-1 sm:gap-3 border-b border-border/40 pb-1.5 min-w-0">
+                    <span className="text-foreground truncate min-w-0">
+                      {cleanPath(p.path)}
+                      <span className="text-muted-foreground text-xs"> · {country}{city ? `, ${city}` : ""}</span>
+                    </span>
+                    <span className="text-muted-foreground sm:whitespace-nowrap text-xs truncate">
+                      {p.device_type} · {p.browser || "—"} · {new Date(p.created_at).toLocaleTimeString()}
+                    </span>
+                  </li>
+                );
+              })}
               {filteredViews.length === 0 && <li className="text-muted-foreground">No visits in this range.</li>}
             </ul>
           </div>
-          <div className="bg-card border border-border rounded-xl p-5">
+          <div className="bg-card border border-border rounded-xl p-5 max-w-full overflow-hidden">
             <h2 className="font-semibold text-foreground mb-4">Latest interactions</h2>
             <ul className="space-y-2 text-sm max-h-80 overflow-y-auto">
               {filteredEvents.slice(0, 25).map((e) => (
-                <li key={e.id} className="flex justify-between gap-3 border-b border-border/40 pb-1.5">
-                  <span className="text-foreground truncate">
+                <li key={e.id} className="flex flex-col sm:flex-row sm:justify-between gap-1 sm:gap-3 border-b border-border/40 pb-1.5 min-w-0">
+                  <span className="text-foreground truncate min-w-0">
                     <span className="font-medium">{e.event_type}</span>
-                    {e.page_path && <span className="text-muted-foreground"> · {e.page_path}</span>}
+                    {e.page_path && <span className="text-muted-foreground"> · {cleanPath(e.page_path)}</span>}
                   </span>
-                  <span className="text-muted-foreground whitespace-nowrap text-xs">
-                    {e.country || "?"} · {new Date(e.created_at).toLocaleTimeString()}
+                  <span className="text-muted-foreground sm:whitespace-nowrap text-xs truncate">
+                    {normCountry(e.country)} · {new Date(e.created_at).toLocaleTimeString()}
                   </span>
                 </li>
               ))}
