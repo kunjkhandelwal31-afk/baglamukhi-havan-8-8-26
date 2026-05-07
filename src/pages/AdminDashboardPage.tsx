@@ -501,7 +501,7 @@ const AdminDashboardPage = () => {
   // Bookings
   const bookingStats = useMemo(() => {
     const all = bookings;
-    const c = { total: all.length, pending: 0, accepted: 0, rejected: 0 } as Record<string, number>;
+    const c: Record<string, number> = { total: all.length, pending: 0, accepted: 0, rejected: 0 };
     const byType: Record<string, number> = {};
     for (const b of all) {
       c[b.status] = (c[b.status] || 0) + 1;
