@@ -9,4 +9,4 @@ export const WHATSAPP_URL = `https://wa.me/919340233595?text=${encodeURIComponen
 )}`;
 
 export const INSTAGRAM_URL =
-  "https://www.instagram.com/baglanamastammm?igsh=bnJpcnE3ZDB5Zmdh";
+  "https://www.instagram.com/maabaglamukhiofficial2?igsh=ZG5xNTV0ODJ4MzBr";
