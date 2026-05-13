@@ -214,7 +214,7 @@ const Index = () => {
               },
               {
                 q: "Baglamukhi Havan कैसे बुक करें? (How to book Havan?)",
-                a: "आप हमारी वेबसाइट पर ऑनलाइन बुकिंग फ़ॉर्म भरकर या +91 70000 54787 पर कॉल / WhatsApp करके हवन बुक कर सकते हैं। भारत एवं विश्व के किसी भी स्थान से booking उपलब्ध है। 24 घंटे में हमारी टीम संपर्क करेगी।",
+                a: "आप हमारी वेबसाइट पर ऑनलाइन बुकिंग फ़ॉर्म भरकर या +91 93402 33595 पर कॉल / WhatsApp करके हवन बुक कर सकते हैं। भारत एवं विश्व के किसी भी स्थान से booking उपलब्ध है। 24 घंटे में हमारी टीम संपर्क करेगी।",
               },
               {
                 q: "लाल मिर्च हवन किसके लिए होता है? (Who needs Lal Mirch Havan?)",
@@ -416,7 +416,7 @@ const Index = () => {
               <p>
                 हम भारत एवं विश्वभर में बगलामुखी हवन, पूजा एवं अनुष्ठान सेवा प्रदान करते हैं। बुकिंग के लिए{" "}
                 <Link to="/havan-booking" className="underline" style={{ color: '#FFD700' }}>online booking page</Link> पर जाएँ या{" "}
-                <Link to="/contact" className="underline" style={{ color: '#FFD700' }}>संपर्क पेज</Link> से जुड़ें। +91 70000 54787 पर कॉल या
+                <Link to="/contact" className="underline" style={{ color: '#FFD700' }}>संपर्क पेज</Link> से जुड़ें। +91 93402 33595 पर कॉल या
                 WhatsApp भी कर सकते हैं — 24 घंटे में हमारी टीम आपसे संपर्क करेगी।
               </p>
 
@@ -425,7 +425,7 @@ const Index = () => {
                 We provide Baglamukhi Havan, Puja and Anushthan services across India and worldwide. To book, visit our{" "}
                 <Link to="/havan-booking" className="underline" style={{ color: '#FFD700' }}>online booking page</Link> or use the{" "}
                 <Link to="/contact" className="underline" style={{ color: '#FFD700' }}>contact page</Link>. You may also call or
-                WhatsApp +91 70000 54787 — our team will respond within 24 hours.
+                WhatsApp +91 93402 33595 — our team will respond within 24 hours.
               </p>
               <p className="text-white/70 text-xs">
                 Service areas: Nalkheda, Agar Malwa, Madhya Pradesh, India — Delhi, Mumbai, Bangalore, Hyderabad, Kolkata,
