@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { Award, CheckCircle, Shield, Star, ArrowRight } from "lucide-react";
 import ContactStrip from "@/components/ContactStrip";
+import panditImage from "@/assets/pandit-ji.png";
 
 const features = [
   "10+ वर्षों का अनुभव",
