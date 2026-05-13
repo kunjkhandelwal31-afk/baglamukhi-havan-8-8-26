@@ -41,10 +41,19 @@ const PanditSection = () => {
         </div>
 
         <div
-          className={`max-w-3xl mx-auto transition-all duration-700 ${
+          className={`max-w-5xl mx-auto grid md:grid-cols-2 gap-8 md:gap-12 items-center transition-all duration-700 ${
             visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
+          <div className="rounded-2xl overflow-hidden shadow-2xl border-2" style={{ borderColor: '#FFD700' }}>
+            <img
+              src={panditImage}
+              alt="पंडित जी माँ बगलामुखी मंदिर नलखेड़ा में हवन करते हुए"
+              className="w-full h-auto object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
           <div>
             <p className="text-white/85 leading-relaxed mb-6">
               हमारे पंडित जी वैदिक अनुष्ठानों और विशेष रूप से माँ बगलामुखी साधना में 10+ वर्षों का गहरा अनुभव रखते हैं। उन्होंने अनेक सफल हवन और अनुष्ठान सम्पन्न कराए हैं, जिससे हजारों भक्तों को शांति, सुरक्षा और सफलता प्राप्त हुई है।
