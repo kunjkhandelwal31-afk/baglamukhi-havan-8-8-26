@@ -49,7 +49,7 @@ const HavanBookingPage = () => (
           Booking कैसे करें — Simple Booking Process
         </h2>
         <ol className="list-decimal pl-6 space-y-2 text-white/85 mb-4">
-          <li>नीचे form भरें या <strong>+91 70000 54787</strong> पर कॉल/WhatsApp करें</li>
+          <li>नीचे form भरें या <strong>+91 93402 33595</strong> पर कॉल/WhatsApp करें</li>
           <li>हमारी टीम 24 घंटे में आपसे संपर्क करेगी</li>
           <li>अनुष्ठान की तिथि, सामग्री एवं विधि finalise करें</li>
           <li>50% advance payment से <strong>booking confirm</strong></li>
