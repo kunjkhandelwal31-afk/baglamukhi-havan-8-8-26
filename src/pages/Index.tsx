@@ -53,7 +53,7 @@ const Index = () => {
       <Helmet>
         <title>Baglamukhi Havan Booking | Maa Baglamukhi Puja & Anushthan</title>
         <meta name="description" content="Book Baglamukhi Havan & Puja with experienced pandits. Lal Mirch Havan, Tantra Nivaran & Anushthan services available worldwide. Contact now." />
-        <link rel="canonical" href="https://www.baglamukhihavananushthan.com/" />
+        <link rel="canonical" href="https://baglamukhihavananushthan.com/" />
       </Helmet>
       <HeroSection />
 

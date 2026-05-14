@@ -19,4 +19,4 @@ Allow: /
 User-agent: facebookexternalhit
 Allow: /
 
-Sitemap: https://www.baglamukhihavananushthan.com/sitemap.xml
+Sitemap: https://baglamukhihavananushthan.com/sitemap.xml
