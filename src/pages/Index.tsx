@@ -127,12 +127,13 @@ const Index = () => {
                 className="rounded-xl overflow-hidden hover:shadow-golden transition-all group flex flex-col"
                 style={{ background: '#F57C00', border: '1px solid rgba(255,215,0,0.4)', boxShadow: '0 4px 20px rgba(0,0,0,0.25)' }}
               >
-                <div className="relative h-44 overflow-hidden">
+                <div className="relative w-full aspect-[4/3] sm:aspect-[16/10] md:h-44 md:aspect-auto overflow-hidden">
                   <img
                     src={a.image}
                     alt={`${a.title} - baglamukhi anushthan, online booking`}
                     loading="lazy"
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                    style={{ objectPosition: 'center top' }}
                   />
                 </div>
                 <div className="p-6 flex flex-col flex-1">

@@ -58,7 +58,7 @@ const AnushthanPage = () => {
         <div className="space-y-8 max-w-4xl mx-auto">
           {anushthans.map((a) => (
             <article key={a.id} className="rounded-xl overflow-hidden" style={{ background: '#F57C00', border: '1px solid rgba(255,215,0,0.4)', boxShadow: '0 4px 20px rgba(0,0,0,0.25)' }}>
-              <div className="relative w-full aspect-[16/9] overflow-hidden"><img src={a.image} alt={`${a.title} - baglamukhi anushthan, mantra jaap, online booking`} loading="lazy" width={768} height={432} className="w-full h-full object-cover" /></div>
+              <div className="relative w-full aspect-[4/3] sm:aspect-[16/10] md:aspect-[16/9] overflow-hidden" style={{ background: '#6B0000' }}><img src={a.image} alt={`${a.title} - baglamukhi anushthan, mantra jaap, online booking`} loading="lazy" width={768} height={576} className="w-full h-full object-cover" style={{ objectPosition: 'center top' }} /></div>
               <div className="p-6 md:p-8">
                 <div className="flex flex-wrap items-start justify-between gap-3 mb-4"><h2 className="text-xl md:text-2xl font-bold text-golden-outline" style={{ color: '#FFD700' }}>{a.title}</h2><span className="text-xl md:text-2xl font-extrabold px-4 py-1.5 rounded-lg text-golden-outline tracking-wide" style={{ background: 'rgba(139,0,0,0.55)', color: '#FFD700', border: '1px solid rgba(255,215,0,0.4)' }}>{a.price}</span></div>
                 <p className="text-white text-sm md:text-base leading-relaxed mb-5">{a.intro}</p>
