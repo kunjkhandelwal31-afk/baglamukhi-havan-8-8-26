@@ -30,13 +30,12 @@ const AnushthanDetailPage = () => {
             className="rounded-xl overflow-hidden"
             style={{ background: '#F57C00', border: '1px solid rgba(255,215,0,0.4)', boxShadow: '0 4px 20px rgba(0,0,0,0.25)' }}
           >
-            <div className="relative w-full aspect-[4/3] sm:aspect-[16/10] md:aspect-[16/9] overflow-hidden" style={{ background: '#6B0000' }}>
+            <div className="relative w-full aspect-[16/9] overflow-hidden">
               <img
                 src={a.image}
                 alt={`${a.title} - baglamukhi anushthan, mantra jaap, online booking`}
                 loading="lazy"
                 className="w-full h-full object-cover"
-                style={{ objectPosition: 'center top' }}
               />
             </div>
             <div className="p-6 md:p-8">
