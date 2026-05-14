@@ -9,7 +9,7 @@ interface SeoProps {
   image?: string;
 }
 
-const SITE = "https://www.baglamukhihavananushthan.com";
+const SITE = "https://baglamukhihavananushthan.com";
 
 const Seo = ({ title, description, path, keywords, type = "website", image }: SeoProps) => {
   const url = `${SITE}${path}`;
