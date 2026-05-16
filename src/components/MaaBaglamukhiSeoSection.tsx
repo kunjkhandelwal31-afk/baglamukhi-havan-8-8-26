@@ -176,16 +176,22 @@ const faqSchema = {
   })),
 };
 
-const MaaBaglamukhiSeoSection = () => {
+interface MaaBaglamukhiSeoSectionProps {
+  hideFaq?: boolean;
+}
+
+const MaaBaglamukhiSeoSection = ({ hideFaq = false }: MaaBaglamukhiSeoSectionProps) => {
   return (
     <section
       className="py-16"
       style={{ background: "#5A0000" }}
       aria-label="Maa Baglamukhi spiritual information"
     >
-      <Helmet>
-        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
-      </Helmet>
+      {!hideFaq && (
+        <Helmet>
+          <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
+        </Helmet>
+      )}
 
       <div className="container mx-auto px-4 max-w-3xl">
         <header className="text-center mb-12">
