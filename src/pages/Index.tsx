@@ -360,6 +360,93 @@ const Index = () => {
             </article>
         </div>
       </section>
+
+      {/* 2️⃣ Contact / Pandit Ji CTA */}
+      <CallSection />
+
+      {/* 3️⃣ Map / Temple location */}
+      <MandirLocationSection />
+
+      {/* 4️⃣ Booking section */}
+      <section className="py-20 yantra-bg" style={{ background: '#6B0000' }}>
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-10 items-start">
+            <div>
+              <h2 className="text-3xl font-bold mb-4" style={{ color: '#FFD700' }}>
+                अभी बुकिंग करें
+              </h2>
+              <p className="text-white/80 mb-6 leading-relaxed">
+                माँ बगलामुखी की कृपा से अपने जीवन की हर समस्या का समाधान पाएं।
+                फ़ॉर्म भरें, हम 24 घंटे में आपसे संपर्क करेंगे।
+              </p>
+              <div className="p-4 rounded-lg text-sm font-medium" style={{ background: '#FF8C00', color: '#FFD700' }}>
+                ⏰ सीमित स्लॉट उपलब्ध — जल्दी बुक करें!
+              </div>
+            </div>
+            <BookingForm />
+          </div>
+        </div>
+      </section>
+
+      {/* 5️⃣ FAQ section (grouped) */}
+      <section className="py-14" style={{ background: '#6B0000' }}>
+        <div className="container mx-auto px-4 max-w-3xl">
+          <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center" style={{ color: '#FFD700' }}>
+            अक्सर पूछे जाने वाले प्रश्न — Baglamukhi Havan FAQ
+          </h2>
+          <div className="space-y-4">
+            {[
+              {
+                q: "बगलामुखी हवन क्या है? (What is Baglamukhi Havan?)",
+                a: "बगलामुखी हवन दस महाविद्याओं में आठवीं शक्ति माँ बगलामुखी की उपासना का सिद्ध वैदिक अनुष्ठान है। इसमें माँ बगलामुखी के बीज मंत्र का जाप एवं दशांश हवन किया जाता है — यह शत्रु-स्तंभन, कोर्ट केस विजय, तांत्रिक बाधा निवारण और जीवन की समस्याओं के समाधान के लिए प्रसिद्ध है।",
+              },
+              {
+                q: "Baglamukhi Havan कैसे बुक करें? (How to book Havan?)",
+                a: "आप हमारी वेबसाइट पर ऑनलाइन बुकिंग फ़ॉर्म भरकर या +91 93402 33595 पर कॉल / WhatsApp करके हवन बुक कर सकते हैं। भारत एवं विश्व के किसी भी स्थान से booking उपलब्ध है। 24 घंटे में हमारी टीम संपर्क करेगी।",
+              },
+              {
+                q: "लाल मिर्च हवन किसके लिए होता है? (Who needs Lal Mirch Havan?)",
+                a: "Lal Mirch Havan विशेष रूप से तांत्रिक बाधा, काला जादू, नज़र दोष, ऊपरी हवा और शत्रुओं के षड्यंत्र से पीड़ित व्यक्तियों के लिए किया जाता है। यह अत्यंत उग्र एवं शीघ्र फलदायी माना जाता है।",
+              },
+              {
+                q: "क्या हवन ऑनलाइन करवा सकते हैं? (Is online havan possible?)",
+                a: "हाँ, ऑनलाइन हवन बुकिंग की पूर्ण सुविधा उपलब्ध है। हवन नलखेड़ा (Nalkheda, Agar Malwa, Madhya Pradesh) के सिद्ध बगलामुखी मंदिर में अनुभवी पंडितों द्वारा सम्पन्न होता है और आपको live video, photo proof एवं प्रसाद/यंत्र भेजा जाता है।",
+              },
+              {
+                q: "बगलामुखी अनुष्ठान और हवन में क्या अंतर है?",
+                a: "बगलामुखी हवन एक छोटी अवधि की पूजा है (1-3 घंटे), जबकि अनुष्ठान में 36,000 से 5,00,000 तक मंत्रों का जाप एवं दशांश हवन शामिल है। अनुष्ठान अधिक शक्तिशाली एवं स्थायी फल प्रदान करता है — जटिल समस्याओं जैसे लम्बे court case, गंभीर शत्रु बाधा या व्यापार में बड़ी हानि के लिए अनुष्ठान विशेष प्रभावी है।",
+              },
+              {
+                q: "Baglamukhi Havan की cost कितनी है?",
+                a: "सामान्य बगलामुखी हवन ₹5,100 से प्रारंभ होता है। लाल मिर्च हवन ₹11,000 से, 36,000 मंत्र अनुष्ठान ₹31,000, सवा लाख अनुष्ठान ₹61,000 और पंचलक्षी महा-अनुष्ठान ₹1,51,000 में उपलब्ध है। सभी pricing पारदर्शी है — कोई छुपा शुल्क नहीं।",
+              },
+              {
+                q: "हवन के बाद क्या मिलता है?",
+                a: "हवन / अनुष्ठान के बाद सम्पूर्ण विधि का video और photo proof, सिद्ध प्रसाद, माँ बगलामुखी का अभिमंत्रित यंत्र और ब्राह्मणों का आशीर्वाद — सब कुछ कूरियर द्वारा आपके घर पहुँचाया जाता है।",
+              },
+              {
+                q: "Best pandit for Baglamukhi Havan कहाँ मिलेंगे?",
+                a: "नलखेड़ा (जिला आगर मालवा, मध्यप्रदेश) के सिद्ध बगलामुखी मंदिर के विद्वान एवं अनुभवी पंडित हमारी सेवा में हैं। 247+ संतुष्ट साधकों ने 4.9/5 की rating दी है।",
+              },
+            ].map((f) => (
+              <div
+                key={f.q}
+                className="rounded-lg p-5"
+                style={{ background: 'rgba(255,140,0,0.15)', border: '1px solid rgba(255,215,0,0.3)' }}
+              >
+                <h3 className="font-bold mb-2" style={{ color: '#FFD700' }}>{f.q}</h3>
+                <p className="text-white/85 text-sm leading-relaxed">{f.a}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Extended FAQ (Hindi + English) with FAQPage schema */}
+      <MaaBaglamukhiFaqSection />
+
+      {/* 6️⃣ Reviews / Testimonials */}
+      <TestimonialsSection />
     </main>
   );
 };
