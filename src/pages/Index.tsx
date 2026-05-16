@@ -175,32 +175,9 @@ const Index = () => {
       </section>
 
       <PanditSection />
-      <MaaBaglamukhiSeoSection />
-      <CallSection />
-      <MandirLocationSection />
 
-      {/* Booking CTA */}
-      <section className="py-20 yantra-bg" style={{ background: '#6B0000' }}>
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-10 items-start">
-            <div>
-              <h2 className="text-3xl font-bold mb-4" style={{ color: '#FFD700' }}>
-                अभी बुकिंग करें
-              </h2>
-              <p className="text-white/80 mb-6 leading-relaxed">
-                माँ बगलामुखी की कृपा से अपने जीवन की हर समस्या का समाधान पाएं।
-                फ़ॉर्म भरें, हम 24 घंटे में आपसे संपर्क करेंगे।
-              </p>
-              <div className="p-4 rounded-lg text-sm font-medium" style={{ background: '#FF8C00', color: '#FFD700' }}>
-                ⏰ सीमित स्लॉट उपलब्ध — जल्दी बुक करें!
-              </div>
-            </div>
-            <BookingForm />
-          </div>
-        </div>
-      </section>
-
-      <TestimonialsSection />
+      {/* 1️⃣ Complete SEO + theory content (grouped) */}
+      <MaaBaglamukhiSeoSection hideFaq />
 
       {/* FAQ Section - SEO with Accordion */}
       <section className="py-14" style={{ background: '#6B0000' }}>
