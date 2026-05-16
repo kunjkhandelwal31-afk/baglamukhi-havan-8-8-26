@@ -6,7 +6,7 @@ import PanditSection from "@/components/PanditSection";
 import CallSection from "@/components/CallSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import MandirLocationSection from "@/components/MandirLocationSection";
-import MaaBaglamukhiSeoSection from "@/components/MaaBaglamukhiSeoSection";
+import MaaBaglamukhiSeoSection, { MaaBaglamukhiFaqSection } from "@/components/MaaBaglamukhiSeoSection";
 import BookingForm from "@/components/BookingForm";
 import { havans } from "@/data/havans";
 import { Link } from "react-router-dom";
