@@ -227,37 +227,38 @@ const MaaBaglamukhiSeoSection = ({ hideFaq = false }: MaaBaglamukhiSeoSectionPro
             </article>
           ))}
 
-          {/* FAQ Section */}
-          <section className="pt-8 space-y-6" aria-label="Maa Baglamukhi FAQ">
-            <h3
-              className="text-2xl md:text-4xl font-extrabold text-center leading-snug"
-              style={{ color: "#FFD700" }}
-            >
-              अक्सर पूछे जाने वाले प्रश्न / Frequently Asked Questions
-            </h3>
-            <div className="space-y-6">
-              {faqs.map((f, i) => (
-                <div
-                  key={i}
-                  className="rounded-xl p-5 md:p-6"
-                  style={{
-                    background: "rgba(0,0,0,0.25)",
-                    border: "1px solid rgba(255,215,0,0.25)",
-                  }}
-                >
-                  <h4
-                    className="text-lg md:text-2xl font-bold mb-3 leading-snug"
-                    style={{ color: "#FFD700" }}
+          {!hideFaq && (
+            <section className="pt-8 space-y-6" aria-label="Maa Baglamukhi FAQ">
+              <h3
+                className="text-2xl md:text-4xl font-extrabold text-center leading-snug"
+                style={{ color: "#FFD700" }}
+              >
+                अक्सर पूछे जाने वाले प्रश्न / Frequently Asked Questions
+              </h3>
+              <div className="space-y-6">
+                {faqs.map((f, i) => (
+                  <div
+                    key={i}
+                    className="rounded-xl p-5 md:p-6"
+                    style={{
+                      background: "rgba(0,0,0,0.25)",
+                      border: "1px solid rgba(255,215,0,0.25)",
+                    }}
                   >
-                    {f.q}
-                  </h4>
-                  <p className="text-[17px] md:text-[19px] leading-[1.9] text-white/90">
-                    {f.a}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </section>
+                    <h4
+                      className="text-lg md:text-2xl font-bold mb-3 leading-snug"
+                      style={{ color: "#FFD700" }}
+                    >
+                      {f.q}
+                    </h4>
+                    <p className="text-[17px] md:text-[19px] leading-[1.9] text-white/90">
+                      {f.a}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </section>
+          )}
 
           <div
             className="rounded-xl p-6 md:p-8 mt-8 text-center"
