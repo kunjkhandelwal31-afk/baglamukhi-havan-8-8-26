@@ -282,4 +282,54 @@ const MaaBaglamukhiSeoSection = ({ hideFaq = false }: MaaBaglamukhiSeoSectionPro
   );
 };
 
+export const MaaBaglamukhiFaqSection = () => {
+  return (
+    <section
+      className="py-16"
+      style={{ background: "#5A0000" }}
+      aria-label="Maa Baglamukhi FAQ"
+    >
+      <Helmet>
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
+      </Helmet>
+      <div className="container mx-auto px-4 max-w-3xl">
+        <header className="text-center mb-10">
+          <h2
+            className="text-3xl md:text-4xl font-extrabold text-golden-shadow leading-tight"
+            style={{ color: "#FFD700" }}
+          >
+            अक्सर पूछे जाने वाले प्रश्न
+          </h2>
+          <p className="text-white/85 mt-3 text-base md:text-lg">
+            Frequently Asked Questions — Maa Baglamukhi Havan & Anushthan
+          </p>
+        </header>
+        <div className="space-y-6">
+          {faqs.map((f, i) => (
+            <div
+              key={i}
+              className="rounded-xl p-5 md:p-6"
+              style={{
+                background: "rgba(0,0,0,0.25)",
+                border: "1px solid rgba(255,215,0,0.25)",
+              }}
+            >
+              <h3
+                className="text-lg md:text-2xl font-bold mb-3 leading-snug"
+                style={{ color: "#FFD700" }}
+              >
+                {f.q}
+              </h3>
+              <p className="text-[17px] md:text-[19px] leading-[1.9] text-white/90">
+                {f.a}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
 export default MaaBaglamukhiSeoSection;
+
