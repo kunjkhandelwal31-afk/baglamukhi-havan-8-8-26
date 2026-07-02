@@ -58,17 +58,17 @@ const HavanBookingPage = () => (
         </ol>
 
         <h2 className="text-2xl md:text-3xl font-bold mt-8 mb-3" style={{ color: '#FFD700' }}>
-          Transparent Pricing — पारदर्शी मूल्य
+          पूजा शुल्क — Puja Donation
         </h2>
-        <ul className="space-y-2 mb-4 text-white/90">
-          <li>सामान्य बगलामुखी हवन — <strong>₹5,100</strong> से</li>
-          <li>लाल मिर्च हवन — <strong>₹11,000</strong> से</li>
-          <li>36,000 मंत्र अनुष्ठान — <strong>₹31,000</strong></li>
-          <li>सवा लाख मंत्र अनुष्ठान — <strong>₹61,000</strong></li>
-          <li>पंचलक्षी महा-अनुष्ठान — <strong>₹1,51,000</strong></li>
-        </ul>
+        <p className="text-white/85 leading-relaxed mb-4">
+          प्रत्येक हवन एवं अनुष्ठान का शुल्क सेवा के प्रकार, अवधि, ब्राह्मणों की संख्या एवं
+          सामग्री के अनुसार भिन्न होता है। सटीक विवरण, मुहूर्त एवं मार्गदर्शन हेतु कृपया{" "}
+          <a href="tel:+919340233595" className="underline" style={{ color: '#FFD700' }}>+91 93402 33595</a>{" "}
+          पर कॉल या WhatsApp करें — हमारी टीम 24 घंटे में आपकी परिस्थिति समझकर उचित सुझाव देगी।
+        </p>
         <p className="text-white/70 text-sm mb-6">
-          कोई छुपा शुल्क नहीं। सम्पूर्ण सामग्री, ब्राह्मण भोज, video/photo proof एवं प्रसाद/यंत्र — सब शामिल।
+          Please contact us on WhatsApp or call for detailed guidance about the puja donation,
+          samagri, muhurat and process — no hidden charges, full transparency.
         </p>
 
         <h2 className="text-2xl md:text-3xl font-bold mt-8 mb-3" style={{ color: '#FFD700' }}>
@@ -78,7 +78,7 @@ const HavanBookingPage = () => (
           {[
             "नलखेड़ा (Nalkheda, Agar Malwa, MP) के सिद्ध मंदिर — 15+ वर्षों का अनुभव",
             "India + worldwide service — कहीं से भी book करें",
-            "पारदर्शी pricing — कोई छुपा शुल्क नहीं",
+            "पारदर्शी संवाद — कोई छुपा शुल्क नहीं, पूरा विवरण फोन/WhatsApp पर",
             "हवन का live video / photo proof",
             "सिद्ध प्रसाद एवं अभिमंत्रित यंत्र कूरियर द्वारा",
             "247+ संतुष्ट साधक — 4.9/5 rating",

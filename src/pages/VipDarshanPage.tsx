@@ -11,9 +11,9 @@ const benefits = [
   { icon: Clock, text: "समय की बचत" },
 ];
 
-const pricing = [
-  { name: "VIP दर्शन", price: "₹2,100 – ₹5,100", features: ["गर्भ गृह प्रवेश", "विशेष पूजा", "प्रसाद"], cta: "vip-darshan" },
-  { name: "VIP + हवन कॉम्बो", price: "₹7,100 – ₹21,000", features: ["गर्भ गृह प्रवेश", "विशेष हवन", "व्यक्तिगत मंत्र जाप", "प्रसाद + आशीर्वाद"], cta: "vip-combo", featured: true },
+const services = [
+  { name: "VIP दर्शन", features: ["गर्भ गृह प्रवेश", "विशेष पूजा", "प्रसाद"], cta: "vip-darshan" },
+  { name: "VIP + हवन कॉम्बो", features: ["गर्भ गृह प्रवेश", "विशेष हवन", "व्यक्तिगत मंत्र जाप", "प्रसाद + आशीर्वाद"], cta: "vip-combo", featured: true },
 ];
 
 const VipDarshanPage = () => {
@@ -62,14 +62,14 @@ const VipDarshanPage = () => {
         </div>
       </section>
 
-      {/* Pricing */}
+      {/* Services */}
       <section className="py-16">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl md:text-3xl font-bold text-foreground text-center mb-10">
-            VIP <span className="text-gradient-golden">मूल्य सूची</span>
+            VIP <span className="text-gradient-golden">सेवाएं</span>
           </h2>
           <div className="grid md:grid-cols-2 gap-6 max-w-2xl mx-auto">
-            {pricing.map((p) => (
+            {services.map((p) => (
               <div
                 key={p.name}
                 className={`rounded-2xl border p-8 text-center transition-all hover:shadow-golden ${
@@ -82,17 +82,19 @@ const VipDarshanPage = () => {
                   </span>
                 )}
                 <h3 className="text-xl font-bold text-foreground mb-2">{p.name}</h3>
-                <p className="text-2xl font-bold text-gradient-golden mb-4">{p.price}</p>
+                <p className="text-base font-semibold text-gradient-golden mb-4">
+                  संपर्क करें विवरण हेतु
+                </p>
                 <ul className="text-sm text-muted-foreground space-y-2 mb-6">
                   {p.features.map((f) => (
                     <li key={f}>✔ {f}</li>
                   ))}
                 </ul>
                 <Link
-                  to={`/booking?havan=${p.cta}`}
+                  to="/contact"
                   className="inline-flex items-center gap-2 gradient-golden text-primary-foreground px-6 py-3 rounded-lg font-bold hover:shadow-lg transition-all"
                 >
-                  👉 VIP प्रवेश बुक करें
+                  👉 संपर्क करें
                 </Link>
               </div>
             ))}

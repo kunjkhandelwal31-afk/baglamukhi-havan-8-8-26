@@ -30,7 +30,6 @@ const BookingForm = ({ preselectedHavan }: { preselectedHavan?: string }) => {
     const selectedHavan = havans.find((h) => h.id === form.havanType);
     const selectedAnushthan = anushthans.find((a) => `anushthan-${a.id}` === form.havanType);
     const havanName = selectedHavan?.name || selectedAnushthan?.shortTitle || form.havanType;
-    const price = selectedHavan?.price || selectedAnushthan?.price || "N/A";
 
     // Save to backend
     await supabase.from("bookings").insert({
@@ -38,12 +37,12 @@ const BookingForm = ({ preselectedHavan }: { preselectedHavan?: string }) => {
       phone: form.phone,
       havan_type: havanName,
       preferred_date: form.date,
-      message: `स्थान: ${form.location || "N/A"} | गोत्र: ${form.gotra || "N/A"} | नक्षत्र: ${form.nakshatra || "N/A"} | शुल्क: ${price}`,
+      message: `स्थान: ${form.location || "N/A"} | गोत्र: ${form.gotra || "N/A"} | नक्षत्र: ${form.nakshatra || "N/A"}`,
       status: "pending",
     });
     trackEvent("booking_submitted", { havan: havanName, source: "booking_form" });
 
-    const message = `${WHATSAPP_MESSAGE}\n\n🙏 *नई हवन बुकिंग*\n\n👤 नाम: ${form.name}\n📞 मोबाइल: ${form.phone}\n📍 स्थान: ${form.location || "N/A"}\n🔥 हवन: ${havanName}\n💰 शुल्क: ${price}\n📅 तिथि: ${form.date}\n🪷 गोत्र: ${form.gotra || "N/A"}\n⭐ नक्षत्र: ${form.nakshatra || "N/A"}`;
+    const message = `${WHATSAPP_MESSAGE}\n\n🙏 *नई हवन बुकिंग*\n\n👤 नाम: ${form.name}\n📞 मोबाइल: ${form.phone}\n📍 स्थान: ${form.location || "N/A"}\n🔥 हवन: ${havanName}\n📅 तिथि: ${form.date}\n🪷 गोत्र: ${form.gotra || "N/A"}\n⭐ नक्षत्र: ${form.nakshatra || "N/A"}\n\nपूजा शुल्क एवं विवरण हेतु कृपया संपर्क करें।`;
 
     const waURL = `https://wa.me/919340233595?text=${encodeURIComponent(message)}`;
     window.open(waURL, "_blank");
@@ -96,14 +95,14 @@ const BookingForm = ({ preselectedHavan }: { preselectedHavan?: string }) => {
         <optgroup label="हवन सेवाएं">
           {havans.map((h) => (
             <option key={h.id} value={h.id}>
-              {h.name} — {h.price}
+              {h.name}
             </option>
           ))}
         </optgroup>
         <optgroup label="अनुष्ठान सेवाएं">
           {anushthans.map((a) => (
             <option key={a.id} value={`anushthan-${a.id}`}>
-              {a.shortTitle} — {a.price}
+              {a.shortTitle}
             </option>
           ))}
         </optgroup>

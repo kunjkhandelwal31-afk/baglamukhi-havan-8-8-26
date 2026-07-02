@@ -27,10 +27,10 @@ const HavanCard = ({ havan }: { havan: Havan }) => {
             </h3>
           </Link>
           <span
-            className="text-lg md:text-xl font-extrabold px-3 py-1.5 rounded-lg text-golden-outline tracking-wide whitespace-nowrap"
+            className="text-xs md:text-sm font-semibold px-3 py-1.5 rounded-lg text-golden-outline tracking-wide whitespace-nowrap"
             style={{ background: 'rgba(139,0,0,0.55)', color: '#FFD700', border: '1px solid rgba(255,215,0,0.4)' }}
           >
-            {havan.price}
+            संपर्क करें
           </span>
         </div>
         <p className="text-sm text-white mb-4 leading-relaxed flex-1">

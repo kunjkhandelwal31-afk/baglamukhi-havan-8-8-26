@@ -10,23 +10,22 @@ export interface Product {
   id: string;
   name: string;
   description: string;
+  /** Contact-only label — no monetary values exposed sitewide. */
   priceRange: string;
-  priceMin: number;
-  priceMax: number;
   image: string;
   category: "ताबीज" | "यंत्र" | "प्रसाद" | "किट";
   tag?: "Best Seller" | "Most Powerful" | "Limited Stock";
   reviews: { name: string; text: string; stars: number }[];
 }
 
+const CONTACT_LABEL = "संपर्क करें विवरण हेतु";
+
 export const products: Product[] = [
   {
     id: "tabiz",
     name: "दिव्य सुरक्षा ताबीज",
     description: "नकारात्मक शक्तियों से रक्षा करने वाला सिद्ध ताबीज",
-    priceRange: "₹499 – ₹1,100",
-    priceMin: 499,
-    priceMax: 1100,
+    priceRange: CONTACT_LABEL,
     image: productTabiz,
     category: "ताबीज",
     tag: "Best Seller",
@@ -39,9 +38,7 @@ export const products: Product[] = [
     id: "prasad",
     name: "माँ बगलामुखी कृपा प्रसाद",
     description: "विशेष पूजा के बाद अभिमंत्रित प्रसाद",
-    priceRange: "₹251 – ₹501",
-    priceMin: 251,
-    priceMax: 501,
+    priceRange: CONTACT_LABEL,
     image: productPrasad,
     category: "प्रसाद",
     reviews: [
@@ -52,9 +49,7 @@ export const products: Product[] = [
     id: "kavach",
     name: "अद्भुत रक्षा कवच",
     description: "जीवन में सुरक्षा और सफलता के लिए शक्तिशाली कवच",
-    priceRange: "₹999 – ₹2,100",
-    priceMin: 999,
-    priceMax: 2100,
+    priceRange: CONTACT_LABEL,
     image: productKavach,
     category: "ताबीज",
     tag: "Most Powerful",
@@ -67,9 +62,7 @@ export const products: Product[] = [
     id: "yantra",
     name: "सिद्ध शक्तिशाली बगलामुखी यंत्र",
     description: "घर और कार्यस्थल में सकारात्मक ऊर्जा के लिए",
-    priceRange: "₹1,100 – ₹5,100",
-    priceMin: 1100,
-    priceMax: 5100,
+    priceRange: CONTACT_LABEL,
     image: productYantra,
     category: "यंत्र",
     tag: "Best Seller",
@@ -81,9 +74,7 @@ export const products: Product[] = [
     id: "pattika",
     name: "पवित्र मंत्र सिद्ध पट्टिका",
     description: "मंत्र ऊर्जा से अभिमंत्रित पवित्र पट्टिका",
-    priceRange: "₹701 – ₹1,500",
-    priceMin: 701,
-    priceMax: 1500,
+    priceRange: CONTACT_LABEL,
     image: productPattika,
     category: "यंत्र",
     tag: "Limited Stock",
@@ -95,9 +86,7 @@ export const products: Product[] = [
     id: "pitambar",
     name: "शुभ पीतांबर वस्त्र",
     description: "माँ बगलामुखी को अर्पित करने हेतु विशेष वस्त्र",
-    priceRange: "₹351 – ₹999",
-    priceMin: 351,
-    priceMax: 999,
+    priceRange: CONTACT_LABEL,
     image: productPitambar,
     category: "प्रसाद",
     reviews: [
@@ -108,9 +97,7 @@ export const products: Product[] = [
     id: "puja-kit",
     name: "सम्पूर्ण दिव्य अनुष्ठान किट",
     description: "सभी आवश्यक सामग्री के साथ पूर्ण पूजा किट",
-    priceRange: "₹2,100 – ₹5,100",
-    priceMin: 2100,
-    priceMax: 5100,
+    priceRange: CONTACT_LABEL,
     image: productPujaKit,
     category: "किट",
     tag: "Most Powerful",

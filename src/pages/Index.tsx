@@ -21,7 +21,6 @@ const anushthanTypes = [
     title: "36,000 मंत्र सिद्धि अनुष्ठान",
     description: "6 अनुभवी ब्राह्मणों द्वारा माँ बगलामुखी के बीज मंत्रों का 36,000 बार जाप एवं दशांश हवन। त्वरित सिद्धि प्रदान करने वाली साधना।",
     duration: "1-2 दिन",
-    price: "₹31,000",
     image: anushthan36000,
   },
   {
@@ -29,7 +28,6 @@ const anushthanTypes = [
     title: "सवा लाख (1.25 लाख मंत्र) महाजाप अनुष्ठान",
     description: "11 विद्वान पंडितों द्वारा लगभग 6 घंटे का अखंड मंत्र जाप एवं शास्त्रोक्त हवन। बड़े संकटों के निवारण हेतु अत्यंत प्रभावी।",
     duration: "1 दिन",
-    price: "₹61,000",
     image: anushthanSavalakh,
   },
   {
@@ -37,7 +35,6 @@ const anushthanTypes = [
     title: "पंचलक्षी (5,00,000 मंत्र) महा-साधना अनुष्ठान",
     description: "21 सिद्ध ब्राह्मणों द्वारा 5,00,000 मंत्रों का महा-जाप एवं विशाल महा-हवन। ‘असंभव को संभव’ करने वाली महा-साधना।",
     duration: "1 दिन",
-    price: "₹1,51,000",
     image: anushthanPanchlakshi,
   },
 ];
@@ -141,7 +138,7 @@ const Index = () => {
                   <p className="text-white text-sm mb-4 leading-relaxed flex-1">{a.description}</p>
                   <div className="flex items-center justify-between mb-4">
                     <span className="text-white/90 text-sm">⏱️ {a.duration}</span>
-                    <span className="font-extrabold text-lg md:text-xl text-golden-outline" style={{ color: '#FFD700' }}>{a.price}</span>
+                    <span className="font-semibold text-sm md:text-base text-golden-outline" style={{ color: '#FFD700' }}>संपर्क करें विवरण हेतु</span>
                   </div>
                   <div className="space-y-2 mt-auto">
                     <Link
@@ -322,14 +319,14 @@ const Index = () => {
               <h2 className="text-2xl md:text-3xl font-bold" style={{ color: '#FFD700' }}>हमारी सेवा क्यों चुनें</h2>
               <p>
                 हम नलखेड़ा (आगर मालवा, मध्यप्रदेश) के प्रसिद्ध बगलामुखी मंदिर से सेवा प्रदान करते हैं। हमारे विद्वान पंडितों को 15+ वर्षों
-                का अनुभव है। पूर्ण शास्त्रोक्त विधि, पारदर्शी pricing, सम्पूर्ण हवन का video/photo proof, सिद्ध प्रसाद एवं अभिमंत्रित यंत्र
+                का अनुभव है। पूर्ण शास्त्रोक्त विधि, पारदर्शी संवाद, सम्पूर्ण हवन का video/photo proof, सिद्ध प्रसाद एवं अभिमंत्रित यंत्र
                 कूरियर द्वारा भेजना हमारी विशेषताएँ हैं। 247+ संतुष्ट साधकों ने 4.9/5 की rating दी है।
               </p>
 
               <h2 className="text-2xl md:text-3xl font-bold pt-2" style={{ color: '#FFD700' }}>Why Choose Our Service</h2>
               <p>
                 We serve from the famous Baglamukhi Mandir at Nalkheda (Agar Malwa, Madhya Pradesh). Our learned pandits carry
-                15+ years of experience. Complete Vedic procedure, transparent pricing, full video and photo documentation,
+                15+ years of experience. Complete Vedic procedure, transparent communication, full video and photo documentation,
                 blessed prasad and an energised yantra couriered to the devotee are our key strengths. 247+ satisfied devotees
                 have rated us 4.9/5.
               </p>
@@ -417,8 +414,8 @@ const Index = () => {
                 a: "बगलामुखी हवन एक छोटी अवधि की पूजा है (1-3 घंटे), जबकि अनुष्ठान में 36,000 से 5,00,000 तक मंत्रों का जाप एवं दशांश हवन शामिल है। अनुष्ठान अधिक शक्तिशाली एवं स्थायी फल प्रदान करता है — जटिल समस्याओं जैसे लम्बे court case, गंभीर शत्रु बाधा या व्यापार में बड़ी हानि के लिए अनुष्ठान विशेष प्रभावी है।",
               },
               {
-                q: "Baglamukhi Havan की cost कितनी है?",
-                a: "सामान्य बगलामुखी हवन ₹5,100 से प्रारंभ होता है। लाल मिर्च हवन ₹11,000 से, 36,000 मंत्र अनुष्ठान ₹31,000, सवा लाख अनुष्ठान ₹61,000 और पंचलक्षी महा-अनुष्ठान ₹1,51,000 में उपलब्ध है। सभी pricing पारदर्शी है — कोई छुपा शुल्क नहीं।",
+                q: "पूजा शुल्क कैसे जानें? (How to know the puja donation?)",
+                a: "पूजा एवं अनुष्ठान का शुल्क सेवा के प्रकार, अवधि, ब्राह्मणों की संख्या एवं सामग्री पर निर्भर करता है। सटीक विवरण एवं मार्गदर्शन हेतु कृपया +91 93402 33595 पर कॉल या WhatsApp करें।",
               },
               {
                 q: "हवन के बाद क्या मिलता है?",

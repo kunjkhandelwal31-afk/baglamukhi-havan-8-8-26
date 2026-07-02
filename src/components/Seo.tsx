@@ -7,18 +7,36 @@ interface SeoProps {
   keywords?: string;
   type?: "website" | "article";
   image?: string;
+  breadcrumbs?: { name: string; path: string }[];
 }
 
 const SITE = "https://baglamukhihavananushthan.com";
 
-const Seo = ({ title, description, path, keywords, type = "website", image }: SeoProps) => {
+const Seo = ({ title, description, path, keywords, type = "website", image, breadcrumbs }: SeoProps) => {
   const url = `${SITE}${path}`;
+
+  const breadcrumbLd = breadcrumbs && breadcrumbs.length > 0
+    ? {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        itemListElement: breadcrumbs.map((b, i) => ({
+          "@type": "ListItem",
+          position: i + 1,
+          name: b.name,
+          item: `${SITE}${b.path}`,
+        })),
+      }
+    : null;
+
   return (
     <Helmet>
       <title>{title}</title>
       <meta name="description" content={description} />
       {keywords && <meta name="keywords" content={keywords} />}
       <link rel="canonical" href={url} />
+      <link rel="alternate" hrefLang="hi-IN" href={url} />
+      <link rel="alternate" hrefLang="en-IN" href={url} />
+      <link rel="alternate" hrefLang="x-default" href={url} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:type" content={type} />
@@ -28,6 +46,9 @@ const Seo = ({ title, description, path, keywords, type = "website", image }: Se
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       {image && <meta name="twitter:image" content={image} />}
+      {breadcrumbLd && (
+        <script type="application/ld+json">{JSON.stringify(breadcrumbLd)}</script>
+      )}
     </Helmet>
   );
 };
