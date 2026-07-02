@@ -24,6 +24,8 @@ const Footer = () => {
               <Link to="/baglamukhi-havan" className="block hover:text-yellow-400 transition-colors">Baglamukhi Havan</Link>
               <Link to="/lal-mirch-havan" className="block hover:text-yellow-400 transition-colors">Lal Mirch Havan</Link>
               <Link to="/baglamukhi-anushthan" className="block hover:text-yellow-400 transition-colors">Baglamukhi Anushthan</Link>
+              <Link to="/court-case-havan" className="block hover:text-yellow-400 transition-colors">Court Case Havan</Link>
+              <Link to="/about-us" className="block hover:text-yellow-400 transition-colors">About Us</Link>
               <Link to="/havan-booking" className="block hover:text-yellow-400 transition-colors">Havan Booking</Link>
               <Link to="/havan-types" className="block hover:text-yellow-400 transition-colors">हवन के प्रकार</Link>
               <Link to="/anushthan" className="block hover:text-yellow-400 transition-colors">अनुष्ठान के प्रकार</Link>
