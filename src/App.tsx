@@ -22,6 +22,8 @@ import BaglamukhiHavanPage from "./pages/BaglamukhiHavanPage";
 import LalMirchHavanPage from "./pages/LalMirchHavanPage";
 import BaglamukhiAnushthanPage from "./pages/BaglamukhiAnushthanPage";
 import HavanBookingPage from "./pages/HavanBookingPage";
+import CourtCaseHavanPage from "./pages/CourtCaseHavanPage";
+import AboutUsPage from "./pages/AboutUsPage";
 import BlogIndexPage from "./pages/BlogIndexPage";
 import BlogPostPage from "./pages/BlogPostPage";
 import AdminLoginPage from "./pages/AdminLoginPage";
@@ -59,6 +61,9 @@ const App = () => (
             <Route path="/lal-mirch-havan" element={<LalMirchHavanPage />} />
             <Route path="/baglamukhi-anushthan" element={<BaglamukhiAnushthanPage />} />
             <Route path="/havan-booking" element={<HavanBookingPage />} />
+            <Route path="/court-case-havan" element={<CourtCaseHavanPage />} />
+            <Route path="/about-us" element={<AboutUsPage />} />
+            <Route path="/about" element={<Navigate to="/about-us" replace />} />
             {/* Blog */}
             <Route path="/blog" element={<BlogIndexPage />} />
             <Route path="/blog/:slug" element={<BlogPostPage />} />

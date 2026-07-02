@@ -45,10 +45,10 @@ const HavanDetailPage = () => {
               </p>
             </div>
             <span
-              className="text-xl md:text-2xl font-extrabold px-4 py-2 rounded-lg tracking-wide whitespace-nowrap text-golden-outline"
+              className="text-sm md:text-base font-semibold px-4 py-2 rounded-lg tracking-wide whitespace-nowrap text-golden-outline"
               style={{ background: '#F57C00', color: '#FFD700', border: '1px solid rgba(255,215,0,0.4)', boxShadow: '0 4px 12px rgba(0,0,0,0.25)' }}
             >
-              {havan.price}
+              संपर्क करें विवरण हेतु
             </span>
           </div>
         </div>
@@ -137,13 +137,13 @@ const HavanDetailPage = () => {
           <div className="space-y-6">
             <div className="bg-card border-2 border-primary/30 rounded-xl p-6 shadow-golden md:sticky md:top-24">
               <div className="text-center mb-4">
-                <div className="text-sm text-muted-foreground mb-1">हवन शुल्क</div>
-                <div className="text-3xl font-extrabold text-gradient-golden">{havan.price}</div>
-                <div className="text-xs text-muted-foreground mt-1">सम्पूर्ण सामग्री सहित</div>
+                <div className="text-sm text-muted-foreground mb-1">पूजा शुल्क</div>
+                <div className="text-lg font-bold text-gradient-golden">संपर्क करें विवरण हेतु</div>
+                <div className="text-xs text-muted-foreground mt-1">कॉल / WhatsApp पर मार्गदर्शन</div>
               </div>
 
               <div className="bg-accent/10 text-accent-foreground text-center text-sm font-semibold py-2 rounded-lg mb-4">
-                ⭐ Best Value — पूरी विधि के साथ
+                ⭐ पूर्ण विधि — शास्त्रोक्त सामग्री सहित
               </div>
 
               <Link
@@ -155,7 +155,7 @@ const HavanDetailPage = () => {
               </Link>
 
               <p className="text-xs text-center text-muted-foreground mt-3">
-                ⏰ सीमित स्लॉट • 50% अग्रिम भुगतान
+                ⏰ सीमित स्लॉट • विवरण हेतु संपर्क करें
               </p>
 
               <ContactStrip compact className="mt-4" />

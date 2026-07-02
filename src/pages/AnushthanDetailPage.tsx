@@ -44,10 +44,10 @@ const AnushthanDetailPage = () => {
                   {a.title}
                 </h1>
                 <span
-                  className="text-xl md:text-2xl font-extrabold px-4 py-1.5 rounded-lg text-golden-outline tracking-wide"
+                  className="text-sm md:text-base font-semibold px-4 py-1.5 rounded-lg text-golden-outline tracking-wide"
                   style={{ background: 'rgba(139,0,0,0.55)', color: '#FFD700', border: '1px solid rgba(255,215,0,0.4)' }}
                 >
-                  {a.price}
+                  संपर्क करें विवरण हेतु
                 </span>
               </div>
 
