@@ -36,12 +36,12 @@ const Navbar = () => {
             <AudioToggle />
             <LanguageToggle />
             <a
-              href="tel:+919340233595"
+              href="tel:+919009451897"
               className="flex items-center gap-1.5 font-semibold text-sm"
               style={{ color: '#FFD700' }}
             >
               <Phone className="h-4 w-4" />
-              +91 93402 33595
+              +91 90094 51897
             </a>
           </div>
 
@@ -64,12 +64,12 @@ const Navbar = () => {
             <AudioToggle />
             <LanguageToggle />
             <a
-              href="tel:+919340233595"
+              href="tel:+919009451897"
               className="ml-3 flex items-center gap-1.5 px-4 py-2 rounded-lg text-sm font-semibold"
               style={{ background: '#FF8C00', color: '#FFD700' }}
             >
               <Phone className="h-4 w-4" />
-              +91 93402 33595
+              +91 90094 51897
             </a>
           </div>
 
@@ -107,12 +107,12 @@ const Navbar = () => {
               </Link>
             ))}
             <a
-              href="tel:+919340233595"
+              href="tel:+919009451897"
               className="flex items-center gap-2 mx-4 mt-2 px-4 py-2.5 rounded-lg text-sm font-semibold justify-center"
               style={{ background: '#FF8C00', color: '#FFD700' }}
             >
               <Phone className="h-4 w-4" />
-              +91 93402 33595
+              +91 90094 51897
             </a>
             <Link
               to="/admin-login"

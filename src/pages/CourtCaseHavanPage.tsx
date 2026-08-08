@@ -1,7 +1,7 @@
 import Seo from "@/components/Seo";
 import SeoCta from "@/components/SeoCta";
 import { Link } from "react-router-dom";
-import { Scale, Gavel, Shield, CheckCircle2 } from "lucide-react";
+import { Scale, Gavel, Shield, CircleCheck as CheckCircle2 } from "lucide-react";
 
 const CourtCaseHavanPage = () => {
   return (
@@ -86,8 +86,8 @@ const CourtCaseHavanPage = () => {
               { q: "क्या दूर बैठे साधक के लिए भी हवन कराया जा सकता है?", a: "हाँ। साधक का नाम, गोत्र, नक्षत्र एवं फोटो लेकर मंदिर में पूजा सम्पन्न होती है। पूरा live video/photo proof भेजा जाता है एवं अभिमंत्रित यंत्र + प्रसाद courier द्वारा भेजा जाता है।" },
               { q: "परिणाम कितने समय में मिलता है?", a: "श्रद्धा, कर्म एवं मंत्र-जाप की संख्या पर निर्भर करता है। सामान्यतः 21 से 90 दिनों में स्पष्ट संकेत मिलने लगते हैं। कठिन cases में सवा लाख या पंचलक्षी अनुष्ठान की सलाह दी जाती है।" },
               { q: "क्या यह हवन criminal case में भी प्रभावी है?", a: "हाँ, विशेषकर जब आप निर्दोष हों और झूठे आरोप लगाए गए हों। बगलामुखी हवन विरोधी पक्ष के झूठ को उजागर करता है।" },
-              { q: "पूजा शुल्क कितना है?", a: "शुल्क मंत्र-संख्या, अनुष्ठान की अवधि एवं ब्राह्मणों की संख्या पर निर्भर करता है। सटीक विवरण हेतु कृपया +91 93402 33595 पर संपर्क करें।" },
-              { q: "बुकिंग कैसे करें?", a: "आप हमारी वेबसाइट के booking form से, या सीधे +91 93402 33595 पर कॉल / WhatsApp कर के बुकिंग कर सकते हैं। India + worldwide devotees के लिए सेवा उपलब्ध है।" },
+              { q: "पूजा शुल्क कितना है?", a: "शुल्क मंत्र-संख्या, अनुष्ठान की अवधि एवं ब्राह्मणों की संख्या पर निर्भर करता है। सटीक विवरण हेतु कृपया +91 90094 51897 पर संपर्क करें।" },
+              { q: "बुकिंग कैसे करें?", a: "आप हमारी वेबसाइट के booking form से, या सीधे +91 90094 51897 पर कॉल / WhatsApp कर के बुकिंग कर सकते हैं। India + worldwide devotees के लिए सेवा उपलब्ध है।" },
             ].map((f) => (
               <details key={f.q} className="p-4 rounded-lg" style={{ background: 'rgba(255,140,0,0.12)', border: '1px solid rgba(255,215,0,0.3)' }}>
                 <summary className="font-semibold cursor-pointer" style={{ color: '#FFD700' }}>{f.q}</summary>
@@ -121,7 +121,7 @@ const CourtCaseHavanPage = () => {
                 provider: {
                   "@type": "LocalBusiness",
                   name: "Maa Baglamukhi Havan & Anushthan Service",
-                  telephone: "+91-9340233595",
+                  telephone: "+91-9009451897",
                   address: {
                     "@type": "PostalAddress",
                     addressLocality: "Nalkheda",
